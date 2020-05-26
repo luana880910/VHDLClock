@@ -16,8 +16,8 @@
 6. 到Github點開你建立的Branch，然後建立Pull Request到master branch，我稍微看一下沒問題我就會merge到master branch
 
 ## 目前進度
-- [x]基本時間顯示 
-- [x]音樂元件
-- [ ]鬧鐘
-- [ ]倒數計時
+- [x] 基本時間顯示 
+- [x] 音樂元件
+- [ ] 鬧鐘
+- [ ] 倒數計時
 
