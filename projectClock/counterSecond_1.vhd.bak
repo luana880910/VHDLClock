@@ -1,0 +1,43 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity counterSecond_1 is 
+port(CLK: in std_logic;
+	S:out std_logic_vector(4 downto 0));
+end counter;
+
+architecture a of counterSecond_1 is
+signal temp: std_logic_vector(4 downto 0);
+begin
+	process(CLK)
+	begin
+		if CLK'event and CLK = '1' then
+			case temp is
+				when "00000" =>
+					temp <= "00001";
+				when "00001" =>
+					temp <= "00010";
+				when "00010" =>
+					temp <= "00011";
+				when "00011" =>
+					temp <= "00100";
+				when "00100" =>
+					temp <= "00101";
+				when "00101" =>
+					temp <= "00110";
+				when "00110" =>
+					temp <= "00111";
+				when "00111" =>
+					temp <= "01000";
+				when "01000" =>
+					temp <= "01001";
+				when "01001" =>
+					temp <= "10000";
+				when others =>
+					temp <= "00000";
+			end case;
+		end if;
+	end process;
+	S <= temp;
+	end a;
+					
