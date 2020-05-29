@@ -18,13 +18,15 @@ begin
 				when "001" =>
 					temp <= "010";
 				when "010" =>
-					temp <= "110";
-				when "110" =>
+					temp <= "011";
+				when "011" =>
 					temp <= "100";
 				when "100" =>
 					temp <= "101";
 				when "101" =>
-					temp <= "000";
+					temp <= "110";
+				when "110" =>
+					temp <= "111";
 				when others =>
 					temp <= "000";
 			end case;

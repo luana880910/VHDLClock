@@ -1,0 +1,15 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity digitRegister is
+port(digit_in:in std_logic_vector(3 downto 0);
+		digit_out:out std_logic_vector(3 downto 0));
+end digitRegister;
+
+architecture a of digitRegister is
+signal temp:std_logic_vector(3 downto 0);
+begin
+	with digit_in select
+	temp <= temp when "0000",
+			 digit_in when others;
+end a;

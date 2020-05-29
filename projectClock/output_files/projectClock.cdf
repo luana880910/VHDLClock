@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(5CEFA2F23) Path("Z:/VHDL/projectClock/output_files/") File("projectClock.sof") MfrSpec(OpMask(1));
+		Device PartName(5CEFA2F23) Path("Z:/VHDL/VHDLClock/projectClock/output_files/") File("projectClock.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

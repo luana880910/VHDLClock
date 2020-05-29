@@ -1,5 +1,5 @@
 Flow report for projectClock
-Mon May 25 12:01:32 2020
+Fri May 29 15:22:52 2020
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -40,25 +40,25 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Flow Summary                                                                 ;
 +---------------------------------+--------------------------------------------+
-; Flow Status                     ; Successful - Mon May 25 12:01:32 2020      ;
+; Flow Status                     ; Successful - Fri May 29 15:22:52 2020      ;
 ; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                   ; projectClock                               ;
 ; Top-level Entity Name           ; projectClock                               ;
 ; Family                          ; Cyclone V                                  ;
 ; Device                          ; 5CEFA2F23C8                                ;
 ; Timing Models                   ; Final                                      ;
-; Logic utilization (in ALMs)     ; 50 / 9,430 ( < 1 % )                       ;
-; Total registers                 ; 62                                         ;
-; Total pins                      ; 11 / 224 ( 5 % )                           ;
+; Logic utilization (in ALMs)     ; N/A                                        ;
+; Total registers                 ; 57                                         ;
+; Total pins                      ; 24                                         ;
 ; Total virtual pins              ; 0                                          ;
-; Total block memory bits         ; 0 / 1,802,240 ( 0 % )                      ;
-; Total DSP Blocks                ; 0 / 25 ( 0 % )                             ;
+; Total block memory bits         ; 0                                          ;
+; Total DSP Blocks                ; 0                                          ;
 ; Total HSSI RX PCSs              ; 0                                          ;
 ; Total HSSI PMA RX Deserializers ; 0                                          ;
 ; Total HSSI TX PCSs              ; 0                                          ;
 ; Total HSSI TX Channels          ; 0                                          ;
-; Total PLLs                      ; 0 / 4 ( 0 % )                              ;
-; Total DLLs                      ; 0 / 4 ( 0 % )                              ;
+; Total PLLs                      ; 0                                          ;
+; Total DLLs                      ; 0                                          ;
 +---------------------------------+--------------------------------------------+
 
 
@@ -67,64 +67,72 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/25/2020 12:00:22 ;
+; Start date & time ; 05/29/2020 15:19:50 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; projectClock        ;
 +-------------------+---------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                     ;
-+-------------------------------------+---------------------------------+---------------+-------------+----------------+
-; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id     ;
-+-------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 263988422351899.159037922106760 ; --            ; --          ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                            ; --            ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)          ; <None>        ; --          ; --             ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                               ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; 16764057                        ; --            ; --          ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --            ; --          ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --            ; --          ; Top            ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                    ; --            ; --          ; --             ;
-+-------------------------------------+---------------------------------+---------------+-------------+----------------+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                     ;
++-------------------------------------+-------------------------------------------------+---------------+-------------+----------------+
+; Assignment Name                     ; Value                                           ; Default Value ; Entity Name ; Section Id     ;
++-------------------------------------+-------------------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 263988422351899.159073678908340                 ; --            ; --          ; --             ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                                              ; --            ; --          ; eda_simulation ;
+; EDA_NETLIST_WRITER_OUTPUT_DIR       ; Z:/VHDL/VHDLClock/projectClock/simulation/qsim/ ; --            ; --          ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                     ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)                       ; <None>        ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                              ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                               ; --            ; --          ; --             ;
+; PARTITION_COLOR                     ; 16764057                                        ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                           ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                          ; --            ; --          ; Top            ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                                    ; --            ; --          ; --             ;
++-------------------------------------+-------------------------------------------------+---------------+-------------+----------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                             ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:07     ; 1.0                     ; 4711 MB             ; 00:00:06                           ;
-; Fitter                    ; 00:00:37     ; 1.0                     ; 5406 MB             ; 00:00:31                           ;
-; Assembler                 ; 00:00:08     ; 1.0                     ; 4720 MB             ; 00:00:06                           ;
-; TimeQuest Timing Analyzer ; 00:00:09     ; 1.0                     ; 4885 MB             ; 00:00:08                           ;
-; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4609 MB             ; 00:00:02                           ;
-; Total                     ; 00:01:03     ; --                      ; --                  ; 00:00:53                           ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4718 MB             ; 00:00:07                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4602 MB             ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4618 MB             ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4602 MB             ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4618 MB             ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4602 MB             ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4618 MB             ; 00:00:02                           ;
+; Total                ; 00:00:20     ; --                      ; --                  ; 00:00:19                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                        ;
-+---------------------------+------------------+-----------+------------+----------------+
-; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
-+---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; DESKTOP-HRN24VE  ; Windows 7 ; 6.2        ; x86_64         ;
-; Fitter                    ; DESKTOP-HRN24VE  ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; DESKTOP-HRN24VE  ; Windows 7 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; DESKTOP-HRN24VE  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-HRN24VE  ; Windows 7 ; 6.2        ; x86_64         ;
-+---------------------------+------------------+-----------+------------+----------------+
++-----------------------------------------------------------------------------------+
+; Flow OS Summary                                                                   ;
++----------------------+------------------+-----------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++----------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis ; DESKTOP-HRN24VE  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-HRN24VE  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-HRN24VE  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-HRN24VE  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-HRN24VE  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-HRN24VE  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-HRN24VE  ; Windows 7 ; 6.2        ; x86_64         ;
++----------------------+------------------+-----------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off projectClock -c projectClock
-quartus_fit --read_settings_files=off --write_settings_files=off projectClock -c projectClock
-quartus_asm --read_settings_files=off --write_settings_files=off projectClock -c projectClock
-quartus_sta projectClock -c projectClock
-quartus_eda --read_settings_files=off --write_settings_files=off projectClock -c projectClock
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog projectClock -c projectClock --vector_source=Z:/VHDL/VHDLClock/projectClock/Waveform.vwf --testbench_file=Z:/VHDL/VHDLClock/projectClock/simulation/qsim/Waveform.vwf.vt
+quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=Z:/VHDL/VHDLClock/projectClock/simulation/qsim/ projectClock -c projectClock
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog projectClock -c projectClock --vector_source=Z:/VHDL/VHDLClock/projectClock/Waveform.vwf --testbench_file=Z:/VHDL/VHDLClock/projectClock/simulation/qsim/Waveform.vwf.vt
+quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=Z:/VHDL/VHDLClock/projectClock/simulation/qsim/ projectClock -c projectClock
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog projectClock -c projectClock --vector_source=Z:/VHDL/VHDLClock/projectClock/Waveform.vwf --testbench_file=Z:/VHDL/VHDLClock/projectClock/simulation/qsim/Waveform.vwf.vt
+quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=Z:/VHDL/VHDLClock/projectClock/simulation/qsim/ projectClock -c projectClock
 
 
 

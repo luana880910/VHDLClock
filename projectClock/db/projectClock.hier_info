@@ -1,4 +1,5 @@
 |projectClock
+COM <= <VCC>
 b_v[0] <= vectortest:inst3.b_v[0]
 b_v[1] <= vectortest:inst3.b_v[1]
 b_v[2] <= vectortest:inst3.b_v[2]
@@ -7,9 +8,21 @@ b_v[4] <= vectortest:inst3.b_v[4]
 b_v[5] <= vectortest:inst3.b_v[5]
 b_v[6] <= vectortest:inst3.b_v[6]
 clk => clk_gen:inst1.clock
+ppop[0] <= digitRegister:inst21.digit_out[0]
+ppop[1] <= digitRegister:inst21.digit_out[1]
+ppop[2] <= digitRegister:inst21.digit_out[2]
+ppop[3] <= digitRegister:inst21.digit_out[3]
+keypad_0 => keypadDecoder:inst17.keypad_0
+keypad_1 => keypadDecoder:inst17.keypad_1
+keypad_2 => keypadDecoder:inst17.keypad_2
 S[0] <= display:inst.S[0]
 S[1] <= display:inst.S[1]
 S[2] <= display:inst.S[2]
+testpin[0] <= keypadDecoder:inst17.number_out[0]
+testpin[1] <= keypadDecoder:inst17.number_out[1]
+testpin[2] <= keypadDecoder:inst17.number_out[2]
+testpin[3] <= keypadDecoder:inst17.number_out[3]
+edit_pin => ~NO_FANOUT~
 
 
 |projectClock|vectortest:inst3
@@ -41,59 +54,20 @@ a_v[3] => Mux3.IN16
 a_v[3] => Mux4.IN16
 a_v[3] => Mux5.IN16
 a_v[3] => Mux6.IN16
-b_v[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
-b_v[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
-b_v[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
-b_v[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
-b_v[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
-b_v[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
-b_v[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|projectClock|vectorOR:inst12
-SIGNALIN_0[0] => SIGNALOUT.IN0
-SIGNALIN_0[1] => SIGNALOUT.IN0
-SIGNALIN_0[2] => SIGNALOUT.IN0
-SIGNALIN_0[3] => SIGNALOUT.IN0
-SIGNALIN_1[0] => SIGNALOUT.IN1
-SIGNALIN_1[1] => SIGNALOUT.IN1
-SIGNALIN_1[2] => SIGNALOUT.IN1
-SIGNALIN_1[3] => SIGNALOUT.IN1
-SIGNALIN_2[0] => SIGNALOUT.IN1
-SIGNALIN_2[1] => SIGNALOUT.IN1
-SIGNALIN_2[2] => SIGNALOUT.IN1
-SIGNALIN_2[3] => SIGNALOUT.IN1
-SIGNALIN_3[0] => SIGNALOUT.IN1
-SIGNALIN_3[1] => SIGNALOUT.IN1
-SIGNALIN_3[2] => SIGNALOUT.IN1
-SIGNALIN_3[3] => SIGNALOUT.IN1
-SIGNALIN_4[0] => SIGNALOUT.IN1
-SIGNALIN_4[1] => SIGNALOUT.IN1
-SIGNALIN_4[2] => SIGNALOUT.IN1
-SIGNALIN_4[3] => SIGNALOUT.IN1
-SIGNALIN_5[0] => SIGNALOUT.IN1
-SIGNALIN_5[1] => SIGNALOUT.IN1
-SIGNALIN_5[2] => SIGNALOUT.IN1
-SIGNALIN_5[3] => SIGNALOUT.IN1
-SIGNALOUT[0] <= SIGNALOUT.DB_MAX_OUTPUT_PORT_TYPE
-SIGNALOUT[1] <= SIGNALOUT.DB_MAX_OUTPUT_PORT_TYPE
-SIGNALOUT[2] <= SIGNALOUT.DB_MAX_OUTPUT_PORT_TYPE
-SIGNALOUT[3] <= SIGNALOUT.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|projectClock|vectorAND:inst4
-ANDINPUT => SIGNALOUT.OUTPUTSELECT
-ANDINPUT => SIGNALOUT.OUTPUTSELECT
-ANDINPUT => SIGNALOUT.OUTPUTSELECT
-ANDINPUT => SIGNALOUT.OUTPUTSELECT
-SIGNALIN[0] => SIGNALOUT.DATAA
-SIGNALIN[1] => SIGNALOUT.DATAA
-SIGNALIN[2] => SIGNALOUT.DATAA
-SIGNALIN[3] => SIGNALOUT.DATAA
-SIGNALOUT[0] <= SIGNALOUT.DB_MAX_OUTPUT_PORT_TYPE
-SIGNALOUT[1] <= SIGNALOUT.DB_MAX_OUTPUT_PORT_TYPE
-SIGNALOUT[2] <= SIGNALOUT.DB_MAX_OUTPUT_PORT_TYPE
-SIGNALOUT[3] <= SIGNALOUT.DB_MAX_OUTPUT_PORT_TYPE
+b_v[0] <= b_v.DB_MAX_OUTPUT_PORT_TYPE
+b_v[1] <= b_v.DB_MAX_OUTPUT_PORT_TYPE
+b_v[2] <= b_v.DB_MAX_OUTPUT_PORT_TYPE
+b_v[3] <= b_v.DB_MAX_OUTPUT_PORT_TYPE
+b_v[4] <= b_v.DB_MAX_OUTPUT_PORT_TYPE
+b_v[5] <= b_v.DB_MAX_OUTPUT_PORT_TYPE
+b_v[6] <= b_v.DB_MAX_OUTPUT_PORT_TYPE
+disable => b_v.OUTPUTSELECT
+disable => b_v.OUTPUTSELECT
+disable => b_v.OUTPUTSELECT
+disable => b_v.OUTPUTSELECT
+disable => b_v.OUTPUTSELECT
+disable => b_v.OUTPUTSELECT
+disable => b_v.OUTPUTSELECT
 
 
 |projectClock|outputsix:inst2
@@ -197,17 +171,72 @@ S[1] <= temp[1].DB_MAX_OUTPUT_PORT_TYPE
 S[2] <= temp[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
+|projectClock|vectorOR:inst12
+SIGNALIN_0[0] => SIGNALOUT.IN0
+SIGNALIN_0[1] => SIGNALOUT.IN0
+SIGNALIN_0[2] => SIGNALOUT.IN0
+SIGNALIN_0[3] => SIGNALOUT.IN0
+SIGNALIN_1[0] => SIGNALOUT.IN1
+SIGNALIN_1[1] => SIGNALOUT.IN1
+SIGNALIN_1[2] => SIGNALOUT.IN1
+SIGNALIN_1[3] => SIGNALOUT.IN1
+SIGNALIN_2[0] => SIGNALOUT.IN1
+SIGNALIN_2[1] => SIGNALOUT.IN1
+SIGNALIN_2[2] => SIGNALOUT.IN1
+SIGNALIN_2[3] => SIGNALOUT.IN1
+SIGNALIN_3[0] => SIGNALOUT.IN1
+SIGNALIN_3[1] => SIGNALOUT.IN1
+SIGNALIN_3[2] => SIGNALOUT.IN1
+SIGNALIN_3[3] => SIGNALOUT.IN1
+SIGNALIN_4[0] => SIGNALOUT.IN1
+SIGNALIN_4[1] => SIGNALOUT.IN1
+SIGNALIN_4[2] => SIGNALOUT.IN1
+SIGNALIN_4[3] => SIGNALOUT.IN1
+SIGNALIN_5[0] => SIGNALOUT.IN1
+SIGNALIN_5[1] => SIGNALOUT.IN1
+SIGNALIN_5[2] => SIGNALOUT.IN1
+SIGNALIN_5[3] => SIGNALOUT.IN1
+SIGNALOUT[0] <= SIGNALOUT.DB_MAX_OUTPUT_PORT_TYPE
+SIGNALOUT[1] <= SIGNALOUT.DB_MAX_OUTPUT_PORT_TYPE
+SIGNALOUT[2] <= SIGNALOUT.DB_MAX_OUTPUT_PORT_TYPE
+SIGNALOUT[3] <= SIGNALOUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projectClock|vectorAND:inst4
+ANDINPUT => SIGNALOUT.OUTPUTSELECT
+ANDINPUT => SIGNALOUT.OUTPUTSELECT
+ANDINPUT => SIGNALOUT.OUTPUTSELECT
+ANDINPUT => SIGNALOUT.OUTPUTSELECT
+SIGNALIN[0] => SIGNALOUT.DATAA
+SIGNALIN[1] => SIGNALOUT.DATAA
+SIGNALIN[2] => SIGNALOUT.DATAA
+SIGNALIN[3] => SIGNALOUT.DATAA
+SIGNALOUT[0] <= SIGNALOUT.DB_MAX_OUTPUT_PORT_TYPE
+SIGNALOUT[1] <= SIGNALOUT.DB_MAX_OUTPUT_PORT_TYPE
+SIGNALOUT[2] <= SIGNALOUT.DB_MAX_OUTPUT_PORT_TYPE
+SIGNALOUT[3] <= SIGNALOUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |projectClock|counterSecond_1:inst7
 CLK => carry~reg0.CLK
 CLK => temp[0].CLK
 CLK => temp[1].CLK
 CLK => temp[2].CLK
 CLK => temp[3].CLK
+edit => temp[0].ALOAD
+edit => temp[1].ALOAD
+edit => temp[2].ALOAD
+edit => temp[3].ALOAD
+edit => carry~reg0.ENA
 S[0] <= temp[0].DB_MAX_OUTPUT_PORT_TYPE
 S[1] <= temp[1].DB_MAX_OUTPUT_PORT_TYPE
 S[2] <= temp[2].DB_MAX_OUTPUT_PORT_TYPE
 S[3] <= temp[3].DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry~reg0.DB_MAX_OUTPUT_PORT_TYPE
+edit_input[0] => temp[0].ADATA
+edit_input[1] => temp[1].ADATA
+edit_input[2] => temp[2].ADATA
+edit_input[3] => temp[3].ADATA
 
 
 |projectClock|vectorAND:inst6
@@ -259,11 +288,20 @@ CLK => temp[0].CLK
 CLK => temp[1].CLK
 CLK => temp[2].CLK
 CLK => temp[3].CLK
+edit => temp[0].ALOAD
+edit => temp[1].ALOAD
+edit => temp[2].ALOAD
+edit => temp[3].ALOAD
+edit => carry~reg0.ENA
 S[0] <= temp[0].DB_MAX_OUTPUT_PORT_TYPE
 S[1] <= temp[1].DB_MAX_OUTPUT_PORT_TYPE
 S[2] <= temp[2].DB_MAX_OUTPUT_PORT_TYPE
 S[3] <= temp[3].DB_MAX_OUTPUT_PORT_TYPE
 carry <= carry~reg0.DB_MAX_OUTPUT_PORT_TYPE
+edit_input[0] => temp[0].ADATA
+edit_input[1] => temp[1].ADATA
+edit_input[2] => temp[2].ADATA
+edit_input[3] => temp[3].ADATA
 
 
 |projectClock|vectorAND:inst11
@@ -348,5 +386,124 @@ S[0] <= temp[0].DB_MAX_OUTPUT_PORT_TYPE
 S[1] <= temp[1].DB_MAX_OUTPUT_PORT_TYPE
 S[2] <= temp[2].DB_MAX_OUTPUT_PORT_TYPE
 S[3] <= temp[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projectClock|digitRegister:inst21
+digit_in[0] => Mux0.IN4
+digit_in[0] => Mux0.IN5
+digit_in[0] => Mux0.IN6
+digit_in[0] => Mux0.IN7
+digit_in[0] => Mux0.IN8
+digit_in[0] => Mux0.IN9
+digit_in[0] => Mux0.IN10
+digit_in[0] => Mux0.IN11
+digit_in[0] => Mux0.IN12
+digit_in[0] => Mux0.IN13
+digit_in[0] => Mux0.IN14
+digit_in[0] => Mux0.IN15
+digit_in[0] => Mux0.IN16
+digit_in[0] => Mux0.IN17
+digit_in[0] => Mux0.IN18
+digit_in[0] => Mux0.IN19
+digit_in[0] => Mux1.IN19
+digit_in[0] => Mux2.IN19
+digit_in[0] => Mux3.IN19
+digit_in[0] => Mux4.IN19
+digit_in[1] => Mux0.IN3
+digit_in[1] => Mux1.IN3
+digit_in[1] => Mux1.IN4
+digit_in[1] => Mux1.IN5
+digit_in[1] => Mux1.IN6
+digit_in[1] => Mux1.IN7
+digit_in[1] => Mux1.IN8
+digit_in[1] => Mux1.IN9
+digit_in[1] => Mux1.IN10
+digit_in[1] => Mux1.IN11
+digit_in[1] => Mux1.IN12
+digit_in[1] => Mux1.IN13
+digit_in[1] => Mux1.IN14
+digit_in[1] => Mux1.IN15
+digit_in[1] => Mux1.IN16
+digit_in[1] => Mux1.IN17
+digit_in[1] => Mux1.IN18
+digit_in[1] => Mux2.IN18
+digit_in[1] => Mux3.IN18
+digit_in[1] => Mux4.IN18
+digit_in[2] => Mux0.IN2
+digit_in[2] => Mux1.IN2
+digit_in[2] => Mux2.IN2
+digit_in[2] => Mux2.IN3
+digit_in[2] => Mux2.IN4
+digit_in[2] => Mux2.IN5
+digit_in[2] => Mux2.IN6
+digit_in[2] => Mux2.IN7
+digit_in[2] => Mux2.IN8
+digit_in[2] => Mux2.IN9
+digit_in[2] => Mux2.IN10
+digit_in[2] => Mux2.IN11
+digit_in[2] => Mux2.IN12
+digit_in[2] => Mux2.IN13
+digit_in[2] => Mux2.IN14
+digit_in[2] => Mux2.IN15
+digit_in[2] => Mux2.IN16
+digit_in[2] => Mux2.IN17
+digit_in[2] => Mux3.IN17
+digit_in[2] => Mux4.IN17
+digit_in[3] => Mux0.IN1
+digit_in[3] => Mux1.IN1
+digit_in[3] => Mux2.IN1
+digit_in[3] => Mux3.IN1
+digit_in[3] => Mux3.IN2
+digit_in[3] => Mux3.IN3
+digit_in[3] => Mux3.IN4
+digit_in[3] => Mux3.IN5
+digit_in[3] => Mux3.IN6
+digit_in[3] => Mux3.IN7
+digit_in[3] => Mux3.IN8
+digit_in[3] => Mux3.IN9
+digit_in[3] => Mux3.IN10
+digit_in[3] => Mux3.IN11
+digit_in[3] => Mux3.IN12
+digit_in[3] => Mux3.IN13
+digit_in[3] => Mux3.IN14
+digit_in[3] => Mux3.IN15
+digit_in[3] => Mux3.IN16
+digit_in[3] => Mux4.IN16
+digit_out[0] <= temp[0].DB_MAX_OUTPUT_PORT_TYPE
+digit_out[1] <= temp[1].DB_MAX_OUTPUT_PORT_TYPE
+digit_out[2] <= temp[2].DB_MAX_OUTPUT_PORT_TYPE
+digit_out[3] <= temp[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projectClock|keypadDecoder:inst17
+de_in[0] => Mux0.IN10
+de_in[0] => Mux1.IN10
+de_in[0] => Mux2.IN10
+de_in[0] => Mux3.IN10
+de_in[1] => Mux0.IN9
+de_in[1] => Mux1.IN9
+de_in[1] => Mux2.IN9
+de_in[1] => Mux3.IN9
+de_in[2] => Mux0.IN8
+de_in[2] => Mux1.IN8
+de_in[2] => Mux2.IN8
+de_in[2] => Mux3.IN8
+keypad_0 => number_out_temp.OUTPUTSELECT
+keypad_0 => number_out_temp.OUTPUTSELECT
+keypad_0 => number_out_temp.OUTPUTSELECT
+keypad_0 => number_out_temp.OUTPUTSELECT
+keypad_0 => Mux1.IN5
+keypad_0 => Mux2.IN6
+keypad_0 => number_out_temp.OUTPUTSELECT
+keypad_1 => number_out_temp.OUTPUTSELECT
+keypad_1 => number_out_temp.DATAA
+keypad_1 => number_out_temp.OUTPUTSELECT
+keypad_2 => number_out_temp.DATAA
+keypad_2 => number_out_temp.DATAA
+clk => ~NO_FANOUT~
+number_out[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+number_out[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+number_out[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+number_out[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
