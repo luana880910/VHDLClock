@@ -5,14 +5,16 @@ use ieee.std_logic_1164.all;
 entity vectortest is
 port(
 	  a_v: in std_logic_vector(3 downto 0);
-	  b_v: out std_logic_vector(6 downto 0));
+	  b_v: out std_logic_vector(6 downto 0);
+	  disable: in std_logic);
 	  
 end vectortest;
 
 architecture a of vectortest is
+signal temp: std_logic_vector(6 downto 0);
 begin
 	with a_v select
-	b_v <= "1111110" when "0000",
+	temp <= "1111110" when "0000",
 			 "0110000" when "0001",
 			 "1101101" when "0010",
 			 "1111001" when "0011",
@@ -29,5 +31,7 @@ begin
 			 "1001111" when "1110",
 			 "1000111" when "1111",
 			 "0000000" when others;
-			 
+	with disable select
+	b_v <= temp when '1',
+			"0000000" when '0';
 end a;

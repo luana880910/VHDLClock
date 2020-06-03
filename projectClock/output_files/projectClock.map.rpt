@@ -1,5 +1,5 @@
 Analysis & Synthesis report for projectClock
-Mon May 25 12:00:29 2020
+Fri May 29 15:19:56 2020
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -13,10 +13,12 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -42,14 +44,14 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +---------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon May 25 12:00:28 2020      ;
+; Analysis & Synthesis Status     ; Successful - Fri May 29 15:19:56 2020      ;
 ; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                   ; projectClock                               ;
 ; Top-level Entity Name           ; projectClock                               ;
 ; Family                          ; Cyclone V                                  ;
 ; Logic utilization (in ALMs)     ; N/A                                        ;
-; Total registers                 ; 46                                         ;
-; Total pins                      ; 11                                         ;
+; Total registers                 ; 57                                         ;
+; Total pins                      ; 24                                         ;
 ; Total virtual pins              ; 0                                          ;
 ; Total block memory bits         ; 0                                          ;
 ; Total DSP Blocks                ; 0                                          ;
@@ -160,24 +162,26 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                        ;
-+----------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                        ; Library ;
-+----------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------------+---------+
-; projectClock.bdf                 ; yes             ; User Block Diagram/Schematic File        ; //vmware-host/Shared Folders/VHDL/projectClock/projectClock.bdf     ;         ;
-; counterSecond_1.vhd              ; yes             ; User VHDL File                           ; //vmware-host/Shared Folders/VHDL/projectClock/counterSecond_1.vhd  ;         ;
-; display.vhd                      ; yes             ; User VHDL File                           ; //vmware-host/Shared Folders/VHDL/projectClock/display.vhd          ;         ;
-; outputsix.vhd                    ; yes             ; User VHDL File                           ; //vmware-host/Shared Folders/VHDL/projectClock/outputsix.vhd        ;         ;
-; counterSecond_10.vhd             ; yes             ; User VHDL File                           ; //vmware-host/Shared Folders/VHDL/projectClock/counterSecond_10.vhd ;         ;
-; vectorAND.vhd                    ; yes             ; User VHDL File                           ; //vmware-host/Shared Folders/VHDL/projectClock/vectorAND.vhd        ;         ;
-; vectorOR.vhd                     ; yes             ; User VHDL File                           ; //vmware-host/Shared Folders/VHDL/projectClock/vectorOR.vhd         ;         ;
-; counterHour_1.vhd                ; yes             ; User VHDL File                           ; //vmware-host/Shared Folders/VHDL/projectClock/counterHour_1.vhd    ;         ;
-; counterHour_10.vhd               ; yes             ; User VHDL File                           ; //vmware-host/Shared Folders/VHDL/projectClock/counterHour_10.vhd   ;         ;
-; vectortest.vhd                   ; yes             ; Auto-Found VHDL File                     ; //vmware-host/Shared Folders/VHDL/projectClock/vectortest.vhd       ;         ;
-; clk_gen.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; //vmware-host/Shared Folders/VHDL/projectClock/clk_gen.bdf          ;         ;
-; div10_t.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; //vmware-host/Shared Folders/VHDL/projectClock/div10_t.bdf          ;         ;
-+----------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                        ;
++----------------------------------+-----------------+------------------------------------------+-----------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                        ; Library ;
++----------------------------------+-----------------+------------------------------------------+-----------------------------------------------------+---------+
+; projectClock.bdf                 ; yes             ; User Block Diagram/Schematic File        ; Z:/VHDL/VHDLClock/projectClock/projectClock.bdf     ;         ;
+; counterSecond_1.vhd              ; yes             ; User VHDL File                           ; Z:/VHDL/VHDLClock/projectClock/counterSecond_1.vhd  ;         ;
+; display.vhd                      ; yes             ; User VHDL File                           ; Z:/VHDL/VHDLClock/projectClock/display.vhd          ;         ;
+; outputsix.vhd                    ; yes             ; User VHDL File                           ; Z:/VHDL/VHDLClock/projectClock/outputsix.vhd        ;         ;
+; counterSecond_10.vhd             ; yes             ; User VHDL File                           ; Z:/VHDL/VHDLClock/projectClock/counterSecond_10.vhd ;         ;
+; vectorAND.vhd                    ; yes             ; User VHDL File                           ; Z:/VHDL/VHDLClock/projectClock/vectorAND.vhd        ;         ;
+; vectorOR.vhd                     ; yes             ; User VHDL File                           ; Z:/VHDL/VHDLClock/projectClock/vectorOR.vhd         ;         ;
+; counterHour_1.vhd                ; yes             ; User VHDL File                           ; Z:/VHDL/VHDLClock/projectClock/counterHour_1.vhd    ;         ;
+; counterHour_10.vhd               ; yes             ; User VHDL File                           ; Z:/VHDL/VHDLClock/projectClock/counterHour_10.vhd   ;         ;
+; keypadDecoder.vhd                ; yes             ; User VHDL File                           ; Z:/VHDL/VHDLClock/projectClock/keypadDecoder.vhd    ;         ;
+; digitRegister.vhd                ; yes             ; User VHDL File                           ; Z:/VHDL/VHDLClock/projectClock/digitRegister.vhd    ;         ;
+; vectortest.vhd                   ; yes             ; Auto-Found VHDL File                     ; Z:/VHDL/VHDLClock/projectClock/vectortest.vhd       ;         ;
+; clk_gen.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; Z:/VHDL/VHDLClock/projectClock/clk_gen.bdf          ;         ;
+; div10_t.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; Z:/VHDL/VHDLClock/projectClock/div10_t.bdf          ;         ;
++----------------------------------+-----------------+------------------------------------------+-----------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------------+
@@ -185,23 +189,23 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+----------------------+
 ; Resource                                    ; Usage                ;
 +---------------------------------------------+----------------------+
-; Estimate of Logic utilization (ALMs needed) ; 35                   ;
+; Estimate of Logic utilization (ALMs needed) ; 51                   ;
 ;                                             ;                      ;
-; Combinational ALUT usage for logic          ; 62                   ;
-;     -- 7 input functions                    ; 2                    ;
-;     -- 6 input functions                    ; 5                    ;
-;     -- 5 input functions                    ; 8                    ;
-;     -- 4 input functions                    ; 21                   ;
-;     -- <=3 input functions                  ; 26                   ;
+; Combinational ALUT usage for logic          ; 83                   ;
+;     -- 7 input functions                    ; 1                    ;
+;     -- 6 input functions                    ; 18                   ;
+;     -- 5 input functions                    ; 7                    ;
+;     -- 4 input functions                    ; 18                   ;
+;     -- <=3 input functions                  ; 39                   ;
 ;                                             ;                      ;
-; Dedicated logic registers                   ; 46                   ;
+; Dedicated logic registers                   ; 57                   ;
 ;                                             ;                      ;
-; I/O pins                                    ; 11                   ;
+; I/O pins                                    ; 24                   ;
 ; Total DSP Blocks                            ; 0                    ;
-; Maximum fan-out node                        ; display:inst|temp[2] ;
-; Maximum fan-out                             ; 12                   ;
-; Total fan-out                               ; 348                  ;
-; Average fan-out                             ; 2.68                 ;
+; Maximum fan-out node                        ; display:inst|temp[0] ;
+; Maximum fan-out                             ; 27                   ;
+; Total fan-out                               ; 477                  ;
+; Average fan-out                             ; 2.54                 ;
 +---------------------------------------------+----------------------+
 
 
@@ -210,11 +214,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------+-------------------+--------------+-------------------+------------+------+--------------+-------------------------------------------+--------------+
 ; Compilation Hierarchy Node  ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                       ; Library Name ;
 +-----------------------------+-------------------+--------------+-------------------+------------+------+--------------+-------------------------------------------+--------------+
-; |projectClock               ; 62 (0)            ; 46 (0)       ; 0                 ; 0          ; 11   ; 0            ; |projectClock                             ; work         ;
-;    |clk_gen:inst1|          ; 16 (0)            ; 16 (0)       ; 0                 ; 0          ; 0    ; 0            ; |projectClock|clk_gen:inst1               ; work         ;
+; |projectClock               ; 83 (0)            ; 57 (0)       ; 0                 ; 0          ; 24   ; 0            ; |projectClock                             ; work         ;
+;    |clk_gen:inst1|          ; 27 (0)            ; 27 (0)       ; 0                 ; 0          ; 0    ; 0            ; |projectClock|clk_gen:inst1               ; work         ;
 ;       |div10_t:inst1|       ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|clk_gen:inst1|div10_t:inst1 ; work         ;
 ;       |div10_t:inst2|       ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|clk_gen:inst1|div10_t:inst2 ; work         ;
 ;       |div10_t:inst3|       ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|clk_gen:inst1|div10_t:inst3 ; work         ;
+;       |div10_t:inst4|       ; 3 (3)             ; 3 (3)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|clk_gen:inst1|div10_t:inst4 ; work         ;
+;       |div10_t:inst5|       ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|clk_gen:inst1|div10_t:inst5 ; work         ;
+;       |div10_t:inst6|       ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|clk_gen:inst1|div10_t:inst6 ; work         ;
 ;       |div10_t:inst|        ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|clk_gen:inst1|div10_t:inst  ; work         ;
 ;    |counterHour_10:inst15|  ; 2 (2)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|counterHour_10:inst15       ; work         ;
 ;    |counterHour_1:inst13|   ; 7 (7)             ; 7 (7)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|counterHour_1:inst13        ; work         ;
@@ -222,11 +229,27 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;    |counterSecond_10:inst9| ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|counterSecond_10:inst9      ; work         ;
 ;    |counterSecond_1:inst7|  ; 5 (5)             ; 5 (5)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|counterSecond_1:inst7       ; work         ;
 ;    |counterSecond_1:inst8|  ; 5 (5)             ; 5 (5)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|counterSecond_1:inst8       ; work         ;
-;    |display:inst|           ; 2 (2)             ; 3 (3)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|display:inst                ; work         ;
+;    |digitRegister:inst21|   ; 5 (5)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|digitRegister:inst21        ; work         ;
+;    |display:inst|           ; 3 (3)             ; 3 (3)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|display:inst                ; work         ;
+;    |keypadDecoder:inst17|   ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|keypadDecoder:inst17        ; work         ;
 ;    |vectorOR:inst12|        ; 10 (10)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|vectorOR:inst12             ; work         ;
 ;    |vectortest:inst3|       ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|vectortest:inst3            ; work         ;
 +-----------------------------+-------------------+--------------+-------------------+------------+------+--------------+-------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                     ;
++----------------------------------------------------+---------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal       ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------------+------------------------+
+; digitRegister:inst21|temp[3]                       ; digitRegister:inst21|Mux3 ; yes                    ;
+; digitRegister:inst21|temp[2]                       ; digitRegister:inst21|Mux3 ; yes                    ;
+; digitRegister:inst21|temp[1]                       ; digitRegister:inst21|Mux3 ; yes                    ;
+; digitRegister:inst21|temp[0]                       ; digitRegister:inst21|Mux3 ; yes                    ;
+; Number of user-specified and inferred latches = 4  ;                           ;                        ;
++----------------------------------------------------+---------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +--------------------------------------------------------------------------------+
@@ -237,7 +260,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; counterHour_10:inst15|temp[2,3]       ; Stuck at GND due to stuck port data_in ;
 ; counterSecond_10:inst9|temp[3]        ; Stuck at GND due to stuck port data_in ;
 ; counterSecond_10:inst5|temp[3]        ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 4 ;                                        ;
+; clk_gen:inst1|div10_t:inst4|5         ; Merged with display:inst|temp[0]       ;
+; Total Number of Removed Registers = 5 ;                                        ;
 +---------------------------------------+----------------------------------------+
 
 
@@ -246,7 +270,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 46    ;
+; Total registers                              ; 57    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -254,6 +278,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+; 1:1                ; 4 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |projectClock|digitRegister:inst21|Mux3 ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |projectClock|keypadDecoder:inst17|Mux0 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
 
 
 +-------------------------------+
@@ -271,7 +305,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Mon May 25 12:00:20 2020
+    Info: Processing started: Fri May 29 15:19:47 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off projectClock -c projectClock
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file projectclock.bdf
@@ -300,15 +334,22 @@ Info (12021): Found 2 design units, including 1 entities, in source file counter
 Info (12021): Found 2 design units, including 1 entities, in source file counterhour_10.vhd
     Info (12022): Found design unit 1: counterHour_10-a
     Info (12023): Found entity 1: counterHour_10
+Info (12021): Found 2 design units, including 1 entities, in source file keypaddecoder.vhd
+    Info (12022): Found design unit 1: keypadDecoder-a
+    Info (12023): Found entity 1: keypadDecoder
+Info (12021): Found 1 design units, including 1 entities, in source file keypaddecoderwithdebounce.bdf
+    Info (12023): Found entity 1: keypadDecoderWithdebounce
+Info (12021): Found 2 design units, including 1 entities, in source file digitregister.vhd
+    Info (12022): Found design unit 1: digitRegister-a
+    Info (12023): Found entity 1: digitRegister
 Info (12127): Elaborating entity "projectClock" for the top level hierarchy
+Warning (275011): Block or symbol "counterSecond_10" of instance "inst5" overlaps another block or symbol
+Warning (275011): Block or symbol "VCC" of instance "inst18" overlaps another block or symbol
+Warning (275009): Pin "edit_pin" not connected
 Warning (12125): Using design file vectortest.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: vectortest-a
     Info (12023): Found entity 1: vectortest
 Info (12128): Elaborating entity "vectortest" for hierarchy "vectortest:inst3"
-Info (12128): Elaborating entity "vectorOR" for hierarchy "vectorOR:inst12"
-Info (12128): Elaborating entity "vectorAND" for hierarchy "vectorAND:inst4"
-Warning (10492): VHDL Process Statement warning at vectorAND.vhd(15): signal "SIGNALIN" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at vectorAND.vhd(17): signal "SIGNALIN" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "outputsix" for hierarchy "outputsix:inst2"
 Warning (10492): VHDL Process Statement warning at outputsix.vhd(15): signal "SIN" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (12125): Using design file clk_gen.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
@@ -318,21 +359,58 @@ Warning (12125): Using design file div10_t.bdf, which is not specified as a desi
     Info (12023): Found entity 1: div10_t
 Info (12128): Elaborating entity "div10_t" for hierarchy "clk_gen:inst1|div10_t:inst3"
 Info (12128): Elaborating entity "display" for hierarchy "display:inst"
+Info (12128): Elaborating entity "vectorOR" for hierarchy "vectorOR:inst12"
+Info (12128): Elaborating entity "vectorAND" for hierarchy "vectorAND:inst4"
+Warning (10492): VHDL Process Statement warning at vectorAND.vhd(15): signal "SIGNALIN" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at vectorAND.vhd(17): signal "SIGNALIN" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "counterSecond_1" for hierarchy "counterSecond_1:inst7"
+Warning (10492): VHDL Process Statement warning at counterSecond_1.vhd(17): signal "edit_input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "counterSecond_10" for hierarchy "counterSecond_10:inst5"
 Info (12128): Elaborating entity "counterHour_1" for hierarchy "counterHour_1:inst13"
 Info (12128): Elaborating entity "counterHour_10" for hierarchy "counterHour_10:inst15"
+Info (12128): Elaborating entity "digitRegister" for hierarchy "digitRegister:inst21"
+Warning (10492): VHDL Process Statement warning at digitRegister.vhd(15): signal "temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at digitRegister.vhd(12): inferring latch(es) for signal or variable "temp", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "temp[0]" at digitRegister.vhd(12)
+Info (10041): Inferred latch for "temp[1]" at digitRegister.vhd(12)
+Info (10041): Inferred latch for "temp[2]" at digitRegister.vhd(12)
+Info (10041): Inferred latch for "temp[3]" at digitRegister.vhd(12)
+Info (12128): Elaborating entity "keypadDecoder" for hierarchy "keypadDecoder:inst17"
+Warning (10492): VHDL Process Statement warning at keypadDecoder.vhd(17): signal "keypad_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at keypadDecoder.vhd(18): signal "keypad_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at keypadDecoder.vhd(19): signal "keypad_2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at keypadDecoder.vhd(23): signal "keypad_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at keypadDecoder.vhd(24): signal "keypad_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at keypadDecoder.vhd(25): signal "keypad_2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at keypadDecoder.vhd(29): signal "keypad_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at keypadDecoder.vhd(30): signal "keypad_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at keypadDecoder.vhd(31): signal "keypad_2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at keypadDecoder.vhd(35): signal "keypad_0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at keypadDecoder.vhd(36): signal "keypad_1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at keypadDecoder.vhd(37): signal "keypad_2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (13012): Latch digitRegister:inst21|temp[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal display:inst|temp[1]
+Warning (13012): Latch digitRegister:inst21|temp[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal keypad_0
+Warning (13012): Latch digitRegister:inst21|temp[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal keypad_2
+Warning (13012): Latch digitRegister:inst21|temp[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal display:inst|temp[2]
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "COM" is stuck at VCC
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 74 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 10 output pins
-    Info (21061): Implemented 63 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4719 megabytes
-    Info: Processing ended: Mon May 25 12:00:29 2020
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "edit_pin"
+Info (21057): Implemented 107 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 19 output pins
+    Info (21061): Implemented 83 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 37 warnings
+    Info: Peak virtual memory: 4718 megabytes
+    Info: Processing ended: Fri May 29 15:19:56 2020
     Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Total CPU time (on all processors): 00:00:09
 
 

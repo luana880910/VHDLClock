@@ -1,0 +1,28 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity keypadDecoder is
+port(de_in : in std_logic_vector(2 downto 0);
+		keypad_0,keypad_1,keypad_2:in std_logic;
+		number_out:out std_logic_vector(3 downto 0));
+end keypadDecoder;
+
+architecture a of keypadDecoder is
+signal keypad_0_not,keypad_1_not,keypad_2_not: std_logic; 
+begin
+	keypad_0_not <= not keypad_0;
+	keypad_1_not <= not keypad_1;
+	keypad_2_not <= not keypad_2;
+
+	process
+	
+		case de_in is
+			when "000" =>
+				if keypad_0 = '0' then number_out <= "0001";
+				else if keypad_1 = '0' then number_out <= "0010";
+				else then number_out <= "0011";
+			
+			
+		end case;
+	end process
+end a;

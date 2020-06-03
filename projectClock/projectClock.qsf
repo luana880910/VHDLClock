@@ -46,8 +46,8 @@ set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
-set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
-set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
 set_global_assignment -name BDF_FILE projectClock.bdf
 set_global_assignment -name VHDL_FILE counterSecond_1.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
@@ -72,4 +72,19 @@ set_global_assignment -name VHDL_FILE vectorAND.vhd
 set_global_assignment -name VHDL_FILE vectorOR.vhd
 set_global_assignment -name VHDL_FILE counterHour_1.vhd
 set_global_assignment -name VHDL_FILE counterHour_10.vhd
+set_location_assignment PIN_AA13 -to keypad_0
+set_location_assignment PIN_AB12 -to keypad_1
+set_location_assignment PIN_Y16 -to keypad_2
+set_global_assignment -name VHDL_FILE keypadDecoder.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name EDA_NETLIST_WRITER_OUTPUT_DIR "Z:/VHDL/VHDLClock/projectClock/simulation/qsim/" -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
+set_location_assignment PIN_N21 -to COM
+set_location_assignment PIN_E2 -to ppop[3]
+set_location_assignment PIN_D3 -to ppop[2]
+set_location_assignment PIN_C2 -to ppop[1]
+set_location_assignment PIN_C1 -to ppop[0]
+set_global_assignment -name BDF_FILE keypadDecoderWithdebounce.bdf
+set_location_assignment PIN_AA2 -to testpin
+set_global_assignment -name VHDL_FILE digitRegister.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dZ:\VHDL\VHDLClock\projectClock\simulation\qsim
+vprojectClock
+Z1 IY?lQYTIT4YeLE4jH;Af7f3
+Z2 VX=XRQF;f<47=PNZXF11[82
+Z3 dZ:\VHDL\VHDLClock\projectClock\simulation\qsim
+Z4 w1590736972
+Z5 8projectClock.vo
+Z6 FprojectClock.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|projectClock.vo|
+Z9 o-work work -O0
+Z10 nproject@clock
+!i10b 1
+Z11 !s100 e:R;Df_amHKGJFT?36`fj0
+!s85 0
+Z12 !s108 1590736973.396000
+Z13 !s107 projectClock.vo|
+!s101 -O0
+vprojectClock_vlg_check_tst
+!i10b 1
+Z14 !s100 gSY@M0JX;k<b^OdJ4[dFj0
+Z15 Ii^<?S<FiBOcf0H]I1^_mQ0
+Z16 VN@H0;8?d^c0XI=Bjj19a]1
+R3
+Z17 w1590736969
+Z18 8Waveform.vwf.vt
+Z19 FWaveform.vwf.vt
+L0 65
+R7
+r1
+!s85 0
+31
+Z20 !s108 1590736973.661000
+Z21 !s107 Waveform.vwf.vt|
+Z22 !s90 -work|work|Waveform.vwf.vt|
+!s101 -O0
+R9
+Z23 nproject@clock_vlg_check_tst
+vprojectClock_vlg_sample_tst
+!i10b 1
+Z24 !s100 znJ8V9fJCk@UcQHCf?C`?3
+Z25 I`hX=8:fcaRaE_OF0XbX::1
+Z26 V2AWjg?BBlUhPR?8NMh^YU1
+R3
+R17
+R18
+R19
+L0 29
+R7
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R9
+Z27 nproject@clock_vlg_sample_tst
+vprojectClock_vlg_vec_tst
+!i10b 1
+Z28 !s100 l[Oz4UVQPPFHnoHhZ[:iD0
+Z29 I>NAV5DJdH[g[EQm7NlTD32
+Z30 VMgCMDH9Clk7nJNjM:Kah13
+R3
+R17
+R18
+R19
+Z31 L0 308
+R7
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R9
+Z32 nproject@clock_vlg_vec_tst
