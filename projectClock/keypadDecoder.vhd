@@ -8,7 +8,7 @@ port(de_in : in std_logic_vector(2 downto 0);
 end keypadDecoder;
 
 architecture a of keypadDecoder is
-signal number_out_temp: std_logic_vector(3 downto 0):= "0000";
+signal number_out_temp: std_logic_vector(3 downto 0);
 begin
 	process(de_in)
 	begin

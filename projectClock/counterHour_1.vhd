@@ -3,9 +3,10 @@ use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
 
 entity counterHour_1 is 
-port(carry: in std_logic;
+port(carry,edit: in std_logic;
 	S:out std_logic_vector(3 downto 0);
-	carry_out:out std_logic);
+	carry_out:out std_logic;
+	edit_in:in std_logic_vector(3 downto 0));
 
 end counterHour_1;
 
@@ -15,6 +16,9 @@ signal K: std_logic_vector(1 downto 0);
 begin
 	process(carry)
 	begin
+	if	edit = '1' then
+			temp <= edit_in;
+	else
 		if carry'event and carry = '1' then
 			case temp is
 				when "0000" =>
@@ -57,6 +61,7 @@ begin
 					temp <= "0000";
 			end case;
 		end if;
+	end if;
 	end process;
 	S <= temp;
 	end a;

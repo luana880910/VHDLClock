@@ -7,7 +7,7 @@ port(digit_in:in std_logic_vector(3 downto 0);
 end digitRegister;
 
 architecture a of digitRegister is
-signal temp:std_logic_vector(3 downto 0);
+signal temp:std_logic_vector(3 downto 0):=digit_in;
 begin
 	process(digit_in)
 	begin

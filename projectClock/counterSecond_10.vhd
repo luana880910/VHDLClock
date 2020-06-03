@@ -2,18 +2,22 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity counterSecond_10 is 
-port(carry: in std_logic;
+port(carry,edit: in std_logic;
 	S:out std_logic_vector(3 downto 0);
-	carry_out:out std_logic);
+	carry_out:out std_logic;
+	edit_input:in std_logic_vector(3 downto 0));
 
 end counterSecond_10;
 
 architecture a of counterSecond_10 is
 signal temp: std_logic_vector(3 downto 0);
 begin
-	process(carry)
+	process(carry,edit)
 	begin
-		if carry'event and carry = '1' then
+		if	edit = '1' then
+			temp <= edit_input;
+		else
+			if carry'event and carry = '1' then
 			case temp is
 				when "0000" =>
 					temp <= "0001";
@@ -33,10 +37,10 @@ begin
 				when "0101" =>
 					temp <= "0000";
 					carry_out <= '1';
-					
 				when others =>
 					temp <= "0000";
-			end case;
+				end case;
+			end if;
 		end if;
 	end process;
 	S <= temp;

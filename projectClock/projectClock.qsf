@@ -48,12 +48,9 @@ set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
-set_global_assignment -name BDF_FILE projectClock.bdf
-set_global_assignment -name VHDL_FILE counterSecond_1.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name VHDL_FILE display.vhd
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
 set_location_assignment PIN_AB7 -to b_v[6]
 set_location_assignment PIN_AA7 -to b_v[5]
@@ -66,25 +63,31 @@ set_location_assignment PIN_W16 -to clk
 set_location_assignment PIN_AA12 -to S[2]
 set_location_assignment PIN_AB11 -to S[1]
 set_location_assignment PIN_AB10 -to S[0]
+set_global_assignment -name EDA_NETLIST_WRITER_OUTPUT_DIR "Z:/VHDL/VHDLClock/projectClock/simulation/qsim/" -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
+set_location_assignment PIN_N21 -to COM
+set_global_assignment -name VHDL_FILE shift_clock.vhd
+set_global_assignment -name VHDL_FILE buzzer.vhd
+set_global_assignment -name VHDL_FILE demultiplexer3to6.vhd
+set_global_assignment -name BDF_FILE projectClock.bdf
+set_global_assignment -name VHDL_FILE counterSecond_1.vhd
+set_global_assignment -name VHDL_FILE display.vhd
 set_global_assignment -name VHDL_FILE outputsix.vhd
 set_global_assignment -name VHDL_FILE counterSecond_10.vhd
 set_global_assignment -name VHDL_FILE vectorAND.vhd
 set_global_assignment -name VHDL_FILE vectorOR.vhd
 set_global_assignment -name VHDL_FILE counterHour_1.vhd
 set_global_assignment -name VHDL_FILE counterHour_10.vhd
-set_location_assignment PIN_AA13 -to keypad_0
-set_location_assignment PIN_AB12 -to keypad_1
-set_location_assignment PIN_Y16 -to keypad_2
 set_global_assignment -name VHDL_FILE keypadDecoder.vhd
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
-set_global_assignment -name EDA_NETLIST_WRITER_OUTPUT_DIR "Z:/VHDL/VHDLClock/projectClock/simulation/qsim/" -section_id eda_simulation
-set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
-set_location_assignment PIN_N21 -to COM
-set_location_assignment PIN_E2 -to ppop[3]
-set_location_assignment PIN_D3 -to ppop[2]
-set_location_assignment PIN_C2 -to ppop[1]
-set_location_assignment PIN_C1 -to ppop[0]
 set_global_assignment -name BDF_FILE keypadDecoderWithdebounce.bdf
-set_location_assignment PIN_AA2 -to testpin
 set_global_assignment -name VHDL_FILE digitRegister.vhd
+set_global_assignment -name BDF_FILE register.bdf
+set_global_assignment -name VHDL_FILE register_saver.vhd
+set_location_assignment PIN_C16 -to edit_pin
+set_global_assignment -name VHDL_FILE vector_gndvhd.vhd
+set_location_assignment PIN_AA15 -to editstart
+set_location_assignment PIN_E2 -to RRRR[2]
+set_location_assignment PIN_D3 -to RRRR[1]
+set_location_assignment PIN_C2 -to RRRR[0]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
