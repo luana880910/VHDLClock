@@ -5,7 +5,6 @@ use ieee.std_logic_unsigned.all;
 
 entity music_02 is
 port (
-	RESET: in std_logic;
 	CLK: in std_logic;
 	BEEP:out std_logic
 );

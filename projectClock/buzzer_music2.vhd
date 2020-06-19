@@ -12,7 +12,7 @@ end buzzer_music2;
 
 architecture arch of buzzer_music2 is
 signal PULSE: std_logic;
-signal PITCH: integer range 0 to 8;
+signal PITCH: integer range 0 to 9;
 signal BEAT ,LEN: integer range 0 to 16;
 signal COUNT: integer range 0 to 127;
 signal FREQ: integer range 0 to 127;
@@ -36,8 +36,10 @@ begin
 		FREQ <= 32768/880;
 		when 7 =>
 		FREQ <= 32768/988;
-		when 8 =>
-		FREQ <= 32768/1043;
+		when 8 => --高音do
+		FREQ <= 32768/1046;
+		when 9 => --低音si
+		FREQ <= 32768/494;
 		when others =>
 		FREQ <= 0;
 	end case;
@@ -51,14 +53,14 @@ begin
 					COUNT <= 0;
 				end if;
 		end if;
-		if DIVIDER >= 4915 then
+		if DIVIDER >= 3686 then
 			DIVIDER <= 0;
 			if LEN < BEAT then
 				LEN <= LEN + 1;
 			else
 				LEN <= 0;
 				INDEX <= INDEX +1;
-				if INDEX > 108 then
+				if INDEX > 140 then
 					INDEX <= 0;
 				end if;
 			end if;
@@ -90,7 +92,7 @@ begin
 				PITCH <= 0;
 				BEAT <= 0;
 			when 6 =>
-				PITCH <= 1;
+				PITCH <= 8;
 				BEAT <= 2;
 			when 7 =>
 				PITCH <= 0;
@@ -201,7 +203,7 @@ begin
 				PITCH <= 0;
 				BEAT <= 0;
 			when 43 =>
-				PITCH <= 1;
+				PITCH <= 8;
 				BEAT <= 2;
 			when 44 =>
 				PITCH <= 0;
@@ -309,7 +311,7 @@ begin
 				PITCH <= 0;
 				BEAT <= 0;
 			when 79 =>
-				PITCH <= 1;
+				PITCH <= 8;
 				BEAT <= 2;
 			when 80 =>
 				PITCH <= 0;
@@ -477,10 +479,10 @@ begin
 				PITCH <= 0;
 				BEAT <= 0;
 			when 135 =>
-				PITCH <= 7;
+				PITCH <= 9;
 				BEAT <= 1;
 			when 136 =>
-				PITCH <= 7;
+				PITCH <= 9;
 				BEAT <= 2;
 			when 137 =>
 				PITCH <= 0;
