@@ -50,7 +50,7 @@ LEDVECTOR[11] <= vectorOR2:inst63.led_and_out[11]
 
 
 |projectClock|Test:inst62
-BEEP <= inst19.DB_MAX_OUTPUT_PORT_TYPE
+BEEP <= inst20.DB_MAX_OUTPUT_PORT_TYPE
 clk => div10_t:inst3.CLK
 editinput => musicselector:inst98.edit
 music_select[0] => musicselector:inst98.vectorinput[0]
@@ -59,7 +59,7 @@ music_select[2] => musicselector:inst98.vectorinput[2]
 music_select[3] => musicselector:inst98.vectorinput[3]
 
 
-|projectClock|Test:inst62|alarm_clock:inst6
+|projectClock|Test:inst62|DLBB_simple:inst5
 CLK => INDEX[0].CLK
 CLK => INDEX[1].CLK
 CLK => INDEX[2].CLK
@@ -71,6 +71,8 @@ CLK => INDEX[7].CLK
 CLK => LEN[0].CLK
 CLK => LEN[1].CLK
 CLK => LEN[2].CLK
+CLK => LEN[3].CLK
+CLK => LEN[4].CLK
 CLK => DIVIDER[0].CLK
 CLK => DIVIDER[1].CLK
 CLK => DIVIDER[2].CLK
@@ -94,7 +96,7 @@ CLK => COUNT[3].CLK
 CLK => COUNT[4].CLK
 CLK => COUNT[5].CLK
 CLK => COUNT[6].CLK
-BEEP <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
+BEEP <= Mux14.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |projectClock|Test:inst62|CLKtest:inst1
@@ -155,6 +157,44 @@ music6 <= music6~reg0.DB_MAX_OUTPUT_PORT_TYPE
 music7 <= music7~reg0.DB_MAX_OUTPUT_PORT_TYPE
 music8 <= music8~reg0.DB_MAX_OUTPUT_PORT_TYPE
 music9 <= music9~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projectClock|Test:inst62|alarm_clock:inst6
+CLK => INDEX[0].CLK
+CLK => INDEX[1].CLK
+CLK => INDEX[2].CLK
+CLK => INDEX[3].CLK
+CLK => INDEX[4].CLK
+CLK => INDEX[5].CLK
+CLK => INDEX[6].CLK
+CLK => INDEX[7].CLK
+CLK => LEN[0].CLK
+CLK => LEN[1].CLK
+CLK => LEN[2].CLK
+CLK => DIVIDER[0].CLK
+CLK => DIVIDER[1].CLK
+CLK => DIVIDER[2].CLK
+CLK => DIVIDER[3].CLK
+CLK => DIVIDER[4].CLK
+CLK => DIVIDER[5].CLK
+CLK => DIVIDER[6].CLK
+CLK => DIVIDER[7].CLK
+CLK => DIVIDER[8].CLK
+CLK => DIVIDER[9].CLK
+CLK => DIVIDER[10].CLK
+CLK => DIVIDER[11].CLK
+CLK => DIVIDER[12].CLK
+CLK => DIVIDER[13].CLK
+CLK => DIVIDER[14].CLK
+CLK => PULSE.CLK
+CLK => COUNT[0].CLK
+CLK => COUNT[1].CLK
+CLK => COUNT[2].CLK
+CLK => COUNT[3].CLK
+CLK => COUNT[4].CLK
+CLK => COUNT[5].CLK
+CLK => COUNT[6].CLK
+BEEP <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |projectClock|Test:inst62|buzzer_music0:inst2

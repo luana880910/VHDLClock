@@ -1,5 +1,5 @@
 Analysis & Synthesis report for projectClock
-Tue Jun 23 22:07:47 2020
+Tue Jun 23 22:45:15 2020
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -45,7 +45,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +---------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Jun 23 22:07:46 2020      ;
+; Analysis & Synthesis Status     ; Successful - Tue Jun 23 22:45:15 2020      ;
 ; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                   ; projectClock                               ;
 ; Top-level Entity Name           ; projectClock                               ;
@@ -187,9 +187,10 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; led_and2.vhd                     ; yes             ; User VHDL File                           ; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/led_and2.vhd          ;         ;
 ; vectorOR2.vhd                    ; yes             ; User VHDL File                           ; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/vectorOR2.vhd         ;         ;
 ; test.bdf                         ; yes             ; Auto-Found Block Diagram/Schematic File  ; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/test.bdf              ;         ;
-; alarm_clock.vhd                  ; yes             ; Auto-Found VHDL File                     ; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/alarm_clock.vhd       ;         ;
+; dlbb_simple.vhd                  ; yes             ; Auto-Found VHDL File                     ; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/dlbb_simple.vhd       ;         ;
 ; clktest.vhd                      ; yes             ; Auto-Found VHDL File                     ; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/clktest.vhd           ;         ;
 ; div10_t.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/div10_t.bdf           ;         ;
+; alarm_clock.vhd                  ; yes             ; Auto-Found VHDL File                     ; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/alarm_clock.vhd       ;         ;
 ; buzzer_music0.vhd                ; yes             ; Auto-Found VHDL File                     ; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/buzzer_music0.vhd     ;         ;
 ; buzzer_music1.vhd                ; yes             ; Auto-Found VHDL File                     ; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/buzzer_music1.vhd     ;         ;
 ; music_02.vhd                     ; yes             ; Auto-Found VHDL File                     ; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/music_02.vhd          ;         ;
@@ -340,6 +341,12 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 ; counterSecond_1:inst39|carry                 ; Stuck at GND due to stuck port clock                    ;
 ; counterSecond_10:inst41|carry_out            ; Stuck at GND due to stuck port clock                    ;
 ; counterHour_1:inst43|carry_out               ; Stuck at GND due to stuck port clock                    ;
+; Test:inst62|musicselector:inst98|music9      ; Stuck at GND due to stuck port data_in                  ;
+; Test:inst62|DLBB_simple:inst5|INDEX[0..7]    ; Lost fanout                                             ;
+; Test:inst62|DLBB_simple:inst5|LEN[0..4]      ; Lost fanout                                             ;
+; Test:inst62|DLBB_simple:inst5|DIVIDER[0..14] ; Lost fanout                                             ;
+; Test:inst62|DLBB_simple:inst5|PULSE          ; Lost fanout                                             ;
+; Test:inst62|DLBB_simple:inst5|COUNT[0..6]    ; Lost fanout                                             ;
 ; clk_gen:inst1|div10_t:inst4|5                ; Merged with display:inst|temp[0]                        ;
 ; Test:inst62|div10_t:inst3|5                  ; Merged with clk_gen:inst1|div10_t:inst|5                ;
 ; Test:inst62|buzzer:inst|DIVIDER[14]          ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[14]   ;
@@ -447,20 +454,22 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 ; counterHour_1:inst43|temp[3]~_emulated       ; Stuck at GND due to stuck port clock                    ;
 ; counterHour_10:inst42|temp[0]~_emulated      ; Stuck at GND due to stuck port clock                    ;
 ; counterHour_10:inst42|temp[1]~_emulated      ; Stuck at GND due to stuck port clock                    ;
-; Total Number of Removed Registers = 113      ;                                                         ;
+; Total Number of Removed Registers = 150      ;                                                         ;
 +----------------------------------------------+---------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                 ;
-+------------------------------+-------------------------+--------------------------------------------------------------------+
-; Register name                ; Reason for Removal      ; Registers Removed due to This Register                             ;
-+------------------------------+-------------------------+--------------------------------------------------------------------+
-; counterSecond_1:inst38|carry ; Stuck at GND            ; counterSecond_10:inst40|carry_out, counterSecond_1:inst39|carry,   ;
-;                              ; due to stuck port clock ; counterSecond_10:inst41|carry_out, counterHour_1:inst43|carry_out, ;
-;                              ;                         ; counterSecond_10:inst40|temp[3], counterSecond_10:inst41|temp[3],  ;
-;                              ;                         ; counterHour_10:inst42|temp[2], counterHour_10:inst42|temp[3]       ;
-+------------------------------+-------------------------+--------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                              ;
++-----------------------------------------+---------------------------+--------------------------------------------------------------------+
+; Register name                           ; Reason for Removal        ; Registers Removed due to This Register                             ;
++-----------------------------------------+---------------------------+--------------------------------------------------------------------+
+; counterSecond_1:inst38|carry            ; Stuck at GND              ; counterSecond_10:inst40|carry_out, counterSecond_1:inst39|carry,   ;
+;                                         ; due to stuck port clock   ; counterSecond_10:inst41|carry_out, counterHour_1:inst43|carry_out, ;
+;                                         ;                           ; counterSecond_10:inst40|temp[3], counterSecond_10:inst41|temp[3],  ;
+;                                         ;                           ; counterHour_10:inst42|temp[2], counterHour_10:inst42|temp[3]       ;
+; Test:inst62|musicselector:inst98|music9 ; Stuck at GND              ; Test:inst62|DLBB_simple:inst5|PULSE                                ;
+;                                         ; due to stuck port data_in ;                                                                    ;
++-----------------------------------------+---------------------------+--------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -511,7 +520,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Tue Jun 23 22:07:40 2020
+    Info: Processing started: Tue Jun 23 22:45:07 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off projectClock -c projectClock
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file up.vhd
@@ -677,12 +686,12 @@ Warning (12125): Using design file test.bdf, which is not specified as a design 
 Info (12128): Elaborating entity "Test" for hierarchy "Test:inst62"
 Warning (275011): Block or symbol "music_02" of instance "inst7" overlaps another block or symbol
 Warning (275011): Block or symbol "musicselector" of instance "inst98" overlaps another block or symbol
-Warning (12125): Using design file alarm_clock.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: alarm_clock-arch
-    Info (12023): Found entity 1: alarm_clock
-Info (12128): Elaborating entity "alarm_clock" for hierarchy "Test:inst62|alarm_clock:inst6"
-Warning (10492): VHDL Process Statement warning at alarm_clock.vhd(24): signal "PITCH" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at alarm_clock.vhd(61): signal "INDEX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (12125): Using design file dlbb_simple.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: DLBB_simple-arch
+    Info (12023): Found entity 1: DLBB_simple
+Info (12128): Elaborating entity "DLBB_simple" for hierarchy "Test:inst62|DLBB_simple:inst5"
+Warning (10492): VHDL Process Statement warning at dlbb_simple.vhd(24): signal "PITCH" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at dlbb_simple.vhd(93): signal "INDEX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (12125): Using design file clktest.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: CLKtest-arch
     Info (12023): Found entity 1: CLKtest
@@ -691,6 +700,12 @@ Warning (12125): Using design file div10_t.bdf, which is not specified as a desi
     Info (12023): Found entity 1: div10_t
 Info (12128): Elaborating entity "div10_t" for hierarchy "Test:inst62|div10_t:inst3"
 Info (12128): Elaborating entity "musicselector" for hierarchy "Test:inst62|musicselector:inst98"
+Warning (12125): Using design file alarm_clock.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: alarm_clock-arch
+    Info (12023): Found entity 1: alarm_clock
+Info (12128): Elaborating entity "alarm_clock" for hierarchy "Test:inst62|alarm_clock:inst6"
+Warning (10492): VHDL Process Statement warning at alarm_clock.vhd(24): signal "PITCH" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at alarm_clock.vhd(61): signal "INDEX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (12125): Using design file buzzer_music0.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: buzzer_music0-arch
     Info (12023): Found entity 1: buzzer_music0
@@ -847,16 +862,17 @@ Warning (13004): Presettable and clearable registers converted to equivalent cir
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "COM" is stuck at VCC
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 36 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 859 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 25 output pins
     Info (21061): Implemented 827 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 185 warnings
-    Info: Peak virtual memory: 4722 megabytes
-    Info: Processing ended: Tue Jun 23 22:07:47 2020
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:04
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 188 warnings
+    Info: Peak virtual memory: 4730 megabytes
+    Info: Processing ended: Tue Jun 23 22:45:15 2020
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:05
 
 

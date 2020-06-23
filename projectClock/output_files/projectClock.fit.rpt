@@ -1,5 +1,5 @@
 Fitter report for projectClock
-Tue Jun 23 22:08:35 2020
+Tue Jun 23 22:46:09 2020
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Fitter Summary                                                               ;
 +---------------------------------+--------------------------------------------+
-; Fitter Status                   ; Successful - Tue Jun 23 22:08:35 2020      ;
+; Fitter Status                   ; Successful - Tue Jun 23 22:46:09 2020      ;
 ; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                   ; projectClock                               ;
 ; Top-level Entity Name           ; projectClock                               ;
@@ -71,7 +71,7 @@ applicable agreement for further details.
 ; Device                          ; 5CEFA2F23C8                                ;
 ; Timing Models                   ; Final                                      ;
 ; Logic utilization (in ALMs)     ; 497 / 9,430 ( 5 % )                        ;
-; Total registers                 ; 391                                        ;
+; Total registers                 ; 389                                        ;
 ; Total pins                      ; 32 / 224 ( 14 % )                          ;
 ; Total virtual pins              ; 0                                          ;
 ; Total block memory bits         ; 0 / 1,802,240 ( 0 % )                      ;
@@ -198,7 +198,6 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; LED:inst57|op[1]                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; LED:inst57|op[1]~DUPLICATE                          ;                  ;                       ;
 ; LED:inst57|op[2]                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; LED:inst57|op[2]~DUPLICATE                          ;                  ;                       ;
 ; LED:inst57|op[3]                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; LED:inst57|op[3]~DUPLICATE                          ;                  ;                       ;
-; LED:inst57|op[4]                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; LED:inst57|op[4]~DUPLICATE                          ;                  ;                       ;
 ; LED:inst57|op[5]                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; LED:inst57|op[5]~DUPLICATE                          ;                  ;                       ;
 ; LED:inst57|op[6]                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; LED:inst57|op[6]~DUPLICATE                          ;                  ;                       ;
 ; LED:inst57|op[7]                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; LED:inst57|op[7]~DUPLICATE                          ;                  ;                       ;
@@ -206,8 +205,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; LED:inst57|op[9]                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; LED:inst57|op[9]~DUPLICATE                          ;                  ;                       ;
 ; LED:inst57|op[10]                         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; LED:inst57|op[10]~DUPLICATE                         ;                  ;                       ;
 ; LED:inst57|op[11]                         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; LED:inst57|op[11]~DUPLICATE                         ;                  ;                       ;
+; Test:inst62|CLKtest:inst1|CNT[0]          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Test:inst62|CLKtest:inst1|CNT[0]~DUPLICATE          ;                  ;                       ;
 ; Test:inst62|CLKtest:inst1|CNT[2]          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Test:inst62|CLKtest:inst1|CNT[2]~DUPLICATE          ;                  ;                       ;
-; Test:inst62|CLKtest:inst1|CNT[4]          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Test:inst62|CLKtest:inst1|CNT[4]~DUPLICATE          ;                  ;                       ;
 ; Test:inst62|buzzer:inst|INDEX[1]          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Test:inst62|buzzer:inst|INDEX[1]~DUPLICATE          ;                  ;                       ;
 ; Test:inst62|buzzer:inst|INDEX[2]          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Test:inst62|buzzer:inst|INDEX[2]~DUPLICATE          ;                  ;                       ;
 ; Test:inst62|buzzer:inst|INDEX[3]          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Test:inst62|buzzer:inst|INDEX[3]~DUPLICATE          ;                  ;                       ;
@@ -217,7 +216,6 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Test:inst62|buzzer_music0:inst2|INDEX[4]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Test:inst62|buzzer_music0:inst2|INDEX[4]~DUPLICATE  ;                  ;                       ;
 ; Test:inst62|buzzer_music0:inst2|INDEX[5]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Test:inst62|buzzer_music0:inst2|INDEX[5]~DUPLICATE  ;                  ;                       ;
 ; Test:inst62|buzzer_music0:inst2|INDEX[6]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Test:inst62|buzzer_music0:inst2|INDEX[6]~DUPLICATE  ;                  ;                       ;
-; Test:inst62|buzzer_music1:inst99|COUNT[2] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Test:inst62|buzzer_music1:inst99|COUNT[2]~DUPLICATE ;                  ;                       ;
 ; Test:inst62|buzzer_music1:inst99|INDEX[0] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Test:inst62|buzzer_music1:inst99|INDEX[0]~DUPLICATE ;                  ;                       ;
 ; Test:inst62|buzzer_music1:inst99|INDEX[1] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Test:inst62|buzzer_music1:inst99|INDEX[1]~DUPLICATE ;                  ;                       ;
 ; Test:inst62|buzzer_music1:inst99|INDEX[2] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Test:inst62|buzzer_music1:inst99|INDEX[2]~DUPLICATE ;                  ;                       ;
@@ -235,8 +233,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Test:inst62|music_01:inst16|INDEX[0]      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Test:inst62|music_01:inst16|INDEX[0]~DUPLICATE      ;                  ;                       ;
 ; Test:inst62|music_01:inst16|INDEX[1]      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Test:inst62|music_01:inst16|INDEX[1]~DUPLICATE      ;                  ;                       ;
 ; Test:inst62|music_01:inst16|INDEX[2]      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Test:inst62|music_01:inst16|INDEX[2]~DUPLICATE      ;                  ;                       ;
-; Test:inst62|music_01:inst16|INDEX[3]      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Test:inst62|music_01:inst16|INDEX[3]~DUPLICATE      ;                  ;                       ;
 ; Test:inst62|music_01:inst16|INDEX[4]      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Test:inst62|music_01:inst16|INDEX[4]~DUPLICATE      ;                  ;                       ;
+; Test:inst62|music_01:inst16|LEN[1]        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Test:inst62|music_01:inst16|LEN[1]~DUPLICATE        ;                  ;                       ;
 ; Test:inst62|music_02:inst7|INDEX[0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Test:inst62|music_02:inst7|INDEX[0]~DUPLICATE       ;                  ;                       ;
 ; Test:inst62|music_02:inst7|INDEX[1]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Test:inst62|music_02:inst7|INDEX[1]~DUPLICATE       ;                  ;                       ;
 ; Test:inst62|music_02:inst7|INDEX[2]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Test:inst62|music_02:inst7|INDEX[2]~DUPLICATE       ;                  ;                       ;
@@ -245,7 +243,6 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Test:inst62|music_02:inst7|INDEX[5]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Test:inst62|music_02:inst7|INDEX[5]~DUPLICATE       ;                  ;                       ;
 ; Test:inst62|music_02:inst7|INDEX[6]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Test:inst62|music_02:inst7|INDEX[6]~DUPLICATE       ;                  ;                       ;
 ; Test:inst62|music_02:inst7|INDEX[7]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Test:inst62|music_02:inst7|INDEX[7]~DUPLICATE       ;                  ;                       ;
-; Test:inst62|music_03:inst8|COUNT[3]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Test:inst62|music_03:inst8|COUNT[3]~DUPLICATE       ;                  ;                       ;
 ; Test:inst62|music_03:inst8|INDEX[0]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Test:inst62|music_03:inst8|INDEX[0]~DUPLICATE       ;                  ;                       ;
 ; Test:inst62|music_03:inst8|INDEX[1]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Test:inst62|music_03:inst8|INDEX[1]~DUPLICATE       ;                  ;                       ;
 ; Test:inst62|music_03:inst8|INDEX[2]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Test:inst62|music_03:inst8|INDEX[2]~DUPLICATE       ;                  ;                       ;
@@ -254,7 +251,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Test:inst62|music_03:inst8|INDEX[5]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Test:inst62|music_03:inst8|INDEX[5]~DUPLICATE       ;                  ;                       ;
 ; Test:inst62|music_03:inst8|INDEX[6]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Test:inst62|music_03:inst8|INDEX[6]~DUPLICATE       ;                  ;                       ;
 ; Test:inst62|music_03:inst8|INDEX[7]       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Test:inst62|music_03:inst8|INDEX[7]~DUPLICATE       ;                  ;                       ;
-; clk_gen:inst1|div10_t:inst2|5             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; clk_gen:inst1|div10_t:inst2|5~DUPLICATE             ;                  ;                       ;
+; Test:inst62|music_03:inst8|LEN[0]         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; Test:inst62|music_03:inst8|LEN[0]~DUPLICATE         ;                  ;                       ;
+; clk_gen:inst1|div10_t:inst1|5             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; clk_gen:inst1|div10_t:inst1|5~DUPLICATE             ;                  ;                       ;
 ; clk_gen:inst1|div10_t:inst6|5             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; clk_gen:inst1|div10_t:inst6|5~DUPLICATE             ;                  ;                       ;
 ; clk_gen:inst1|div10_t:inst|5              ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; clk_gen:inst1|div10_t:inst|5~DUPLICATE              ;                  ;                       ;
 ; display:inst|temp[0]                      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; display:inst|temp[0]~DUPLICATE                      ;                  ;                       ;
@@ -334,14 +332,14 @@ The pin-out file can be found in Z:/Desktop/Programming/VHDL/VHDLClock/projectCl
 ;     -- 5 input functions                                    ; 93            ;       ;
 ;     -- 4 input functions                                    ; 189           ;       ;
 ;     -- <=3 input functions                                  ; 351           ;       ;
-; Combinational ALUT usage for route-throughs                 ; 11            ;       ;
-; Dedicated logic registers                                   ; 391           ;       ;
+; Combinational ALUT usage for route-throughs                 ; 9             ;       ;
+; Dedicated logic registers                                   ; 389           ;       ;
 ;     -- By type:                                             ;               ;       ;
 ;         -- Primary logic registers                          ; 326 / 18,860  ; 2 %   ;
-;         -- Secondary logic registers                        ; 65 / 18,860   ; < 1 % ;
+;         -- Secondary logic registers                        ; 63 / 18,860   ; < 1 % ;
 ;     -- By function:                                         ;               ;       ;
 ;         -- Design implementation registers                  ; 326           ;       ;
-;         -- Routing optimization registers                   ; 65            ;       ;
+;         -- Routing optimization registers                   ; 63            ;       ;
 ;                                                             ;               ;       ;
 ; Virtual pins                                                ; 0             ;       ;
 ; I/O pins                                                    ; 32 / 224      ; 14 %  ;
@@ -367,10 +365,10 @@ The pin-out file can be found in Z:/Desktop/Programming/VHDL/VHDLClock/projectCl
 ; Hard Memory Controllers                                     ; 0 / 1         ; 0 %   ;
 ; Average interconnect usage (total/H/V)                      ; 0% / 0% / 0%  ;       ;
 ; Peak interconnect usage (total/H/V)                         ; 4% / 4% / 4%  ;       ;
-; Maximum fan-out                                             ; 250           ;       ;
+; Maximum fan-out                                             ; 249           ;       ;
 ; Highest non-global fan-out                                  ; 36            ;       ;
-; Total fan-out                                               ; 4252          ;       ;
-; Average fan-out                                             ; 3.33          ;       ;
+; Total fan-out                                               ; 4246          ;       ;
+; Average fan-out                                             ; 3.34          ;       ;
 +-------------------------------------------------------------+---------------+-------+
 
 
@@ -405,7 +403,7 @@ The pin-out file can be found in Z:/Desktop/Programming/VHDL/VHDLClock/projectCl
 ;     -- 5 input functions                                    ; 93                   ; 0                              ;
 ;     -- 4 input functions                                    ; 189                  ; 0                              ;
 ;     -- <=3 input functions                                  ; 351                  ; 0                              ;
-; Combinational ALUT usage for route-throughs                 ; 11                   ; 0                              ;
+; Combinational ALUT usage for route-throughs                 ; 9                    ; 0                              ;
 ; Memory ALUT usage                                           ; 0                    ; 0                              ;
 ;     -- 64-address deep                                      ; 0                    ; 0                              ;
 ;     -- 32-address deep                                      ; 0                    ; 0                              ;
@@ -413,10 +411,10 @@ The pin-out file can be found in Z:/Desktop/Programming/VHDL/VHDLClock/projectCl
 ; Dedicated logic registers                                   ; 0                    ; 0                              ;
 ;     -- By type:                                             ;                      ;                                ;
 ;         -- Primary logic registers                          ; 326 / 18860 ( 2 % )  ; 0 / 18860 ( 0 % )              ;
-;         -- Secondary logic registers                        ; 65 / 18860 ( < 1 % ) ; 0 / 18860 ( 0 % )              ;
+;         -- Secondary logic registers                        ; 63 / 18860 ( < 1 % ) ; 0 / 18860 ( 0 % )              ;
 ;     -- By function:                                         ;                      ;                                ;
 ;         -- Design implementation registers                  ; 326                  ; 0                              ;
-;         -- Routing optimization registers                   ; 65                   ; 0                              ;
+;         -- Routing optimization registers                   ; 63                   ; 0                              ;
 ;                                                             ;                      ;                                ;
 ;                                                             ;                      ;                                ;
 ; Virtual pins                                                ; 0                    ; 0                              ;
@@ -433,7 +431,7 @@ The pin-out file can be found in Z:/Desktop/Programming/VHDL/VHDLClock/projectCl
 ;     -- Registered Output Connections                        ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Internal Connections                                        ;                      ;                                ;
-;     -- Total Connections                                    ; 4252                 ; 0                              ;
+;     -- Total Connections                                    ; 4246                 ; 0                              ;
 ;     -- Registered Connections                               ; 1840                 ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; External Connections                                        ;                      ;                                ;
@@ -1023,14 +1021,14 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+------------------------------------------------+--------------+
 ; Compilation Hierarchy Node   ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                            ; Library Name ;
 +------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+------------------------------------------------+--------------+
-; |projectClock                ; 497.0 (5.3)          ; 521.5 (5.8)                      ; 35.0 (0.4)                                        ; 10.5 (0.0)                       ; 0.0 (0.0)            ; 807 (16)            ; 391 (0)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 32   ; 0            ; |projectClock                                  ; work         ;
-;    |LED:inst57|              ; 42.0 (42.0)          ; 45.0 (45.0)                      ; 3.0 (3.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 72 (72)             ; 25 (25)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |projectClock|LED:inst57                       ; work         ;
-;    |Test:inst62|             ; 301.9 (5.2)          ; 316.0 (5.7)                      ; 17.1 (0.5)                                        ; 3.0 (0.0)                        ; 0.0 (0.0)            ; 484 (8)             ; 261 (0)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |projectClock|Test:inst62                      ; work         ;
+; |projectClock                ; 497.0 (5.3)          ; 521.5 (5.8)                      ; 35.0 (0.4)                                        ; 10.5 (0.0)                       ; 0.0 (0.0)            ; 807 (16)            ; 389 (0)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 32   ; 0            ; |projectClock                                  ; work         ;
+;    |LED:inst57|              ; 42.0 (42.0)          ; 45.0 (45.0)                      ; 3.0 (3.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 72 (72)             ; 24 (24)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |projectClock|LED:inst57                       ; work         ;
+;    |Test:inst62|             ; 301.9 (5.2)          ; 316.0 (5.7)                      ; 17.1 (0.5)                                        ; 3.0 (0.0)                        ; 0.0 (0.0)            ; 484 (8)             ; 260 (0)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |projectClock|Test:inst62                      ; work         ;
 ;       |CLKtest:inst1|        ; 3.3 (3.3)            ; 6.0 (6.0)                        ; 2.7 (2.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 6 (6)               ; 8 (8)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |projectClock|Test:inst62|CLKtest:inst1        ; work         ;
 ;       |alarm_clock:inst6|    ; 21.7 (21.7)          ; 23.5 (23.5)                      ; 2.8 (2.8)                                         ; 1.0 (1.0)                        ; 0.0 (0.0)            ; 43 (43)             ; 32 (32)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |projectClock|Test:inst62|alarm_clock:inst6    ; work         ;
 ;       |buzzer:inst|          ; 16.3 (16.3)          ; 19.5 (19.5)                      ; 3.2 (3.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 27 (27)             ; 19 (19)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |projectClock|Test:inst62|buzzer:inst          ; work         ;
 ;       |buzzer_music0:inst2|  ; 33.7 (33.7)          ; 34.7 (34.7)                      ; 2.0 (2.0)                                         ; 1.0 (1.0)                        ; 0.0 (0.0)            ; 56 (56)             ; 39 (39)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |projectClock|Test:inst62|buzzer_music0:inst2  ; work         ;
-;       |buzzer_music1:inst99| ; 41.3 (41.3)          ; 41.8 (41.8)                      ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 63 (63)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |projectClock|Test:inst62|buzzer_music1:inst99 ; work         ;
+;       |buzzer_music1:inst99| ; 41.3 (41.3)          ; 41.8 (41.8)                      ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 63 (63)             ; 25 (25)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |projectClock|Test:inst62|buzzer_music1:inst99 ; work         ;
 ;       |buzzer_music2:inst4|  ; 56.3 (56.3)          ; 58.2 (58.2)                      ; 2.8 (2.8)                                         ; 1.0 (1.0)                        ; 0.0 (0.0)            ; 92 (92)             ; 44 (44)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |projectClock|Test:inst62|buzzer_music2:inst4  ; work         ;
 ;       |div10_t:inst3|        ; 1.6 (1.6)            ; 2.0 (2.0)                        ; 0.4 (0.4)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 3 (3)               ; 3 (3)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |projectClock|Test:inst62|div10_t:inst3        ; work         ;
 ;       |music_01:inst16|      ; 25.3 (25.3)          ; 25.8 (25.8)                      ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 41 (41)             ; 22 (22)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |projectClock|Test:inst62|music_01:inst16      ; work         ;
@@ -1045,8 +1043,8 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ;    |alarmDetection:inst46|   ; 7.5 (7.5)            ; 7.5 (7.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 10 (10)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |projectClock|alarmDetection:inst46            ; work         ;
 ;    |clk_gen:inst1|           ; 20.4 (0.0)           ; 22.3 (0.0)                       ; 8.0 (0.0)                                         ; 6.0 (0.0)                        ; 0.0 (0.0)            ; 27 (0)              ; 30 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |projectClock|clk_gen:inst1                    ; work         ;
 ;       |div10_t:inst|         ; 1.8 (1.8)            ; 2.5 (2.5)                        ; 0.7 (0.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 5 (5)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |projectClock|clk_gen:inst1|div10_t:inst       ; work         ;
-;       |div10_t:inst1|        ; 1.7 (1.7)            ; 3.5 (3.5)                        ; 1.8 (1.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |projectClock|clk_gen:inst1|div10_t:inst1      ; work         ;
-;       |div10_t:inst2|        ; 8.6 (8.6)            ; 3.3 (3.3)                        ; 0.7 (0.7)                                         ; 6.0 (6.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 5 (5)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |projectClock|clk_gen:inst1|div10_t:inst2      ; work         ;
+;       |div10_t:inst1|        ; 1.7 (1.7)            ; 3.5 (3.5)                        ; 1.8 (1.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 5 (5)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |projectClock|clk_gen:inst1|div10_t:inst1      ; work         ;
+;       |div10_t:inst2|        ; 8.6 (8.6)            ; 3.3 (3.3)                        ; 0.7 (0.7)                                         ; 6.0 (6.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |projectClock|clk_gen:inst1|div10_t:inst2      ; work         ;
 ;       |div10_t:inst3|        ; 2.6 (2.6)            ; 4.0 (4.0)                        ; 1.4 (1.4)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |projectClock|clk_gen:inst1|div10_t:inst3      ; work         ;
 ;       |div10_t:inst4|        ; 1.0 (1.0)            ; 2.7 (2.7)                        ; 1.6 (1.6)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 3 (3)               ; 3 (3)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |projectClock|clk_gen:inst1|div10_t:inst4      ; work         ;
 ;       |div10_t:inst5|        ; 2.5 (2.5)            ; 3.3 (3.3)                        ; 0.7 (0.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 4 (4)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |projectClock|clk_gen:inst1|div10_t:inst5      ; work         ;
@@ -1188,65 +1186,65 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+----------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 ; Name                                         ; Location             ; Fan-Out ; Usage                      ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +----------------------------------------------+----------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
-; Test:inst62|CLKtest:inst1|CNTout             ; FF_X36_Y34_N5        ; 250     ; Clock                      ; yes    ; Global Clock         ; GCLK12           ; --                        ;
+; Test:inst62|CLKtest:inst1|CNTout             ; FF_X36_Y34_N5        ; 249     ; Clock                      ; yes    ; Global Clock         ; GCLK12           ; --                        ;
 ; Test:inst62|alarm_clock:inst6|COUNT~0        ; LABCELL_X32_Y25_N57  ; 7       ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; Test:inst62|alarm_clock:inst6|INDEX[3]~0     ; LABCELL_X32_Y25_N45  ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Test:inst62|alarm_clock:inst6|LessThan0~3    ; LABCELL_X32_Y25_N51  ; 29      ; Clock enable, Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; Test:inst62|alarm_clock:inst6|LessThan2~0    ; LABCELL_X32_Y26_N51  ; 8       ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; Test:inst62|alarm_clock:inst6|INDEX[3]~0     ; LABCELL_X32_Y25_N39  ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Test:inst62|alarm_clock:inst6|LessThan0~3    ; LABCELL_X32_Y25_N33  ; 30      ; Clock enable, Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; Test:inst62|alarm_clock:inst6|LessThan2~0    ; LABCELL_X32_Y26_N57  ; 8       ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
 ; Test:inst62|buzzer:inst|COUNT[3]~0           ; LABCELL_X35_Y24_N24  ; 7       ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; Test:inst62|buzzer:inst|INDEX[2]~0           ; LABCELL_X31_Y24_N24  ; 9       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Test:inst62|buzzer:inst|INDEX[2]~0           ; LABCELL_X31_Y24_N18  ; 9       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
 ; Test:inst62|buzzer_music0:inst2|COUNT[0]~0   ; LABCELL_X39_Y28_N18  ; 7       ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
 ; Test:inst62|buzzer_music0:inst2|INDEX[4]~0   ; LABCELL_X36_Y28_N48  ; 12      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Test:inst62|buzzer_music0:inst2|LessThan0~2  ; LABCELL_X36_Y28_N36  ; 30      ; Clock enable, Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; Test:inst62|buzzer_music0:inst2|LessThan2~1  ; LABCELL_X35_Y28_N54  ; 12      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; Test:inst62|buzzer_music1:inst99|COUNT[4]~0  ; LABCELL_X35_Y29_N24  ; 8       ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; Test:inst62|buzzer_music0:inst2|LessThan0~2  ; LABCELL_X36_Y28_N0   ; 31      ; Clock enable, Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; Test:inst62|buzzer_music0:inst2|LessThan2~1  ; LABCELL_X35_Y28_N30  ; 12      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; Test:inst62|buzzer_music1:inst99|COUNT[4]~0  ; LABCELL_X35_Y29_N24  ; 7       ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
 ; Test:inst62|buzzer_music1:inst99|INDEX[2]~0  ; MLABCELL_X37_Y29_N33 ; 13      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Test:inst62|buzzer_music1:inst99|LessThan2~0 ; MLABCELL_X34_Y29_N48 ; 13      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; Test:inst62|buzzer_music2:inst4|COUNT[3]~0   ; LABCELL_X40_Y25_N15  ; 7       ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; Test:inst62|buzzer_music2:inst4|INDEX[7]~0   ; MLABCELL_X37_Y25_N54 ; 16      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Test:inst62|buzzer_music1:inst99|LessThan2~0 ; MLABCELL_X34_Y29_N36 ; 13      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; Test:inst62|buzzer_music2:inst4|COUNT[3]~0   ; LABCELL_X40_Y25_N27  ; 7       ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; Test:inst62|buzzer_music2:inst4|INDEX[7]~0   ; MLABCELL_X37_Y25_N36 ; 16      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
 ; Test:inst62|buzzer_music2:inst4|LessThan0~3  ; LABCELL_X36_Y24_N18  ; 21      ; Clock enable, Sync. clear  ; no     ; --                   ; --               ; --                        ;
 ; Test:inst62|buzzer_music2:inst4|LessThan2~1  ; MLABCELL_X34_Y25_N27 ; 16      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; Test:inst62|div10_t:inst3|2                  ; FF_X36_Y34_N56       ; 10      ; Clock                      ; no     ; --                   ; --               ; --                        ;
+; Test:inst62|div10_t:inst3|2                  ; FF_X36_Y34_N26       ; 10      ; Clock                      ; no     ; --                   ; --               ; --                        ;
 ; Test:inst62|music_01:inst16|COUNT[1]~0       ; MLABCELL_X37_Y21_N18 ; 7       ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; Test:inst62|music_02:inst7|COUNT[5]~0        ; LABCELL_X36_Y22_N57  ; 7       ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; Test:inst62|music_02:inst7|INDEX[4]~0        ; LABCELL_X35_Y23_N12  ; 16      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Test:inst62|music_02:inst7|LessThan2~1       ; MLABCELL_X37_Y23_N45 ; 16      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; Test:inst62|music_03:inst8|COUNT[0]~0        ; LABCELL_X35_Y25_N12  ; 8       ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; Test:inst62|music_02:inst7|COUNT[5]~0        ; LABCELL_X36_Y22_N15  ; 7       ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; Test:inst62|music_02:inst7|INDEX[4]~0        ; LABCELL_X35_Y23_N36  ; 16      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Test:inst62|music_02:inst7|LessThan2~1       ; MLABCELL_X37_Y23_N15 ; 16      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; Test:inst62|music_03:inst8|COUNT[0]~0        ; LABCELL_X35_Y25_N30  ; 7       ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
 ; Test:inst62|music_03:inst8|INDEX[3]~0        ; LABCELL_X36_Y26_N12  ; 16      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
 ; Test:inst62|music_03:inst8|LessThan2~1       ; LABCELL_X35_Y27_N30  ; 16      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; UPDOWN:inst19|Savetest:inst7|Equal0~0        ; MLABCELL_X28_Y36_N21 ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; UPDOWN:inst19|inst23                         ; MLABCELL_X28_Y36_N51 ; 8       ; Clock                      ; no     ; --                   ; --               ; --                        ;
-; UPDOWN:inst19|inst24                         ; MLABCELL_X28_Y36_N27 ; 8       ; Clock                      ; no     ; --                   ; --               ; --                        ;
+; UPDOWN:inst19|Savetest:inst7|Equal0~0        ; MLABCELL_X28_Y36_N9  ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; UPDOWN:inst19|inst23                         ; MLABCELL_X28_Y36_N57 ; 8       ; Clock                      ; no     ; --                   ; --               ; --                        ;
+; UPDOWN:inst19|inst24                         ; MLABCELL_X28_Y36_N15 ; 8       ; Clock                      ; no     ; --                   ; --               ; --                        ;
 ; clk                                          ; PIN_W16              ; 6       ; Clock                      ; yes    ; Global Clock         ; GCLK4            ; --                        ;
 ; clk                                          ; PIN_W16              ; 3       ; Clock                      ; no     ; --                   ; --               ; --                        ;
-; clk_gen:inst1|div10_t:inst1|2                ; FF_X34_Y34_N59       ; 7       ; Clock                      ; no     ; --                   ; --               ; --                        ;
-; clk_gen:inst1|div10_t:inst2|2                ; FF_X34_Y33_N23       ; 6       ; Clock                      ; no     ; --                   ; --               ; --                        ;
+; clk_gen:inst1|div10_t:inst1|2                ; FF_X34_Y34_N59       ; 6       ; Clock                      ; no     ; --                   ; --               ; --                        ;
+; clk_gen:inst1|div10_t:inst2|2                ; FF_X34_Y33_N29       ; 6       ; Clock                      ; no     ; --                   ; --               ; --                        ;
 ; clk_gen:inst1|div10_t:inst3|2                ; FF_X34_Y33_N11       ; 9       ; Clock                      ; no     ; --                   ; --               ; --                        ;
-; clk_gen:inst1|div10_t:inst4|2                ; FF_X28_Y33_N44       ; 8       ; Clock                      ; no     ; --                   ; --               ; --                        ;
-; clk_gen:inst1|div10_t:inst5|2                ; FF_X28_Y33_N53       ; 36      ; Clock                      ; no     ; --                   ; --               ; --                        ;
+; clk_gen:inst1|div10_t:inst4|2                ; FF_X28_Y33_N2        ; 8       ; Clock                      ; no     ; --                   ; --               ; --                        ;
+; clk_gen:inst1|div10_t:inst5|2                ; FF_X28_Y33_N35       ; 36      ; Clock                      ; no     ; --                   ; --               ; --                        ;
 ; clk_gen:inst1|div10_t:inst6|2                ; FF_X29_Y34_N50       ; 7       ; Clock                      ; no     ; --                   ; --               ; --                        ;
-; clk_gen:inst1|div10_t:inst|2                 ; FF_X34_Y34_N26       ; 6       ; Clock                      ; no     ; --                   ; --               ; --                        ;
-; counterHour_1:inst13|carry_out               ; FF_X26_Y35_N44       ; 3       ; Clock                      ; no     ; --                   ; --               ; --                        ;
-; counterSecond_10:inst5|carry_out             ; FF_X31_Y36_N2        ; 6       ; Clock                      ; no     ; --                   ; --               ; --                        ;
-; counterSecond_10:inst9|carry_out             ; FF_X26_Y35_N23       ; 6       ; Clock                      ; no     ; --                   ; --               ; --                        ;
-; counterSecond_1:inst7|carry                  ; FF_X26_Y36_N17       ; 5       ; Clock                      ; no     ; --                   ; --               ; --                        ;
-; counterSecond_1:inst8|carry                  ; FF_X28_Y34_N50       ; 5       ; Clock                      ; no     ; --                   ; --               ; --                        ;
-; debounce_g:inst27|16~1                       ; LABCELL_X25_Y36_N21  ; 4       ; Clock                      ; no     ; --                   ; --               ; --                        ;
-; debounce_g:inst65|16~1                       ; LABCELL_X26_Y36_N15  ; 13      ; Async. clear, Latch enable ; no     ; --                   ; --               ; --                        ;
-; debounce_g:inst66|16~1                       ; LABCELL_X31_Y36_N54  ; 10      ; Async. clear, Latch enable ; no     ; --                   ; --               ; --                        ;
-; debounce_g:inst67|16~1                       ; MLABCELL_X28_Y34_N24 ; 13      ; Async. clear, Latch enable ; no     ; --                   ; --               ; --                        ;
-; debounce_g:inst68|16~1                       ; LABCELL_X29_Y36_N27  ; 10      ; Async. clear, Latch enable ; no     ; --                   ; --               ; --                        ;
+; clk_gen:inst1|div10_t:inst|2                 ; FF_X34_Y34_N26       ; 7       ; Clock                      ; no     ; --                   ; --               ; --                        ;
+; counterHour_1:inst13|carry_out               ; FF_X26_Y35_N20       ; 3       ; Clock                      ; no     ; --                   ; --               ; --                        ;
+; counterSecond_10:inst5|carry_out             ; FF_X31_Y36_N44       ; 6       ; Clock                      ; no     ; --                   ; --               ; --                        ;
+; counterSecond_10:inst9|carry_out             ; FF_X26_Y35_N5        ; 6       ; Clock                      ; no     ; --                   ; --               ; --                        ;
+; counterSecond_1:inst7|carry                  ; FF_X26_Y36_N47       ; 5       ; Clock                      ; no     ; --                   ; --               ; --                        ;
+; counterSecond_1:inst8|carry                  ; FF_X28_Y34_N38       ; 5       ; Clock                      ; no     ; --                   ; --               ; --                        ;
+; debounce_g:inst27|16~1                       ; LABCELL_X25_Y36_N45  ; 4       ; Clock                      ; no     ; --                   ; --               ; --                        ;
+; debounce_g:inst65|16~1                       ; LABCELL_X26_Y36_N45  ; 13      ; Async. clear, Latch enable ; no     ; --                   ; --               ; --                        ;
+; debounce_g:inst66|16~1                       ; LABCELL_X31_Y36_N30  ; 10      ; Async. clear, Latch enable ; no     ; --                   ; --               ; --                        ;
+; debounce_g:inst67|16~1                       ; MLABCELL_X28_Y34_N12 ; 13      ; Async. clear, Latch enable ; no     ; --                   ; --               ; --                        ;
+; debounce_g:inst68|16~1                       ; LABCELL_X29_Y36_N57  ; 10      ; Async. clear, Latch enable ; no     ; --                   ; --               ; --                        ;
 ; debounce_g:inst69|16~1                       ; LABCELL_X25_Y36_N9   ; 14      ; Async. clear, Latch enable ; no     ; --                   ; --               ; --                        ;
-; debounce_g:inst70|16~1                       ; LABCELL_X25_Y35_N30  ; 6       ; Async. clear, Latch enable ; no     ; --                   ; --               ; --                        ;
-; debounce_g:inst71|16~1                       ; LABCELL_X25_Y36_N48  ; 8       ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; debounce_g:inst72|16~1                       ; LABCELL_X29_Y36_N12  ; 6       ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; debounce_g:inst73|16~1                       ; LABCELL_X29_Y34_N21  ; 8       ; Latch enable               ; no     ; --                   ; --               ; --                        ;
-; debounce_g:inst74|16~1                       ; MLABCELL_X28_Y36_N33 ; 6       ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; debounce_g:inst70|16~1                       ; LABCELL_X25_Y35_N42  ; 6       ; Async. clear, Latch enable ; no     ; --                   ; --               ; --                        ;
+; debounce_g:inst71|16~1                       ; LABCELL_X25_Y36_N18  ; 8       ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; debounce_g:inst72|16~1                       ; LABCELL_X29_Y36_N18  ; 6       ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; debounce_g:inst73|16~1                       ; LABCELL_X29_Y34_N15  ; 8       ; Latch enable               ; no     ; --                   ; --               ; --                        ;
+; debounce_g:inst74|16~1                       ; MLABCELL_X28_Y36_N39 ; 6       ; Latch enable               ; no     ; --                   ; --               ; --                        ;
 ; debounce_g:inst75|16~1                       ; MLABCELL_X28_Y35_N12 ; 8       ; Latch enable               ; no     ; --                   ; --               ; --                        ;
 ; debounce_g:inst76|16~1                       ; LABCELL_X24_Y35_N54  ; 4       ; Latch enable               ; no     ; --                   ; --               ; --                        ;
 ; editmusicIn                                  ; PIN_AB18             ; 13      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
 ; inst33                                       ; LABCELL_X26_Y34_N9   ; 5       ; Clock                      ; no     ; --                   ; --               ; --                        ;
-; inst58                                       ; MLABCELL_X28_Y33_N51 ; 25      ; Clock                      ; no     ; --                   ; --               ; --                        ;
+; inst58                                       ; MLABCELL_X28_Y33_N33 ; 24      ; Clock                      ; no     ; --                   ; --               ; --                        ;
 +----------------------------------------------+----------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1255,7 +1253,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------+---------------+---------+----------------------+------------------+---------------------------+
 ; Name                             ; Location      ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +----------------------------------+---------------+---------+----------------------+------------------+---------------------------+
-; Test:inst62|CLKtest:inst1|CNTout ; FF_X36_Y34_N5 ; 250     ; Global Clock         ; GCLK12           ; --                        ;
+; Test:inst62|CLKtest:inst1|CNTout ; FF_X36_Y34_N5 ; 249     ; Global Clock         ; GCLK12           ; --                        ;
 ; clk                              ; PIN_W16       ; 6       ; Global Clock         ; GCLK4            ; --                        ;
 +----------------------------------+---------------+---------+----------------------+------------------+---------------------------+
 
@@ -1266,95 +1264,96 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                                ; Fan-Out ;
 +-----------------------------------------------------+---------+
 ; clk_gen:inst1|div10_t:inst5|2                       ; 36      ;
-; Test:inst62|buzzer_music0:inst2|LessThan0~2         ; 30      ;
-; Test:inst62|music_03:inst8|INDEX[4]~DUPLICATE       ; 29      ;
+; Test:inst62|buzzer_music0:inst2|LessThan0~2         ; 31      ;
+; Test:inst62|alarm_clock:inst6|LessThan0~3           ; 30      ;
 ; Test:inst62|music_03:inst8|INDEX[2]~DUPLICATE       ; 29      ;
-; Test:inst62|music_03:inst8|INDEX[1]~DUPLICATE       ; 29      ;
-; Test:inst62|alarm_clock:inst6|LessThan0~3           ; 29      ;
-; inst58                                              ; 25      ;
+; display:inst|temp[0]~DUPLICATE                      ; 28      ;
+; Test:inst62|music_03:inst8|INDEX[1]~DUPLICATE       ; 28      ;
 ; display:inst|temp[1]                                ; 25      ;
+; inst58                                              ; 24      ;
 ; UPDOWN:inst19|Savetest:inst7|CNT[0]                 ; 24      ;
 ; UPDOWN:inst19|Savetest:inst7|CNT[2]                 ; 22      ;
 ; UPDOWN:inst19|Savetest:inst7|CNT[1]                 ; 22      ;
+; Test:inst62|music_03:inst8|INDEX[7]~DUPLICATE       ; 21      ;
 ; Test:inst62|buzzer_music2:inst4|LessThan0~3         ; 21      ;
 ; shift_clock:inst23|temp[2]                          ; 21      ;
 ; shift_clock:inst23|temp[0]                          ; 21      ;
 ; Test:inst62|music_03:inst8|INDEX[5]~DUPLICATE       ; 20      ;
 ; UPDOWN:inst19|Savetest:inst7|CNT[3]                 ; 20      ;
-; Test:inst62|music_03:inst8|INDEX[3]~DUPLICATE       ; 19      ;
+; Test:inst62|music_03:inst8|INDEX[3]~DUPLICATE       ; 18      ;
+; shift_clock:inst23|temp[1]                          ; 17      ;
 ; display:inst|temp[2]                                ; 17      ;
 ; Test:inst62|buzzer_music1:inst99|INDEX[5]           ; 17      ;
-; Test:inst62|music_03:inst8|INDEX[7]                 ; 17      ;
-; display:inst|temp[0]~DUPLICATE                      ; 16      ;
-; Test:inst62|music_02:inst7|INDEX[2]~DUPLICATE       ; 16      ;
-; Test:inst62|buzzer_music1:inst99|INDEX[0]~DUPLICATE ; 16      ;
+; Test:inst62|music_03:inst8|INDEX[4]                 ; 17      ;
 ; Test:inst62|music_02:inst7|INDEX[4]~0               ; 16      ;
 ; Test:inst62|music_02:inst7|LessThan2~1              ; 16      ;
 ; Test:inst62|music_03:inst8|INDEX[3]~0               ; 16      ;
 ; Test:inst62|music_03:inst8|LessThan2~1              ; 16      ;
 ; Test:inst62|buzzer_music2:inst4|INDEX[7]~0          ; 16      ;
 ; Test:inst62|buzzer_music2:inst4|LessThan2~1         ; 16      ;
-; shift_clock:inst23|temp[1]~DUPLICATE                ; 15      ;
-; Test:inst62|buzzer_music2:inst4|INDEX[2]~DUPLICATE  ; 15      ;
 ; five_sec:inst47|STOP                                ; 15      ;
-; Test:inst62|buzzer_music1:inst99|INDEX[3]~DUPLICATE ; 14      ;
-; Test:inst62|music_03:inst8|INDEX[7]~DUPLICATE       ; 14      ;
-; Test:inst62|buzzer_music2:inst4|INDEX[1]~DUPLICATE  ; 14      ;
+; Test:inst62|music_02:inst7|INDEX[1]                 ; 15      ;
+; Test:inst62|music_03:inst8|INDEX[4]~DUPLICATE       ; 14      ;
+; Test:inst62|buzzer_music2:inst4|INDEX[7]~DUPLICATE  ; 14      ;
+; Test:inst62|buzzer_music2:inst4|INDEX[2]~DUPLICATE  ; 14      ;
 ; debounce_g:inst69|16~1                              ; 14      ;
-; Test:inst62|music_02:inst7|INDEX[1]                 ; 14      ;
-; Test:inst62|buzzer_music2:inst4|INDEX[7]            ; 14      ;
-; Test:inst62|music_02:inst7|INDEX[4]~DUPLICATE       ; 13      ;
+; Test:inst62|buzzer_music1:inst99|INDEX[3]~DUPLICATE ; 13      ;
 ; editmusicIn~input                                   ; 13      ;
 ; debounce_g:inst65|16~1                              ; 13      ;
 ; debounce_g:inst67|16~1                              ; 13      ;
 ; Test:inst62|buzzer_music1:inst99|INDEX[2]~0         ; 13      ;
 ; Test:inst62|buzzer_music1:inst99|LessThan2~0        ; 13      ;
-; LED:inst57|op[8]                                    ; 13      ;
-; display:inst|temp[0]                                ; 13      ;
-; Test:inst62|buzzer_music2:inst4|INDEX[3]            ; 13      ;
-; Test:inst62|buzzer_music1:inst99|INDEX[4]~DUPLICATE ; 12      ;
-; Test:inst62|buzzer_music1:inst99|INDEX[6]~DUPLICATE ; 12      ;
+; Test:inst62|music_03:inst8|INDEX[3]                 ; 13      ;
+; Test:inst62|music_02:inst7|INDEX[2]~DUPLICATE       ; 12      ;
 ; Test:inst62|buzzer_music0:inst2|INDEX[4]~0          ; 12      ;
 ; Test:inst62|buzzer_music0:inst2|LessThan2~1         ; 12      ;
 ; Test:inst62|buzzer:inst|INDEX[0]                    ; 12      ;
 ; Test:inst62|music_02:inst7|INDEX[3]                 ; 12      ;
-; Test:inst62|music_03:inst8|INDEX[3]                 ; 12      ;
-; LED:inst57|op[1]~DUPLICATE                          ; 11      ;
+; Test:inst62|buzzer_music2:inst4|INDEX[3]            ; 12      ;
+; Test:inst62|buzzer_music2:inst4|INDEX[4]            ; 12      ;
+; Test:inst62|buzzer_music1:inst99|INDEX[4]~DUPLICATE ; 11      ;
 ; Test:inst62|buzzer_music1:inst99|INDEX[2]~DUPLICATE ; 11      ;
 ; Test:inst62|buzzer_music2:inst4|INDEX[5]~DUPLICATE  ; 11      ;
-; Test:inst62|buzzer_music2:inst4|INDEX[4]~DUPLICATE  ; 11      ;
+; Test:inst62|buzzer_music2:inst4|INDEX[1]~DUPLICATE  ; 11      ;
 ; alarmSet~input                                      ; 11      ;
 ; counterHour_10:inst42|process_0~0                   ; 11      ;
+; Test:inst62|music_03:inst8|INDEX[0]                 ; 11      ;
 ; Test:inst62|music_03:inst8|INDEX[5]                 ; 11      ;
-; Test:inst62|buzzer_music2:inst4|INDEX[6]~DUPLICATE  ; 10      ;
+; Test:inst62|buzzer_music2:inst4|INDEX[6]            ; 11      ;
+; LED:inst57|op[1]~DUPLICATE                          ; 10      ;
+; LED:inst57|op[5]~DUPLICATE                          ; 10      ;
+; LED:inst57|op[9]~DUPLICATE                          ; 10      ;
+; Test:inst62|music_02:inst7|INDEX[4]~DUPLICATE       ; 10      ;
+; Test:inst62|buzzer_music1:inst99|INDEX[0]~DUPLICATE ; 10      ;
 ; debounce_g:inst66|16~1                              ; 10      ;
 ; debounce_g:inst68|16~1                              ; 10      ;
 ; Test:inst62|div10_t:inst3|2                         ; 10      ;
 ; LED:inst57|j                                        ; 10      ;
-; Test:inst62|buzzer_music2:inst4|INDEX[6]            ; 10      ;
-; LED:inst57|op[3]~DUPLICATE                          ; 9       ;
-; LED:inst57|op[9]~DUPLICATE                          ; 9       ;
+; LED:inst57|op[4]                                    ; 10      ;
+; Test:inst62|music_01:inst16|INDEX[3]                ; 10      ;
+; Test:inst62|buzzer_music1:inst99|INDEX[1]           ; 10      ;
+; Test:inst62|music_03:inst8|INDEX[7]                 ; 10      ;
+; Test:inst62|buzzer_music2:inst4|INDEX[0]            ; 10      ;
+; LED:inst57|op[7]~DUPLICATE                          ; 9       ;
 ; Test:inst62|music_02:inst7|INDEX[6]~DUPLICATE       ; 9       ;
-; Test:inst62|buzzer_music2:inst4|INDEX[0]~DUPLICATE  ; 9       ;
+; Test:inst62|music_02:inst7|INDEX[7]~DUPLICATE       ; 9       ;
+; Test:inst62|buzzer_music1:inst99|INDEX[6]~DUPLICATE ; 9       ;
+; Test:inst62|buzzer_music2:inst4|INDEX[6]~DUPLICATE  ; 9       ;
 ; LED:inst57|Equal1~0                                 ; 9       ;
 ; LED:inst57|Equal3~0                                 ; 9       ;
 ; clk_gen:inst1|div10_t:inst3|2                       ; 9       ;
 ; Test:inst62|buzzer:inst|INDEX[2]~0                  ; 9       ;
-; LED:inst57|op[4]                                    ; 9       ;
+; LED:inst57|op[3]                                    ; 9       ;
 ; Test:inst62|music_01:inst16|INDEX[5]                ; 9       ;
-; Test:inst62|music_01:inst16|INDEX[2]                ; 9       ;
 ; Test:inst62|buzzer_music0:inst2|INDEX[0]            ; 9       ;
 ; Test:inst62|buzzer_music0:inst2|INDEX[3]            ; 9       ;
-; Test:inst62|buzzer_music1:inst99|INDEX[1]           ; 9       ;
-; Test:inst62|music_03:inst8|INDEX[0]                 ; 9       ;
-; Test:inst62|buzzer_music2:inst4|INDEX[0]            ; 9       ;
-; LED:inst57|op[7]~DUPLICATE                          ; 8       ;
-; Test:inst62|music_01:inst16|INDEX[3]~DUPLICATE      ; 8       ;
+; Test:inst62|buzzer_music1:inst99|INDEX[0]           ; 9       ;
+; Test:inst62|buzzer_music2:inst4|INDEX[1]            ; 9       ;
+; LED:inst57|op[0]~DUPLICATE                          ; 8       ;
 ; Test:inst62|music_01:inst16|INDEX[1]~DUPLICATE      ; 8       ;
 ; Test:inst62|music_02:inst7|INDEX[3]~DUPLICATE       ; 8       ;
 ; Test:inst62|music_02:inst7|INDEX[5]~DUPLICATE       ; 8       ;
-; Test:inst62|buzzer_music1:inst99|INDEX[1]~DUPLICATE ; 8       ;
-; Test:inst62|music_03:inst8|INDEX[6]~DUPLICATE       ; 8       ;
+; Test:inst62|buzzer_music2:inst4|INDEX[0]~DUPLICATE  ; 8       ;
 ; editstart~input                                     ; 8       ;
 ; Test:inst62|buzzer_music2:inst4|Mux8~2              ; 8       ;
 ; UPDOWN:inst19|inst24                                ; 8       ;
@@ -1365,8 +1364,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; debounce_g:inst73|16~1                              ; 8       ;
 ; counterSecond_10:inst40|temp~19                     ; 8       ;
 ; debounce_g:inst75|16~1                              ; 8       ;
-; Test:inst62|buzzer_music1:inst99|COUNT[4]~0         ; 8       ;
-; Test:inst62|music_03:inst8|COUNT[0]~0               ; 8       ;
 ; counterSecond_1:inst7|temp[3]~14                    ; 8       ;
 ; counterHour_1:inst13|temp[3]~14                     ; 8       ;
 ; counterHour_1:inst13|temp[2]~10                     ; 8       ;
@@ -1378,10 +1375,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Test:inst62|musicselector:inst98|temp[3]            ; 8       ;
 ; Test:inst62|musicselector:inst98|temp[0]            ; 8       ;
 ; five_sec:inst47|temp[1]                             ; 8       ;
-; LED:inst57|op[5]                                    ; 8       ;
-; LED:inst57|op[10]                                   ; 8       ;
-; LED:inst57|op[11]                                   ; 8       ;
-; Test:inst62|music_01:inst16|INDEX[4]                ; 8       ;
+; LED:inst57|op[8]                                    ; 8       ;
 ; Test:inst62|music_01:inst16|INDEX[0]                ; 8       ;
 ; Test:inst62|music_03:inst8|Mux7~4                   ; 8       ;
 ; Test:inst62|music_03:inst8|Mux8~6                   ; 8       ;
@@ -1390,15 +1384,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Test:inst62|buzzer_music2:inst4|Mux7~4              ; 8       ;
 ; Test:inst62|buzzer_music2:inst4|Mux9~3              ; 8       ;
 ; Test:inst62|buzzer_music2:inst4|Mux10~5             ; 8       ;
+; Test:inst62|music_02:inst7|INDEX[2]                 ; 8       ;
+; Test:inst62|music_02:inst7|INDEX[4]                 ; 8       ;
+; Test:inst62|buzzer_music2:inst4|INDEX[2]            ; 8       ;
 ; LED:inst57|op[2]~DUPLICATE                          ; 7       ;
+; LED:inst57|op[8]~DUPLICATE                          ; 7       ;
+; LED:inst57|op[11]~DUPLICATE                         ; 7       ;
 ; Test:inst62|buzzer:inst|INDEX[2]~DUPLICATE          ; 7       ;
+; Test:inst62|buzzer_music1:inst99|INDEX[1]~DUPLICATE ; 7       ;
+; Test:inst62|buzzer_music2:inst4|INDEX[3]~DUPLICATE  ; 7       ;
 ; Test:inst62|buzzer_music1:inst99|Mux8~2             ; 7       ;
-; clk_gen:inst1|div10_t:inst1|2                       ; 7       ;
+; clk_gen:inst1|div10_t:inst|2                        ; 7       ;
 ; Test:inst62|buzzer:inst|COUNT[3]~0                  ; 7       ;
 ; Test:inst62|buzzer_music0:inst2|COUNT[0]~0          ; 7       ;
 ; Test:inst62|alarm_clock:inst6|COUNT~0               ; 7       ;
 ; Test:inst62|music_02:inst7|COUNT[5]~0               ; 7       ;
 ; Test:inst62|music_01:inst16|COUNT[1]~0              ; 7       ;
+; Test:inst62|buzzer_music1:inst99|COUNT[4]~0         ; 7       ;
+; Test:inst62|music_03:inst8|COUNT[0]~0               ; 7       ;
 ; Test:inst62|buzzer_music2:inst4|COUNT[3]~0          ; 7       ;
 ; counterSecond_1:inst7|temp[1]~6                     ; 7       ;
 ; counterSecond_1:inst7|temp[0]~2                     ; 7       ;
@@ -1409,6 +1412,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; counterSecond_1:inst8|temp[3]~14                    ; 7       ;
 ; counterHour_1:inst13|temp[0]~2                      ; 7       ;
 ; clk_gen:inst1|div10_t:inst6|2                       ; 7       ;
+; LED:inst57|op[10]                                   ; 7       ;
 ; switch:inst44|output[3]~17                          ; 7       ;
 ; switch:inst44|output[2]~14                          ; 7       ;
 ; switch:inst44|output[1]~9                           ; 7       ;
@@ -1417,22 +1421,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Test:inst62|music_01:inst16|Mux8~0                  ; 7       ;
 ; Test:inst62|music_01:inst16|Mux9~0                  ; 7       ;
 ; Test:inst62|music_01:inst16|Mux10~0                 ; 7       ;
+; Test:inst62|music_01:inst16|INDEX[4]                ; 7       ;
+; Test:inst62|music_01:inst16|INDEX[2]                ; 7       ;
 ; Test:inst62|music_02:inst7|INDEX[6]                 ; 7       ;
-; Test:inst62|music_02:inst7|INDEX[7]                 ; 7       ;
 ; Test:inst62|buzzer_music1:inst99|INDEX[2]           ; 7       ;
-; Test:inst62|buzzer_music2:inst4|INDEX[2]            ; 7       ;
-; LED:inst57|op[0]~DUPLICATE                          ; 6       ;
-; LED:inst57|op[5]~DUPLICATE                          ; 6       ;
+; Test:inst62|music_03:inst8|INDEX[6]                 ; 7       ;
 ; LED:inst57|op[6]~DUPLICATE                          ; 6       ;
 ; Test:inst62|buzzer:inst|INDEX[3]~DUPLICATE          ; 6       ;
 ; Test:inst62|buzzer:inst|INDEX[1]~DUPLICATE          ; 6       ;
 ; Test:inst62|buzzer:inst|INDEX[4]~DUPLICATE          ; 6       ;
 ; Test:inst62|music_01:inst16|INDEX[0]~DUPLICATE      ; 6       ;
-; Test:inst62|music_02:inst7|INDEX[1]~DUPLICATE       ; 6       ;
-; Test:inst62|buzzer_music2:inst4|INDEX[3]~DUPLICATE  ; 6       ;
+; Test:inst62|music_03:inst8|INDEX[6]~DUPLICATE       ; 6       ;
 ; Test:inst62|buzzer_music1:inst99|Mux7~3             ; 6       ;
 ; Test:inst62|buzzer_music1:inst99|Mux6~2             ; 6       ;
-; clk_gen:inst1|div10_t:inst|2                        ; 6       ;
+; clk_gen:inst1|div10_t:inst1|2                       ; 6       ;
 ; clk_gen:inst1|div10_t:inst2|2                       ; 6       ;
 ; debounce_g:inst72|16~1                              ; 6       ;
 ; counterSecond_10:inst5|carry_out                    ; 6       ;
@@ -1457,23 +1459,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Test:inst62|buzzer_music2:inst4|LEN[0]              ; 6       ;
 ; Test:inst62|buzzer_music2:inst4|LEN[1]              ; 6       ;
 ; LED:inst57|op[6]                                    ; 6       ;
-; shift_clock:inst23|temp[1]                          ; 6       ;
 ; led_and2:inst61|tempEdit                            ; 6       ;
 ; Test:inst62|buzzer_music1:inst99|Mux7~0             ; 6       ;
+; Test:inst62|buzzer_music0:inst2|INDEX[4]            ; 6       ;
 ; Test:inst62|buzzer_music0:inst2|INDEX[2]            ; 6       ;
 ; Test:inst62|music_02:inst7|INDEX[5]                 ; 6       ;
+; Test:inst62|buzzer_music1:inst99|INDEX[4]           ; 6       ;
+; Test:inst62|buzzer_music1:inst99|INDEX[6]           ; 6       ;
 ; Test:inst62|buzzer_music2:inst4|INDEX[5]            ; 6       ;
-; Test:inst62|buzzer_music2:inst4|INDEX[4]            ; 6       ;
-; Test:inst62|buzzer_music2:inst4|INDEX[1]            ; 6       ;
-; Test:inst62|buzzer_music0:inst2|INDEX[5]~DUPLICATE  ; 5       ;
-; Test:inst62|buzzer_music0:inst2|INDEX[4]~DUPLICATE  ; 5       ;
+; Test:inst62|music_01:inst16|INDEX[2]~DUPLICATE      ; 5       ;
 ; Test:inst62|buzzer_music0:inst2|INDEX[1]~DUPLICATE  ; 5       ;
 ; Test:inst62|buzzer_music0:inst2|INDEX[6]~DUPLICATE  ; 5       ;
-; Test:inst62|music_02:inst7|INDEX[7]~DUPLICATE       ; 5       ;
-; Test:inst62|buzzer_music2:inst4|INDEX[7]~DUPLICATE  ; 5       ;
+; Test:inst62|music_02:inst7|INDEX[1]~DUPLICATE       ; 5       ;
+; Test:inst62|buzzer_music2:inst4|INDEX[4]~DUPLICATE  ; 5       ;
 ; inst33                                              ; 5       ;
 ; clk_gen:inst1|div10_t:inst|5                        ; 5       ;
-; Test:inst62|CLKtest:inst1|CNT[0]                    ; 5       ;
 ; counterSecond_1:inst7|carry                         ; 5       ;
 ; counterSecond_1:inst8|carry                         ; 5       ;
 ; LED:inst57|Selector4~0                              ; 5       ;
@@ -1487,9 +1487,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Test:inst62|music_01:inst16|LessThan1~0             ; 5       ;
 ; Test:inst62|buzzer_music1:inst99|LEN~0              ; 5       ;
 ; Test:inst62|buzzer_music1:inst99|LEN[0]             ; 5       ;
-; Test:inst62|music_03:inst8|LEN[0]                   ; 5       ;
 ; Test:inst62|buzzer_music2:inst4|LEN[2]              ; 5       ;
-; LED:inst57|op[0]                                    ; 5       ;
 ; LED:inst57|op[2]                                    ; 5       ;
 ; alarmDetection:inst46|alarmSent~5                   ; 5       ;
 ; alarmDetection:inst46|alarmSent~4                   ; 5       ;
@@ -1498,12 +1496,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; alarmDetection:inst46|alarmSent~1                   ; 5       ;
 ; alarmDetection:inst46|alarmSent~0                   ; 5       ;
 ; Test:inst62|music_01:inst16|INDEX[1]                ; 5       ;
-; Test:inst62|music_02:inst7|INDEX[4]                 ; 5       ;
+; Test:inst62|buzzer_music0:inst2|INDEX[5]            ; 5       ;
 ; Test:inst62|music_02:inst7|INDEX[0]                 ; 5       ;
-; Test:inst62|buzzer_music1:inst99|INDEX[4]           ; 5       ;
-; Test:inst62|music_03:inst8|INDEX[6]                 ; 5       ;
-; Test:inst62|music_03:inst8|INDEX[0]~DUPLICATE       ; 4       ;
-; clk_gen:inst1|div10_t:inst1|5                       ; 4       ;
+; Test:inst62|buzzer_music1:inst99|INDEX[3]           ; 5       ;
+; Test:inst62|buzzer_music2:inst4|INDEX[7]            ; 5       ;
+; LED:inst57|op[3]~DUPLICATE                          ; 4       ;
+; LED:inst57|op[10]~DUPLICATE                         ; 4       ;
+; shift_clock:inst23|temp[1]~DUPLICATE                ; 4       ;
+; Test:inst62|music_01:inst16|INDEX[4]~DUPLICATE      ; 4       ;
+; Test:inst62|buzzer_music0:inst2|INDEX[5]~DUPLICATE  ; 4       ;
+; clk_gen:inst1|div10_t:inst2|5                       ; 4       ;
 ; clk_gen:inst1|div10_t:inst5|5                       ; 4       ;
 ; Test:inst62|CLKtest:inst1|CNT[1]                    ; 4       ;
 ; clk_gen:inst1|div10_t:inst3|5                       ; 4       ;
@@ -1529,7 +1531,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Test:inst62|music_03:inst8|LEN[1]                   ; 4       ;
 ; Test:inst62|music_03:inst8|LEN[2]                   ; 4       ;
 ; alarmDetection:inst46|alarmSent~7                   ; 4       ;
-; LED:inst57|op[3]                                    ; 4       ;
+; LED:inst57|op[5]                                    ; 4       ;
+; LED:inst57|op[11]                                   ; 4       ;
 ; Test:inst62|buzzer:inst|Mux7~0                      ; 4       ;
 ; Test:inst62|buzzer:inst|Mux8~0                      ; 4       ;
 ; Test:inst62|buzzer:inst|Mux6~0                      ; 4       ;
@@ -1541,18 +1544,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Test:inst62|buzzer_music0:inst2|Mux8~0              ; 4       ;
 ; Test:inst62|music_02:inst7|Mux9~1                   ; 4       ;
 ; Test:inst62|buzzer_music2:inst4|Mux10~2             ; 4       ;
-; Test:inst62|buzzer_music0:inst2|INDEX[5]            ; 4       ;
-; Test:inst62|buzzer_music0:inst2|INDEX[4]            ; 4       ;
 ; Test:inst62|buzzer_music0:inst2|INDEX[1]            ; 4       ;
 ; Test:inst62|buzzer_music0:inst2|INDEX[6]            ; 4       ;
 ; Test:inst62|alarm_clock:inst6|INDEX[0]              ; 4       ;
-; Test:inst62|music_02:inst7|INDEX[2]                 ; 4       ;
-; Test:inst62|buzzer_music1:inst99|INDEX[3]           ; 4       ;
+; clk_gen:inst1|div10_t:inst1|5~DUPLICATE             ; 3       ;
+; Test:inst62|CLKtest:inst1|CNT[0]~DUPLICATE          ; 3       ;
 ; clk_gen:inst1|div10_t:inst6|5~DUPLICATE             ; 3       ;
-; LED:inst57|op[10]~DUPLICATE                         ; 3       ;
-; LED:inst57|op[11]~DUPLICATE                         ; 3       ;
-; Test:inst62|music_01:inst16|INDEX[4]~DUPLICATE      ; 3       ;
-; Test:inst62|music_01:inst16|INDEX[2]~DUPLICATE      ; 3       ;
+; Test:inst62|music_03:inst8|LEN[0]~DUPLICATE         ; 3       ;
+; Test:inst62|buzzer_music0:inst2|INDEX[4]~DUPLICATE  ; 3       ;
 ; Test:inst62|buzzer_music0:inst2|INDEX[2]~DUPLICATE  ; 3       ;
 ; counterSecond_1:inst7|temp[2]~9                     ; 3       ;
 ; counterSecond_1:inst7|temp[1]~5                     ; 3       ;
@@ -1616,11 +1615,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Test:inst62|buzzer:inst|LEN[1]                      ; 3       ;
 ; Test:inst62|buzzer_music0:inst2|LEN[2]              ; 3       ;
 ; Test:inst62|music_02:inst7|LEN[1]                   ; 3       ;
-; Test:inst62|music_01:inst16|LEN[1]                  ; 3       ;
 ; Test:inst62|buzzer_music1:inst99|LEN[2]             ; 3       ;
 ; Test:inst62|music_03:inst8|LEN[3]                   ; 3       ;
 ; Test:inst62|buzzer_music2:inst4|LEN[3]              ; 3       ;
-; LED:inst57|op[7]                                    ; 3       ;
+; LED:inst57|op[0]                                    ; 3       ;
 ; Test:inst62|buzzer:inst|Mux11~0                     ; 3       ;
 ; Test:inst62|buzzer:inst|INDEX[2]                    ; 3       ;
 ; Test:inst62|buzzer_music0:inst2|Mux13~0             ; 3       ;
@@ -1642,14 +1640,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Test:inst62|alarm_clock:inst6|INDEX[1]              ; 3       ;
 ; Test:inst62|music_01:inst16|COUNT[5]                ; 3       ;
 ; Test:inst62|buzzer_music1:inst99|COUNT[3]           ; 3       ;
+; Test:inst62|buzzer_music1:inst99|COUNT[2]           ; 3       ;
 ; Test:inst62|buzzer_music1:inst99|COUNT[4]           ; 3       ;
-; Test:inst62|buzzer_music1:inst99|INDEX[6]           ; 3       ;
-; Test:inst62|buzzer_music1:inst99|INDEX[0]           ; 3       ;
-; clk_gen:inst1|div10_t:inst2|5~DUPLICATE             ; 2       ;
+; Test:inst62|music_02:inst7|INDEX[7]                 ; 3       ;
+; Test:inst62|music_03:inst8|INDEX[1]                 ; 3       ;
 ; clk_gen:inst1|div10_t:inst|5~DUPLICATE              ; 2       ;
 ; Test:inst62|CLKtest:inst1|CNT[2]~DUPLICATE          ; 2       ;
-; LED:inst57|op[8]~DUPLICATE                          ; 2       ;
 ; Test:inst62|music_02:inst7|INDEX[0]~DUPLICATE       ; 2       ;
+; Test:inst62|music_03:inst8|INDEX[0]~DUPLICATE       ; 2       ;
 ; addone~input                                        ; 2       ;
 ; minusone~input                                      ; 2       ;
 ; clk~input                                           ; 2       ;
@@ -1673,8 +1671,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; counterHour_1:inst43|temp[1]~5                      ; 2       ;
 ; counterHour_10:inst42|temp[1]~5                     ; 2       ;
 ; counterHour_10:inst42|temp[0]~1                     ; 2       ;
-; clk_gen:inst1|div10_t:inst2|5~0                     ; 2       ;
+; clk_gen:inst1|div10_t:inst1|5~0                     ; 2       ;
 ; clk_gen:inst1|div10_t:inst|5~0                      ; 2       ;
+; Test:inst62|CLKtest:inst1|CNT[0]~4                  ; 2       ;
 ; clk_gen:inst1|div10_t:inst6|5~0                     ; 2       ;
 ; display:inst|temp[0]~2                              ; 2       ;
 ; Test:inst62|buzzer_music1:inst99|Mux9~9             ; 2       ;
@@ -1683,11 +1682,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; clk_gen:inst1|div10_t:inst1|1                       ; 2       ;
 ; Test:inst62|CLKtest:inst1|CNT[2]~2                  ; 2       ;
 ; clk_gen:inst1|div10_t:inst4|1                       ; 2       ;
-; clk_gen:inst1|div10_t:inst2|5                       ; 2       ;
 ; clk_gen:inst1|div10_t:inst2|1                       ; 2       ;
 ; clk_gen:inst1|div10_t:inst5|1                       ; 2       ;
 ; Test:inst62|div10_t:inst3|1                         ; 2       ;
-; Test:inst62|CLKtest:inst1|CNT[4]~0                  ; 2       ;
+; Test:inst62|CLKtest:inst1|CNT[0]                    ; 2       ;
 ; Test:inst62|CLKtest:inst1|CNT[3]                    ; 2       ;
 ; clk_gen:inst1|div10_t:inst3|1                       ; 2       ;
 ; debounce_g:inst65|1                                 ; 2       ;
@@ -1702,12 +1700,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; debounce_g:inst75|1                                 ; 2       ;
 ; debounce_g:inst70|1                                 ; 2       ;
 ; debounce_g:inst76|1                                 ; 2       ;
+; Test:inst62|music_01:inst16|LEN~1                   ; 2       ;
+; Test:inst62|music_03:inst8|LEN~3                    ; 2       ;
 ; clk_gen:inst1|div10_t:inst6|1                       ; 2       ;
+; Test:inst62|CLKtest:inst1|CNT[4]                    ; 2       ;
 ; LED:inst57|Selector11~1                             ; 2       ;
 ; LED:inst57|Selector10~0                             ; 2       ;
 ; LED:inst57|Selector9~1                              ; 2       ;
 ; LED:inst57|Selector8~1                              ; 2       ;
-; LED:inst57|Selector7~0                              ; 2       ;
 ; LED:inst57|Selector6~0                              ; 2       ;
 ; LED:inst57|Selector5~3                              ; 2       ;
 ; LED:inst57|Selector5~2                              ; 2       ;
@@ -1760,11 +1760,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Test:inst62|music_02:inst7|PULSE~2                  ; 2       ;
 ; Test:inst62|music_01:inst16|INDEX[4]~6              ; 2       ;
 ; Test:inst62|music_01:inst16|Add2~0                  ; 2       ;
-; Test:inst62|music_01:inst16|INDEX[3]~5              ; 2       ;
 ; Test:inst62|music_01:inst16|INDEX[2]~4              ; 2       ;
 ; Test:inst62|music_01:inst16|INDEX[1]~3              ; 2       ;
 ; Test:inst62|music_01:inst16|INDEX[0]~2              ; 2       ;
 ; Test:inst62|music_01:inst16|LessThan2~0             ; 2       ;
+; Test:inst62|music_01:inst16|LEN[1]                  ; 2       ;
 ; Test:inst62|music_01:inst16|LEN[2]                  ; 2       ;
 ; Test:inst62|music_01:inst16|PULSE~1                 ; 2       ;
 ; Test:inst62|music_01:inst16|PULSE~0                 ; 2       ;
@@ -1773,6 +1773,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Test:inst62|music_03:inst8|PULSE~0                  ; 2       ;
 ; Test:inst62|music_03:inst8|Equal1~0                 ; 2       ;
 ; Test:inst62|music_03:inst8|LessThan1~0              ; 2       ;
+; Test:inst62|music_03:inst8|LEN[0]                   ; 2       ;
 ; Test:inst62|music_03:inst8|Mux12~3                  ; 2       ;
 ; Test:inst62|music_03:inst8|Mux11~4                  ; 2       ;
 ; Test:inst62|buzzer_music2:inst4|PULSE~1             ; 2       ;
@@ -1782,13 +1783,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Test:inst62|buzzer_music2:inst4|Mux12~1             ; 2       ;
 ; Test:inst62|buzzer_music2:inst4|Mux13~4             ; 2       ;
 ; Test:inst62|buzzer_music2:inst4|Mux13~2             ; 2       ;
-; LED:inst57|op[9]                                    ; 2       ;
+; LED:inst57|op[1]                                    ; 2       ;
+; LED:inst57|op[7]                                    ; 2       ;
 ; Test:inst62|buzzer:inst|PULSE                       ; 2       ;
 ; Test:inst62|buzzer_music0:inst2|PULSE               ; 2       ;
 ; Test:inst62|alarm_clock:inst6|PULSE                 ; 2       ;
 ; Test:inst62|music_02:inst7|PULSE                    ; 2       ;
 ; Test:inst62|music_01:inst16|Mux0~0                  ; 2       ;
-; Test:inst62|music_01:inst16|INDEX[3]                ; 2       ;
 ; Test:inst62|music_01:inst16|PULSE                   ; 2       ;
 ; Test:inst62|buzzer_music1:inst99|PULSE              ; 2       ;
 ; Test:inst62|buzzer_music1:inst99|Mux3~0             ; 2       ;
@@ -1796,8 +1797,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Test:inst62|buzzer_music1:inst99|Mux9~6             ; 2       ;
 ; Test:inst62|music_03:inst8|PULSE                    ; 2       ;
 ; Test:inst62|buzzer_music2:inst4|PULSE               ; 2       ;
-; Test:inst62|buzzer_music1:inst99|Add0~21            ; 2       ;
-; Test:inst62|music_03:inst8|Add0~21                  ; 2       ;
 ; Test:inst62|buzzer_music0:inst2|Add2~21             ; 2       ;
 ; Test:inst62|buzzer_music0:inst2|Add2~17             ; 2       ;
 ; Test:inst62|buzzer_music0:inst2|Add2~9              ; 2       ;
@@ -1860,7 +1859,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Test:inst62|music_01:inst16|COUNT[6]                ; 2       ;
 ; Test:inst62|music_01:inst16|COUNT[1]                ; 2       ;
 ; Test:inst62|music_01:inst16|COUNT[0]                ; 2       ;
-; Test:inst62|buzzer_music1:inst99|COUNT[2]           ; 2       ;
 ; Test:inst62|buzzer_music1:inst99|COUNT[6]           ; 2       ;
 ; Test:inst62|buzzer_music1:inst99|COUNT[5]           ; 2       ;
 ; Test:inst62|buzzer_music1:inst99|COUNT[1]           ; 2       ;
@@ -1872,6 +1870,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Test:inst62|buzzer_music1:inst99|Add2~5             ; 2       ;
 ; Test:inst62|buzzer_music1:inst99|Add2~1             ; 2       ;
 ; Test:inst62|music_03:inst8|COUNT[4]                 ; 2       ;
+; Test:inst62|music_03:inst8|COUNT[3]                 ; 2       ;
 ; Test:inst62|music_03:inst8|COUNT[2]                 ; 2       ;
 ; Test:inst62|music_03:inst8|COUNT[6]                 ; 2       ;
 ; Test:inst62|music_03:inst8|COUNT[1]                 ; 2       ;
@@ -1935,17 +1934,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Test:inst62|alarm_clock:inst6|INDEX[4]              ; 2       ;
 ; Test:inst62|alarm_clock:inst6|INDEX[5]              ; 2       ;
 ; Test:inst62|alarm_clock:inst6|INDEX[6]              ; 2       ;
-; Test:inst62|music_03:inst8|INDEX[4]                 ; 2       ;
 ; Test:inst62|music_03:inst8|INDEX[2]                 ; 2       ;
-; Test:inst62|music_03:inst8|INDEX[1]                 ; 2       ;
-; Test:inst62|CLKtest:inst1|CNT[4]~DUPLICATE          ; 1       ;
-; LED:inst57|op[4]~DUPLICATE                          ; 1       ;
-; Test:inst62|buzzer_music1:inst99|COUNT[2]~DUPLICATE ; 1       ;
-; Test:inst62|music_03:inst8|COUNT[3]~DUPLICATE       ; 1       ;
+; Test:inst62|music_01:inst16|LEN[1]~DUPLICATE        ; 1       ;
 ; edit_pin~input                                      ; 1       ;
-; clk_gen:inst1|div10_t:inst1|5~0                     ; 1       ;
+; clk_gen:inst1|div10_t:inst2|5~0                     ; 1       ;
 ; clk_gen:inst1|div10_t:inst5|5~0                     ; 1       ;
-; Test:inst62|CLKtest:inst1|CNT[0]~4                  ; 1       ;
 ; clk_gen:inst1|div10_t:inst3|5~0                     ; 1       ;
 ; UPDOWN:inst19|UP:inst1|CNT[0]~0                     ; 1       ;
 ; UPDOWN:inst19|DOWN:inst|CNT[0]~3                    ; 1       ;
@@ -1990,6 +1983,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; clk_gen:inst1|div10_t:inst4|1~0                     ; 1       ;
 ; clk_gen:inst1|div10_t:inst4|3~0                     ; 1       ;
 ; clk_gen:inst1|div10_t:inst1|2~0                     ; 1       ;
+; clk_gen:inst1|div10_t:inst1|5                       ; 1       ;
 ; clk_gen:inst1|div10_t:inst2|1~0                     ; 1       ;
 ; clk_gen:inst1|div10_t:inst2|3~0                     ; 1       ;
 ; clk_gen:inst1|div10_t:inst5|1~0                     ; 1       ;
@@ -2031,6 +2025,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; clk_gen:inst1|div10_t:inst6|1~0                     ; 1       ;
 ; clk_gen:inst1|div10_t:inst6|3~0                     ; 1       ;
 ; Test:inst62|div10_t:inst3|2~0                       ; 1       ;
+; Test:inst62|CLKtest:inst1|CNT[4]~0                  ; 1       ;
 ; Test:inst62|CLKtest:inst1|CNT[2]                    ; 1       ;
 ; LED:inst57|Selector12~0                             ; 1       ;
 ; clk_gen:inst1|div10_t:inst3|2~0                     ; 1       ;
@@ -2086,13 +2081,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Test:inst62|music_02:inst7|LEN~1                    ; 1       ;
 ; Test:inst62|music_02:inst7|LEN~0                    ; 1       ;
 ; Test:inst62|music_01:inst16|LEN~2                   ; 1       ;
-; Test:inst62|music_01:inst16|LEN~1                   ; 1       ;
 ; Test:inst62|music_01:inst16|LEN~0                   ; 1       ;
 ; Test:inst62|buzzer_music1:inst99|LEN~4              ; 1       ;
 ; Test:inst62|buzzer_music1:inst99|LEN~3              ; 1       ;
 ; Test:inst62|buzzer_music1:inst99|LEN~2              ; 1       ;
 ; Test:inst62|buzzer_music1:inst99|LEN~1              ; 1       ;
-; Test:inst62|music_03:inst8|LEN~3                    ; 1       ;
 ; Test:inst62|music_03:inst8|LEN~2                    ; 1       ;
 ; Test:inst62|music_03:inst8|LEN~1                    ; 1       ;
 ; Test:inst62|music_03:inst8|LEN~0                    ; 1       ;
@@ -2106,9 +2099,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Test:inst62|buzzer_music2:inst4|LEN~3               ; 1       ;
 ; Test:inst62|buzzer_music2:inst4|LEN~2               ; 1       ;
 ; Test:inst62|buzzer_music2:inst4|LEN~1               ; 1       ;
-; Test:inst62|CLKtest:inst1|CNT[4]                    ; 1       ;
 ; LED:inst57|Selector9~0                              ; 1       ;
 ; LED:inst57|Selector8~0                              ; 1       ;
+; LED:inst57|Selector7~0                              ; 1       ;
 ; LED:inst57|Selector4~5                              ; 1       ;
 ; LED:inst57|Selector5~1                              ; 1       ;
 ; LED:inst57|Equal13~1                                ; 1       ;
@@ -2161,9 +2154,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Test:inst62|buzzer_music0:inst2|Equal1~0            ; 1       ;
 ; Test:inst62|musicselector:inst98|Mux2~0             ; 1       ;
 ; Test:inst62|alarm_clock:inst6|LEN[0]                ; 1       ;
-; Test:inst62|musicselector:inst98|Mux0~0             ; 1       ;
 ; Test:inst62|alarm_clock:inst6|PULSE~0               ; 1       ;
 ; Test:inst62|alarm_clock:inst6|Equal1~0              ; 1       ;
+; Test:inst62|musicselector:inst98|Mux0~0             ; 1       ;
 ; Test:inst62|music_02:inst7|Mux12~0                  ; 1       ;
 ; Test:inst62|music_02:inst7|Mux11~4                  ; 1       ;
 ; Test:inst62|music_02:inst7|Mux11~3                  ; 1       ;
@@ -2181,6 +2174,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Test:inst62|music_02:inst7|PULSE~0                  ; 1       ;
 ; Test:inst62|musicselector:inst98|Mux5~0             ; 1       ;
 ; Test:inst62|music_01:inst16|INDEX[5]~7              ; 1       ;
+; Test:inst62|music_01:inst16|INDEX[3]~5              ; 1       ;
 ; Test:inst62|music_01:inst16|Mux8~1                  ; 1       ;
 ; Test:inst62|alarm_clock:inst6|LessThan0~2           ; 1       ;
 ; Test:inst62|alarm_clock:inst6|LessThan0~1           ; 1       ;
@@ -2242,7 +2236,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Test:inst62|buzzer_music2:inst4|LessThan2~0         ; 1       ;
 ; led_and:inst59|led_and_out[0]                       ; 1       ;
 ; led_and:inst59|led_and_out[1]                       ; 1       ;
-; LED:inst57|op[1]                                    ; 1       ;
 ; led_and:inst59|led_and_out[2]                       ; 1       ;
 ; led_and:inst59|led_and_out[3]                       ; 1       ;
 ; vectorOR2:inst63|led_and_out[4]                     ; 1       ;
@@ -2251,6 +2244,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; vectorOR2:inst63|led_and_out[7]                     ; 1       ;
 ; vectorOR2:inst63|led_and_out[8]                     ; 1       ;
 ; led_and:inst59|led_and_out[9]                       ; 1       ;
+; LED:inst57|op[9]                                    ; 1       ;
 ; vectorOR2:inst63|led_and_out[10]                    ; 1       ;
 ; vectorOR2:inst63|led_and_out[11]                    ; 1       ;
 ; vectortest:inst3|Mux6~0                             ; 1       ;
@@ -2265,6 +2259,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; outputsix:inst2|Mux0~0                              ; 1       ;
 ; switch:inst44|output[2]~13                          ; 1       ;
 ; switch:inst44|output[2]~12                          ; 1       ;
+; switch:inst44|output[2]~11                          ; 1       ;
+; switch:inst44|output[2]~10                          ; 1       ;
+; switch:inst44|output[1]~8                           ; 1       ;
+; switch:inst44|output[1]~7                           ; 1       ;
 +-----------------------------------------------------+---------+
 
 
@@ -2273,21 +2271,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------+---------------------------+
 ; Routing Resource Type        ; Usage                     ;
 +------------------------------+---------------------------+
-; Block interconnects          ; 1,228 / 140,056 ( < 1 % ) ;
-; C12 interconnects            ; 35 / 6,048 ( < 1 % )      ;
-; C2 interconnects             ; 336 / 54,648 ( < 1 % )    ;
-; C4 interconnects             ; 262 / 25,920 ( 1 % )      ;
+; Block interconnects          ; 1,240 / 140,056 ( < 1 % ) ;
+; C12 interconnects            ; 40 / 6,048 ( < 1 % )      ;
+; C2 interconnects             ; 350 / 54,648 ( < 1 % )    ;
+; C4 interconnects             ; 253 / 25,920 ( < 1 % )    ;
 ; DQS bus muxes                ; 0 / 17 ( 0 % )            ;
 ; DQS-18 I/O buses             ; 0 / 17 ( 0 % )            ;
 ; DQS-9 I/O buses              ; 0 / 17 ( 0 % )            ;
-; Direct links                 ; 244 / 140,056 ( < 1 % )   ;
+; Direct links                 ; 267 / 140,056 ( < 1 % )   ;
 ; Global clocks                ; 2 / 16 ( 13 % )           ;
-; Local interconnects          ; 557 / 36,960 ( 2 % )      ;
+; Local interconnects          ; 549 / 36,960 ( 1 % )      ;
 ; Quadrant clocks              ; 0 / 88 ( 0 % )            ;
 ; R14 interconnects            ; 52 / 5,984 ( < 1 % )      ;
-; R14/C12 interconnect drivers ; 82 / 9,504 ( < 1 % )      ;
-; R3 interconnects             ; 545 / 60,192 ( < 1 % )    ;
-; R6 interconnects             ; 743 / 127,072 ( < 1 % )   ;
+; R14/C12 interconnect drivers ; 85 / 9,504 ( < 1 % )      ;
+; R3 interconnects             ; 559 / 60,192 ( < 1 % )    ;
+; R6 interconnects             ; 700 / 127,072 ( < 1 % )   ;
 ; Spine clocks                 ; 3 / 120 ( 3 % )           ;
 ; Wire stub REs                ; 0 / 7,344 ( 0 % )         ;
 +------------------------------+---------------------------+
@@ -2592,30 +2590,30 @@ Info (332130): Timing requirements not specified -- quality metrics such as perf
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:06
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:07
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:03
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 3% of the available device resources in the region that extends from location X22_Y34 to location X32_Y45
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:12
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:14
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 2.03 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 2.41 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:08
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:10
 Info (144001): Generated suppressed messages file Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/output_files/projectClock.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 5414 megabytes
-    Info: Processing ended: Tue Jun 23 22:08:36 2020
-    Info: Elapsed time: 00:00:48
-    Info: Total CPU time (on all processors): 00:00:42
+    Info: Peak virtual memory: 5430 megabytes
+    Info: Processing ended: Tue Jun 23 22:46:10 2020
+    Info: Elapsed time: 00:00:54
+    Info: Total CPU time (on all processors): 00:00:49
 
 
 +----------------------------+
