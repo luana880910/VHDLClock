@@ -6,13 +6,13 @@ entity counterHour_1 is
 port(carry,edit: in std_logic;
 	S:out std_logic_vector(3 downto 0);
 	carry_out:out std_logic;
+	hour_10:in std_logic_vector(3 downto 0);
 	edit_in:in std_logic_vector(3 downto 0));
 
 end counterHour_1;
 
 architecture a of counterHour_1 is
-signal temp: std_logic_vector(3 downto 0);
-signal K: std_logic_vector(1 downto 0);
+signal temp: std_logic_vector(3 downto 0):="0000";
 begin
 	process(carry)
 	begin
@@ -31,7 +31,7 @@ begin
 					temp <= "0011";
 					carry_out <= '0';
 				when "0011" =>
-					if K = "10" then
+					if hour_10 = "0010" then
 						temp <= "0000";
 						carry_out <= '1';
 					else
@@ -56,7 +56,6 @@ begin
 				when "1001" =>
 					temp <= "0000";
 					carry_out <= '1';
-					K <= K + 1;
 				when others =>
 					temp <= "0000";
 			end case;

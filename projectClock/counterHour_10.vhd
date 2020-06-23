@@ -10,12 +10,16 @@ port(carry,edit: in std_logic;
 end counterHour_10;
 
 architecture a of counterHour_10 is
-signal temp: std_logic_vector(3 downto 0);
+signal temp: std_logic_vector(3 downto 0):="0000";
 begin
 	process(carry)
 	begin
 	if	edit = '1' then
+		if edit_input = "0010" or edit_input = "0001" or edit_input = "0000" then
 			temp <= edit_input;
+		else
+			temp <= "0001";
+		end if;
 	else
 		if carry'event and carry = '1' then
 			case temp is

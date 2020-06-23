@@ -98,8 +98,8 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 560 248 712 328)
-	(text "CLKtest" (rect 5 0 45 12)(font "Arial" ))
+	(rect 560 248 704 328)
+	(text "buzzer" (rect 5 0 35 12)(font "Arial" ))
 	(text "inst" (rect 8 64 25 76)(font "Arial" ))
 	(port
 		(pt 0 32)
@@ -109,19 +109,15 @@ applicable agreement for further details.
 		(line (pt 0 32)(pt 16 32))
 	)
 	(port
-		(pt 152 32)
+		(pt 144 32)
 		(output)
-		(text "CLKout" (rect 0 0 36 12)(font "Arial" ))
-		(text "CLKout" (rect 101 27 137 39)(font "Arial" ))
-		(line (pt 152 32)(pt 136 32))
+		(text "BEEP" (rect 0 0 28 12)(font "Arial" ))
+		(text "BEEP" (rect 100 27 128 39)(font "Arial" ))
+		(line (pt 144 32)(pt 128 32))
 	)
 	(drawing
-		(rectangle (rect 16 16 136 64))
+		(rectangle (rect 16 16 128 64))
 	)
-)
-(connector
-	(pt 728 280)
-	(pt 712 280)
 )
 (connector
 	(pt 520 280)
@@ -130,4 +126,8 @@ applicable agreement for further details.
 (connector
 	(pt 240 280)
 	(pt 224 280)
+)
+(connector
+	(pt 704 280)
+	(pt 728 280)
 )

@@ -10,12 +10,16 @@ port(carry,edit: in std_logic;
 end counterSecond_10;
 
 architecture a of counterSecond_10 is
-signal temp: std_logic_vector(3 downto 0);
+signal temp: std_logic_vector(3 downto 0):="0000";
 begin
 	process(carry,edit)
 	begin
 		if	edit = '1' then
-			temp <= edit_input;
+			if edit_input = "0101" or edit_input = "0100" or edit_input = "0011" or edit_input = "0010" or edit_input = "0001" or edit_input = "0000" then
+				temp <= edit_input;
+			else
+				temp <= "0101";
+			end if;
 		else
 			if carry'event and carry = '1' then
 			case temp is

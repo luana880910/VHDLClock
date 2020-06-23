@@ -42,7 +42,7 @@ SIGNAL("clk")
 	PARENT = "";
 }
 
-SIGNAL("keypad_0")
+SIGNAL("minusone")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -52,7 +52,7 @@ SIGNAL("keypad_0")
 	PARENT = "";
 }
 
-SIGNAL("keypad_1")
+SIGNAL("addone")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -62,17 +62,7 @@ SIGNAL("keypad_1")
 	PARENT = "";
 }
 
-SIGNAL("keypad_2")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("ppop")
+SIGNAL("test")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = BUS;
@@ -82,94 +72,44 @@ SIGNAL("ppop")
 	PARENT = "";
 }
 
-SIGNAL("ppop[3]")
+SIGNAL("test[3]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "ppop";
+	PARENT = "test";
 }
 
-SIGNAL("ppop[2]")
+SIGNAL("test[2]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "ppop";
+	PARENT = "test";
 }
 
-SIGNAL("ppop[1]")
+SIGNAL("test[1]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "ppop";
+	PARENT = "test";
 }
 
-SIGNAL("ppop[0]")
+SIGNAL("test[0]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "ppop";
-}
-
-SIGNAL("testpin")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = BUS;
-	WIDTH = 4;
-	LSB_INDEX = 0;
-	DIRECTION = OUTPUT;
-	PARENT = "";
-}
-
-SIGNAL("testpin[3]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "testpin";
-}
-
-SIGNAL("testpin[2]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "testpin";
-}
-
-SIGNAL("testpin[1]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "testpin";
-}
-
-SIGNAL("testpin[0]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = OUTPUT;
-	PARENT = "testpin";
+	PARENT = "test";
 }
 
 TRANSITION_LIST("clk")
@@ -179,52 +119,46 @@ TRANSITION_LIST("clk")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 50;
-			LEVEL 0 FOR 10.0;
-			LEVEL 1 FOR 10.0;
+			REPEAT = 500;
+			LEVEL 0 FOR 1.0;
+			LEVEL 1 FOR 1.0;
 		}
 	}
 }
 
-TRANSITION_LIST("keypad_0")
+TRANSITION_LIST("minusone")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 12;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+		}
+		LEVEL 0 FOR 760.0;
 	}
 }
 
-TRANSITION_LIST("keypad_1")
+TRANSITION_LIST("addone")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 260.0;
+		LEVEL 1 FOR 10.0;
+		NODE
+		{
+			REPEAT = 12;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+		}
+		LEVEL 0 FOR 490.0;
 	}
 }
 
-TRANSITION_LIST("keypad_2")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 1 FOR 50.0;
-		LEVEL 0 FOR 100.0;
-		LEVEL 1 FOR 850.0;
-	}
-}
-
-TRANSITION_LIST("ppop[3]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ppop[2]")
+TRANSITION_LIST("test[3]")
 {
 	NODE
 	{
@@ -233,7 +167,7 @@ TRANSITION_LIST("ppop[2]")
 	}
 }
 
-TRANSITION_LIST("ppop[1]")
+TRANSITION_LIST("test[2]")
 {
 	NODE
 	{
@@ -242,7 +176,7 @@ TRANSITION_LIST("ppop[1]")
 	}
 }
 
-TRANSITION_LIST("ppop[0]")
+TRANSITION_LIST("test[1]")
 {
 	NODE
 	{
@@ -251,34 +185,7 @@ TRANSITION_LIST("ppop[0]")
 	}
 }
 
-TRANSITION_LIST("testpin[3]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("testpin[2]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("testpin[1]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("testpin[0]")
+TRANSITION_LIST("test[0]")
 {
 	NODE
 	{
@@ -298,7 +205,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "keypad_0";
+	CHANNEL = "minusone";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 1;
@@ -307,7 +214,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "keypad_1";
+	CHANNEL = "addone";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 2;
@@ -316,111 +223,52 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "keypad_2";
+	CHANNEL = "test";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 3;
 	TREE_LEVEL = 0;
+	CHILDREN = 4, 5, 6, 7;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "testpin";
+	CHANNEL = "test[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 4;
-	TREE_LEVEL = 0;
-	CHILDREN = 5, 6, 7, 8;
+	TREE_LEVEL = 1;
+	PARENT = 3;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "testpin[3]";
+	CHANNEL = "test[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 5;
 	TREE_LEVEL = 1;
-	PARENT = 4;
+	PARENT = 3;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "testpin[2]";
+	CHANNEL = "test[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 6;
 	TREE_LEVEL = 1;
-	PARENT = 4;
+	PARENT = 3;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "testpin[1]";
+	CHANNEL = "test[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 7;
 	TREE_LEVEL = 1;
-	PARENT = 4;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "testpin[0]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 8;
-	TREE_LEVEL = 1;
-	PARENT = 4;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "ppop";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 9;
-	TREE_LEVEL = 0;
-	CHILDREN = 10, 11, 12, 13;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "ppop[3]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 10;
-	TREE_LEVEL = 1;
-	PARENT = 9;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "ppop[2]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 11;
-	TREE_LEVEL = 1;
-	PARENT = 9;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "ppop[1]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 12;
-	TREE_LEVEL = 1;
-	PARENT = 9;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "ppop[0]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 13;
-	TREE_LEVEL = 1;
-	PARENT = 9;
+	PARENT = 3;
 }
 
 TIME_BAR

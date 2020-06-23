@@ -9,7 +9,7 @@ port(CLK,edit: in std_logic;
 end counterSecond_1;
 
 architecture a of counterSecond_1 is
-signal temp: std_logic_vector(3 downto 0);
+signal temp: std_logic_vector(3 downto 0):="0000";
 begin
 	process(CLK,edit)
 	begin

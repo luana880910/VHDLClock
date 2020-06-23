@@ -1,0 +1,29 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity UP is
+port (
+	UP: in std_logic;
+	NumIn: in std_logic_vector(3 downto 0);
+	COM: out std_logic;
+	NumOut: out std_logic_vector(3 downto 0)
+);
+end UP;
+
+architecture arch of UP is
+signal CNT: std_logic_vector(3 downto 0):=NumIn;
+begin
+	process(UP)
+	begin
+	if UP'event and UP = '1' then
+		if CNT = "1001" then
+			CNT <= "0000";
+		else
+			CNT <= CNT + '1';
+		end if;
+	end if;
+	end process;
+	NumOut <= CNT;
+	COM <= '1';
+end arch;

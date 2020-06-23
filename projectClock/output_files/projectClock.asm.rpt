@@ -1,5 +1,5 @@
 Assembler report for projectClock
-Wed Jun 03 14:53:50 2020
+Fri Jun 19 15:38:44 2020
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -10,7 +10,7 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: Z:/VHDL/VHDLClock/projectClock/output_files/projectClock.sof
+  5. Assembler Device Options: Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/output_files/projectClock.sof
   6. Assembler Messages
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed Jun 03 14:53:50 2020 ;
+; Assembler Status      ; Successful - Fri Jun 19 15:38:44 2020 ;
 ; Revision Name         ; projectClock                          ;
 ; Top-level Entity Name ; projectClock                          ;
 ; Family                ; Cyclone V                             ;
@@ -77,24 +77,24 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+--------------------------------------------------------------+
-; Assembler Generated Files                                    ;
-+--------------------------------------------------------------+
-; File Name                                                    ;
-+--------------------------------------------------------------+
-; Z:/VHDL/VHDLClock/projectClock/output_files/projectClock.sof ;
-+--------------------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Assembler Generated Files                                                        ;
++----------------------------------------------------------------------------------+
+; File Name                                                                        ;
++----------------------------------------------------------------------------------+
+; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/output_files/projectClock.sof ;
++----------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Assembler Device Options: Z:/VHDL/VHDLClock/projectClock/output_files/projectClock.sof ;
-+----------------+-----------------------------------------------------------------------+
-; Option         ; Setting                                                               ;
-+----------------+-----------------------------------------------------------------------+
-; Device         ; 5CEFA2F23C8                                                           ;
-; JTAG usercode  ; 0x004FC665                                                            ;
-; Checksum       ; 0x004FC665                                                            ;
-+----------------+-----------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/output_files/projectClock.sof ;
++----------------+-------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                   ;
++----------------+-------------------------------------------------------------------------------------------+
+; Device         ; 5CEFA2F23C8                                                                               ;
+; JTAG usercode  ; 0x00538D66                                                                                ;
+; Checksum       ; 0x00538D66                                                                                ;
++----------------+-------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -103,13 +103,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Wed Jun 03 14:53:43 2020
+    Info: Processing started: Fri Jun 19 15:38:36 2020
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off projectClock -c projectClock
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4725 megabytes
-    Info: Processing ended: Wed Jun 03 14:53:50 2020
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Peak virtual memory: 4715 megabytes
+    Info: Processing ended: Fri Jun 19 15:38:44 2020
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:05
 
 
