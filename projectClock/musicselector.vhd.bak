@@ -1,0 +1,99 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity musicselector is
+port(vectorinput:in std_logic_vector(3 downto 0);
+		edit:in std_logic;
+		music1: out std_logic;
+		music2: out std_logic;
+		music3: out std_logic;
+		music4: out std_logic;
+		music5: out std_logic;
+		music6: out std_logic;
+		music7: out std_logic;
+		music8: out std_logic
+		);
+end musicselector;
+
+architecture a of musicselector is
+signal temp :std_logic_vector(3 downto 0)
+begin
+	process(edit)
+		if rising_edge(edit) then
+			temp <= vectorinput;
+		end if;
+		case temp is
+			when "000" =>
+				music1 <= '1';
+				music2 <= '0';
+				music3 <= '0';
+				music4 <= '0';
+				music5 <= '0';
+				music6 <= '0';
+				music7 <= '0';
+				music8 <= '0';
+			when "001" =>
+				music1 <= '0';
+				music2 <= '1';
+				music3 <= '0';
+				music4 <= '0';
+				music5 <= '0';
+				music6 <= '0';
+				music7 <= '0';
+				music8 <= '0';
+			when "010" =>
+				music1 <= '0';
+				music2 <= '0';
+				music3 <= '1';
+				music4 <= '0';
+				music5 <= '0';
+				music6 <= '0';
+				music7 <= '0';
+				music8 <= '0';
+			when "011" =>
+				music1 <= '0';
+				music2 <= '0';
+				music3 <= '0';
+				music4 <= '1';
+				music5 <= '0';
+				music6 <= '0';
+				music7 <= '0';
+				music8 <= '0';
+			when "100" =>
+				music1 <= '0';
+				music2 <= '0';
+				music3 <= '0';
+				music4 <= '0';
+				music5 <= '1';
+				music6 <= '0';
+				music7 <= '0';
+				music8 <= '0';
+			when "101" =>
+				music1 <= '0';
+				music2 <= '0';
+				music3 <= '0';
+				music4 <= '0';
+				music5 <= '0';
+				music6 <= '1';
+				music7 <= '0';
+				music8 <= '0';
+			when "110" =>
+				music1 <= '0';
+				music2 <= '0';
+				music3 <= '0';
+				music4 <= '0';
+				music5 <= '0';
+				music6 <= '0';
+				music7 <= '1';
+				music8 <= '0';
+			when "111" =>
+				music1 <= '0';
+				music2 <= '0';
+				music3 <= '0';
+				music4 <= '0';
+				music5 <= '0';
+				music6 <= '0';
+				music7 <= '0';
+				music8 <= '1';
+	end process;
+end a;

@@ -1,9 +1,13 @@
 |projectClock
 COM <= <VCC>
-buzzer_out <= inst54.DB_MAX_OUTPUT_PORT_TYPE
-edit_pin => debounce_g:inst27.Key_in
+buzzer_out <= inst55.DB_MAX_OUTPUT_PORT_TYPE
+editmusicIn => Test:inst62.editinput
+editmusicIn => inst45.IN0
+clk => Test:inst62.clk
 clk => clk_gen:inst1.clock
-clk => inst45.IN1
+minusone => UPDOWN:inst19.DOWN
+addone => UPDOWN:inst19.UP
+edit_pin => debounce_g:inst27.Key_in
 alarmSet => inst48.IN1
 alarmSet => inst49.IN1
 alarmSet => inst50.IN1
@@ -11,8 +15,7 @@ alarmSet => inst51.IN1
 alarmSet => inst52.IN1
 alarmSet => inst53.IN1
 alarmSet => switch:inst44.sw
-minusone => UPDOWN:inst19.DOWN
-addone => UPDOWN:inst19.UP
+alarmSet => led_and2:inst61.editAlarm
 editstart => inst34.IN0
 editstart => inst24.IN1
 editstart => inst30.IN1
@@ -20,6 +23,7 @@ editstart => inst25.IN1
 editstart => inst28.IN1
 editstart => inst31.IN1
 editstart => inst32.IN1
+editstart => led_and2:inst61.editTime
 test_LED22 <= alarmDetection:inst46.alarmSent
 b_v[0] <= vectortest:inst3.b_v[0]
 b_v[1] <= vectortest:inst3.b_v[1]
@@ -28,21 +32,167 @@ b_v[3] <= vectortest:inst3.b_v[3]
 b_v[4] <= vectortest:inst3.b_v[4]
 b_v[5] <= vectortest:inst3.b_v[5]
 b_v[6] <= vectortest:inst3.b_v[6]
-RRRR[0] <= shift_clock:inst23.S[0]
-RRRR[1] <= shift_clock:inst23.S[1]
-RRRR[2] <= shift_clock:inst23.S[2]
-S[0] <= display:inst.S[0]
-S[1] <= display:inst.S[1]
-S[2] <= display:inst.S[2]
-test[0] <= UPDOWN:inst19.st[0]
-test[1] <= UPDOWN:inst19.st[1]
-test[2] <= UPDOWN:inst19.st[2]
-test[3] <= UPDOWN:inst19.st[3]
+displayer[0] <= display:inst.S[0]
+displayer[1] <= display:inst.S[1]
+displayer[2] <= display:inst.S[2]
+LEDVECTOR[0] <= vectorOR2:inst63.led_and_out[0]
+LEDVECTOR[1] <= vectorOR2:inst63.led_and_out[1]
+LEDVECTOR[2] <= vectorOR2:inst63.led_and_out[2]
+LEDVECTOR[3] <= vectorOR2:inst63.led_and_out[3]
+LEDVECTOR[4] <= vectorOR2:inst63.led_and_out[4]
+LEDVECTOR[5] <= vectorOR2:inst63.led_and_out[5]
+LEDVECTOR[6] <= vectorOR2:inst63.led_and_out[6]
+LEDVECTOR[7] <= vectorOR2:inst63.led_and_out[7]
+LEDVECTOR[8] <= vectorOR2:inst63.led_and_out[8]
+LEDVECTOR[9] <= vectorOR2:inst63.led_and_out[9]
+LEDVECTOR[10] <= vectorOR2:inst63.led_and_out[10]
+LEDVECTOR[11] <= vectorOR2:inst63.led_and_out[11]
 
 
 |projectClock|Test:inst62
-BEEP <= buzzer:inst.BEEP
+BEEP <= inst19.DB_MAX_OUTPUT_PORT_TYPE
 clk => div10_t:inst3.CLK
+editinput => musicselector:inst98.edit
+music_select[0] => musicselector:inst98.vectorinput[0]
+music_select[1] => musicselector:inst98.vectorinput[1]
+music_select[2] => musicselector:inst98.vectorinput[2]
+music_select[3] => musicselector:inst98.vectorinput[3]
+
+
+|projectClock|Test:inst62|alarm_clock:inst6
+CLK => INDEX[0].CLK
+CLK => INDEX[1].CLK
+CLK => INDEX[2].CLK
+CLK => INDEX[3].CLK
+CLK => INDEX[4].CLK
+CLK => INDEX[5].CLK
+CLK => INDEX[6].CLK
+CLK => INDEX[7].CLK
+CLK => LEN[0].CLK
+CLK => LEN[1].CLK
+CLK => LEN[2].CLK
+CLK => DIVIDER[0].CLK
+CLK => DIVIDER[1].CLK
+CLK => DIVIDER[2].CLK
+CLK => DIVIDER[3].CLK
+CLK => DIVIDER[4].CLK
+CLK => DIVIDER[5].CLK
+CLK => DIVIDER[6].CLK
+CLK => DIVIDER[7].CLK
+CLK => DIVIDER[8].CLK
+CLK => DIVIDER[9].CLK
+CLK => DIVIDER[10].CLK
+CLK => DIVIDER[11].CLK
+CLK => DIVIDER[12].CLK
+CLK => DIVIDER[13].CLK
+CLK => DIVIDER[14].CLK
+CLK => PULSE.CLK
+CLK => COUNT[0].CLK
+CLK => COUNT[1].CLK
+CLK => COUNT[2].CLK
+CLK => COUNT[3].CLK
+CLK => COUNT[4].CLK
+CLK => COUNT[5].CLK
+CLK => COUNT[6].CLK
+BEEP <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projectClock|Test:inst62|CLKtest:inst1
+CLK => CNT[0].CLK
+CLK => CNT[1].CLK
+CLK => CNT[2].CLK
+CLK => CNT[3].CLK
+CLK => CNT[4].CLK
+CLK => CNTout.CLK
+CLKout <= CNTout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projectClock|Test:inst62|div10_t:inst3
+CLK_out <= 2.DB_MAX_OUTPUT_PORT_TYPE
+CLK => 5.CLK
+CLK => 3.CLK
+CLK => 1.CLK
+CLK => 2.CLK
+
+
+|projectClock|Test:inst62|musicselector:inst98
+vectorinput[0] => temp[0].DATAIN
+vectorinput[1] => temp[1].DATAIN
+vectorinput[2] => temp[2].DATAIN
+vectorinput[3] => temp[3].DATAIN
+edit => music9~reg0.ENA
+edit => music8~reg0.ENA
+edit => music7~reg0.ENA
+edit => music6~reg0.ENA
+edit => music5~reg0.ENA
+edit => music4~reg0.ENA
+edit => music3~reg0.ENA
+edit => music2~reg0.ENA
+edit => music1~reg0.ENA
+edit => temp[0].ENA
+edit => temp[1].ENA
+edit => temp[2].ENA
+edit => temp[3].ENA
+clk => music9~reg0.CLK
+clk => music8~reg0.CLK
+clk => music7~reg0.CLK
+clk => music6~reg0.CLK
+clk => music5~reg0.CLK
+clk => music4~reg0.CLK
+clk => music3~reg0.CLK
+clk => music2~reg0.CLK
+clk => music1~reg0.CLK
+clk => temp[0].CLK
+clk => temp[1].CLK
+clk => temp[2].CLK
+clk => temp[3].CLK
+music1 <= music1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+music2 <= music2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+music3 <= music3~reg0.DB_MAX_OUTPUT_PORT_TYPE
+music4 <= music4~reg0.DB_MAX_OUTPUT_PORT_TYPE
+music5 <= music5~reg0.DB_MAX_OUTPUT_PORT_TYPE
+music6 <= music6~reg0.DB_MAX_OUTPUT_PORT_TYPE
+music7 <= music7~reg0.DB_MAX_OUTPUT_PORT_TYPE
+music8 <= music8~reg0.DB_MAX_OUTPUT_PORT_TYPE
+music9 <= music9~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projectClock|Test:inst62|buzzer_music0:inst2
+CLK => INDEX[0].CLK
+CLK => INDEX[1].CLK
+CLK => INDEX[2].CLK
+CLK => INDEX[3].CLK
+CLK => INDEX[4].CLK
+CLK => INDEX[5].CLK
+CLK => INDEX[6].CLK
+CLK => LEN[0].CLK
+CLK => LEN[1].CLK
+CLK => LEN[2].CLK
+CLK => LEN[3].CLK
+CLK => DIVIDER[0].CLK
+CLK => DIVIDER[1].CLK
+CLK => DIVIDER[2].CLK
+CLK => DIVIDER[3].CLK
+CLK => DIVIDER[4].CLK
+CLK => DIVIDER[5].CLK
+CLK => DIVIDER[6].CLK
+CLK => DIVIDER[7].CLK
+CLK => DIVIDER[8].CLK
+CLK => DIVIDER[9].CLK
+CLK => DIVIDER[10].CLK
+CLK => DIVIDER[11].CLK
+CLK => DIVIDER[12].CLK
+CLK => DIVIDER[13].CLK
+CLK => DIVIDER[14].CLK
+CLK => PULSE.CLK
+CLK => COUNT[0].CLK
+CLK => COUNT[1].CLK
+CLK => COUNT[2].CLK
+CLK => COUNT[3].CLK
+CLK => COUNT[4].CLK
+CLK => COUNT[5].CLK
+CLK => COUNT[6].CLK
+BEEP <= Mux13.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |projectClock|Test:inst62|buzzer:inst
@@ -80,22 +230,391 @@ CLK => COUNT[6].CLK
 BEEP <= Mux11.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|projectClock|Test:inst62|CLKtest:inst1
-CLK => CNT[0].CLK
-CLK => CNT[1].CLK
-CLK => CNT[2].CLK
-CLK => CNT[3].CLK
-CLK => CNT[4].CLK
-CLK => CNTout.CLK
-CLKout <= CNTout.DB_MAX_OUTPUT_PORT_TYPE
+|projectClock|Test:inst62|buzzer_music1:inst99
+CLK => INDEX[0].CLK
+CLK => INDEX[1].CLK
+CLK => INDEX[2].CLK
+CLK => INDEX[3].CLK
+CLK => INDEX[4].CLK
+CLK => INDEX[5].CLK
+CLK => INDEX[6].CLK
+CLK => LEN[0].CLK
+CLK => LEN[1].CLK
+CLK => LEN[2].CLK
+CLK => LEN[3].CLK
+CLK => DIVIDER[0].CLK
+CLK => DIVIDER[1].CLK
+CLK => DIVIDER[2].CLK
+CLK => DIVIDER[3].CLK
+CLK => DIVIDER[4].CLK
+CLK => DIVIDER[5].CLK
+CLK => DIVIDER[6].CLK
+CLK => DIVIDER[7].CLK
+CLK => DIVIDER[8].CLK
+CLK => DIVIDER[9].CLK
+CLK => DIVIDER[10].CLK
+CLK => DIVIDER[11].CLK
+CLK => DIVIDER[12].CLK
+CLK => DIVIDER[13].CLK
+CLK => DIVIDER[14].CLK
+CLK => PULSE.CLK
+CLK => COUNT[0].CLK
+CLK => COUNT[1].CLK
+CLK => COUNT[2].CLK
+CLK => COUNT[3].CLK
+CLK => COUNT[4].CLK
+CLK => COUNT[5].CLK
+CLK => COUNT[6].CLK
+BEEP <= Mux13.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|projectClock|Test:inst62|div10_t:inst3
+|projectClock|Test:inst62|music_02:inst7
+CLK => INDEX[0].CLK
+CLK => INDEX[1].CLK
+CLK => INDEX[2].CLK
+CLK => INDEX[3].CLK
+CLK => INDEX[4].CLK
+CLK => INDEX[5].CLK
+CLK => INDEX[6].CLK
+CLK => INDEX[7].CLK
+CLK => LEN[0].CLK
+CLK => LEN[1].CLK
+CLK => LEN[2].CLK
+CLK => DIVIDER[0].CLK
+CLK => DIVIDER[1].CLK
+CLK => DIVIDER[2].CLK
+CLK => DIVIDER[3].CLK
+CLK => DIVIDER[4].CLK
+CLK => DIVIDER[5].CLK
+CLK => DIVIDER[6].CLK
+CLK => DIVIDER[7].CLK
+CLK => DIVIDER[8].CLK
+CLK => DIVIDER[9].CLK
+CLK => DIVIDER[10].CLK
+CLK => DIVIDER[11].CLK
+CLK => DIVIDER[12].CLK
+CLK => DIVIDER[13].CLK
+CLK => DIVIDER[14].CLK
+CLK => PULSE.CLK
+CLK => COUNT[0].CLK
+CLK => COUNT[1].CLK
+CLK => COUNT[2].CLK
+CLK => COUNT[3].CLK
+CLK => COUNT[4].CLK
+CLK => COUNT[5].CLK
+CLK => COUNT[6].CLK
+BEEP <= Mux13.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projectClock|Test:inst62|buzzer_music2:inst4
+CLK => INDEX[0].CLK
+CLK => INDEX[1].CLK
+CLK => INDEX[2].CLK
+CLK => INDEX[3].CLK
+CLK => INDEX[4].CLK
+CLK => INDEX[5].CLK
+CLK => INDEX[6].CLK
+CLK => INDEX[7].CLK
+CLK => LEN[0].CLK
+CLK => LEN[1].CLK
+CLK => LEN[2].CLK
+CLK => LEN[3].CLK
+CLK => LEN[4].CLK
+CLK => DIVIDER[0].CLK
+CLK => DIVIDER[1].CLK
+CLK => DIVIDER[2].CLK
+CLK => DIVIDER[3].CLK
+CLK => DIVIDER[4].CLK
+CLK => DIVIDER[5].CLK
+CLK => DIVIDER[6].CLK
+CLK => DIVIDER[7].CLK
+CLK => DIVIDER[8].CLK
+CLK => DIVIDER[9].CLK
+CLK => DIVIDER[10].CLK
+CLK => DIVIDER[11].CLK
+CLK => DIVIDER[12].CLK
+CLK => DIVIDER[13].CLK
+CLK => DIVIDER[14].CLK
+CLK => PULSE.CLK
+CLK => COUNT[0].CLK
+CLK => COUNT[1].CLK
+CLK => COUNT[2].CLK
+CLK => COUNT[3].CLK
+CLK => COUNT[4].CLK
+CLK => COUNT[5].CLK
+CLK => COUNT[6].CLK
+BEEP <= Mux15.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projectClock|Test:inst62|music_03:inst8
+CLK => INDEX[0].CLK
+CLK => INDEX[1].CLK
+CLK => INDEX[2].CLK
+CLK => INDEX[3].CLK
+CLK => INDEX[4].CLK
+CLK => INDEX[5].CLK
+CLK => INDEX[6].CLK
+CLK => INDEX[7].CLK
+CLK => LEN[0].CLK
+CLK => LEN[1].CLK
+CLK => LEN[2].CLK
+CLK => LEN[3].CLK
+CLK => DIVIDER[0].CLK
+CLK => DIVIDER[1].CLK
+CLK => DIVIDER[2].CLK
+CLK => DIVIDER[3].CLK
+CLK => DIVIDER[4].CLK
+CLK => DIVIDER[5].CLK
+CLK => DIVIDER[6].CLK
+CLK => DIVIDER[7].CLK
+CLK => DIVIDER[8].CLK
+CLK => DIVIDER[9].CLK
+CLK => DIVIDER[10].CLK
+CLK => DIVIDER[11].CLK
+CLK => DIVIDER[12].CLK
+CLK => DIVIDER[13].CLK
+CLK => DIVIDER[14].CLK
+CLK => PULSE.CLK
+CLK => COUNT[0].CLK
+CLK => COUNT[1].CLK
+CLK => COUNT[2].CLK
+CLK => COUNT[3].CLK
+CLK => COUNT[4].CLK
+CLK => COUNT[5].CLK
+CLK => COUNT[6].CLK
+BEEP <= Mux15.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projectClock|Test:inst62|music_01:inst16
+CLK => INDEX[0].CLK
+CLK => INDEX[1].CLK
+CLK => INDEX[2].CLK
+CLK => INDEX[3].CLK
+CLK => INDEX[4].CLK
+CLK => INDEX[5].CLK
+CLK => LEN[0].CLK
+CLK => LEN[1].CLK
+CLK => LEN[2].CLK
+CLK => DIVIDER[0].CLK
+CLK => DIVIDER[1].CLK
+CLK => DIVIDER[2].CLK
+CLK => DIVIDER[3].CLK
+CLK => DIVIDER[4].CLK
+CLK => DIVIDER[5].CLK
+CLK => DIVIDER[6].CLK
+CLK => DIVIDER[7].CLK
+CLK => DIVIDER[8].CLK
+CLK => DIVIDER[9].CLK
+CLK => DIVIDER[10].CLK
+CLK => DIVIDER[11].CLK
+CLK => DIVIDER[12].CLK
+CLK => DIVIDER[13].CLK
+CLK => DIVIDER[14].CLK
+CLK => PULSE.CLK
+CLK => COUNT[0].CLK
+CLK => COUNT[1].CLK
+CLK => COUNT[2].CLK
+CLK => COUNT[3].CLK
+CLK => COUNT[4].CLK
+CLK => COUNT[5].CLK
+CLK => COUNT[6].CLK
+BEEP <= Mux14.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projectClock|UPDOWN:inst19
+st[0] <= Savetest:inst7.NumOut[0]
+st[1] <= Savetest:inst7.NumOut[1]
+st[2] <= Savetest:inst7.NumOut[2]
+st[3] <= Savetest:inst7.NumOut[3]
+clk => Savetest:inst7.clk
+DOWN => inst20.IN0
+UP => inst21.IN0
+
+
+|projectClock|UPDOWN:inst19|Savetest:inst7
+clk => CNT[0].CLK
+clk => CNT[1].CLK
+clk => CNT[2].CLK
+clk => CNT[3].CLK
+NumIn[0] => Equal0.IN7
+NumIn[0] => Equal1.IN7
+NumIn[0] => CNT.DATAA
+NumIn[1] => Equal0.IN6
+NumIn[1] => Equal1.IN6
+NumIn[1] => CNT.DATAA
+NumIn[2] => Equal0.IN5
+NumIn[2] => Equal1.IN5
+NumIn[2] => CNT.DATAA
+NumIn[3] => Equal0.IN4
+NumIn[3] => Equal1.IN4
+NumIn[3] => CNT.DATAA
+NumOut[0] <= CNT[0].DB_MAX_OUTPUT_PORT_TYPE
+NumOut[1] <= CNT[1].DB_MAX_OUTPUT_PORT_TYPE
+NumOut[2] <= CNT[2].DB_MAX_OUTPUT_PORT_TYPE
+NumOut[3] <= CNT[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projectClock|UPDOWN:inst19|ORtest:inst5
+DOWNIn[0] => NumOut.IN0
+DOWNIn[1] => NumOut.IN0
+DOWNIn[2] => NumOut.IN0
+DOWNIn[3] => NumOut.IN0
+UPIn[0] => NumOut.IN1
+UPIn[1] => NumOut.IN1
+UPIn[2] => NumOut.IN1
+UPIn[3] => NumOut.IN1
+NumOut[0] <= NumOut.DB_MAX_OUTPUT_PORT_TYPE
+NumOut[1] <= NumOut.DB_MAX_OUTPUT_PORT_TYPE
+NumOut[2] <= NumOut.DB_MAX_OUTPUT_PORT_TYPE
+NumOut[3] <= NumOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projectClock|UPDOWN:inst19|DOWNtest:inst4
+clk => NumOut.OUTPUTSELECT
+clk => NumOut.OUTPUTSELECT
+clk => NumOut.OUTPUTSELECT
+clk => NumOut.OUTPUTSELECT
+NumIn[0] => NumOut.DATAB
+NumIn[1] => NumOut.DATAB
+NumIn[2] => NumOut.DATAB
+NumIn[3] => NumOut.DATAB
+NumOut[0] <= NumOut.DB_MAX_OUTPUT_PORT_TYPE
+NumOut[1] <= NumOut.DB_MAX_OUTPUT_PORT_TYPE
+NumOut[2] <= NumOut.DB_MAX_OUTPUT_PORT_TYPE
+NumOut[3] <= NumOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projectClock|UPDOWN:inst19|DOWN:inst
+DOWN => CNT[0].CLK
+DOWN => CNT[1].CLK
+DOWN => CNT[2].CLK
+DOWN => CNT[3].CLK
+NumIn[0] => Equal0.IN7
+NumIn[0] => Equal1.IN7
+NumIn[0] => Add0.IN8
+NumIn[1] => Equal0.IN6
+NumIn[1] => Equal1.IN6
+NumIn[1] => Add0.IN7
+NumIn[2] => Equal0.IN5
+NumIn[2] => Equal1.IN5
+NumIn[2] => Add0.IN6
+NumIn[3] => Equal0.IN4
+NumIn[3] => Equal1.IN4
+NumIn[3] => Add0.IN5
+NumOut[0] <= CNT[0].DB_MAX_OUTPUT_PORT_TYPE
+NumOut[1] <= CNT[1].DB_MAX_OUTPUT_PORT_TYPE
+NumOut[2] <= CNT[2].DB_MAX_OUTPUT_PORT_TYPE
+NumOut[3] <= CNT[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projectClock|UPDOWN:inst19|UPtest:inst3
+clk => NumOut.OUTPUTSELECT
+clk => NumOut.OUTPUTSELECT
+clk => NumOut.OUTPUTSELECT
+clk => NumOut.OUTPUTSELECT
+NumIn[0] => NumOut.DATAB
+NumIn[1] => NumOut.DATAB
+NumIn[2] => NumOut.DATAB
+NumIn[3] => NumOut.DATAB
+NumOut[0] <= NumOut.DB_MAX_OUTPUT_PORT_TYPE
+NumOut[1] <= NumOut.DB_MAX_OUTPUT_PORT_TYPE
+NumOut[2] <= NumOut.DB_MAX_OUTPUT_PORT_TYPE
+NumOut[3] <= NumOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projectClock|UPDOWN:inst19|UP:inst1
+UP => CNT[0].CLK
+UP => CNT[1].CLK
+UP => CNT[2].CLK
+UP => CNT[3].CLK
+NumIn[0] => Equal0.IN7
+NumIn[0] => Add0.IN8
+NumIn[1] => Equal0.IN6
+NumIn[1] => Add0.IN7
+NumIn[2] => Equal0.IN5
+NumIn[2] => Add0.IN6
+NumIn[3] => Equal0.IN4
+NumIn[3] => Add0.IN5
+NumOut[0] <= CNT[0].DB_MAX_OUTPUT_PORT_TYPE
+NumOut[1] <= CNT[1].DB_MAX_OUTPUT_PORT_TYPE
+NumOut[2] <= CNT[2].DB_MAX_OUTPUT_PORT_TYPE
+NumOut[3] <= CNT[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projectClock|clk_gen:inst1
+1KHz <= div10_t:inst3.CLK_out
+clock => div10_t:inst.CLK
+100Hz <= div10_t:inst4.CLK_out
+10Hz <= div10_t:inst5.CLK_out
+1Hz <= div10_t:inst6.CLK_out
+
+
+|projectClock|clk_gen:inst1|div10_t:inst3
 CLK_out <= 2.DB_MAX_OUTPUT_PORT_TYPE
 CLK => 5.CLK
 CLK => 3.CLK
 CLK => 1.CLK
 CLK => 2.CLK
+
+
+|projectClock|clk_gen:inst1|div10_t:inst2
+CLK_out <= 2.DB_MAX_OUTPUT_PORT_TYPE
+CLK => 5.CLK
+CLK => 3.CLK
+CLK => 1.CLK
+CLK => 2.CLK
+
+
+|projectClock|clk_gen:inst1|div10_t:inst1
+CLK_out <= 2.DB_MAX_OUTPUT_PORT_TYPE
+CLK => 5.CLK
+CLK => 3.CLK
+CLK => 1.CLK
+CLK => 2.CLK
+
+
+|projectClock|clk_gen:inst1|div10_t:inst
+CLK_out <= 2.DB_MAX_OUTPUT_PORT_TYPE
+CLK => 5.CLK
+CLK => 3.CLK
+CLK => 1.CLK
+CLK => 2.CLK
+
+
+|projectClock|clk_gen:inst1|div10_t:inst4
+CLK_out <= 2.DB_MAX_OUTPUT_PORT_TYPE
+CLK => 5.CLK
+CLK => 3.CLK
+CLK => 1.CLK
+CLK => 2.CLK
+
+
+|projectClock|clk_gen:inst1|div10_t:inst5
+CLK_out <= 2.DB_MAX_OUTPUT_PORT_TYPE
+CLK => 5.CLK
+CLK => 3.CLK
+CLK => 1.CLK
+CLK => 2.CLK
+
+
+|projectClock|clk_gen:inst1|div10_t:inst6
+CLK_out <= 2.DB_MAX_OUTPUT_PORT_TYPE
+CLK => 5.CLK
+CLK => 3.CLK
+CLK => 1.CLK
+CLK => 2.CLK
+
+
+|projectClock|five_sec:inst47
+CLK => STOP~reg0.CLK
+CLK => temp[0].CLK
+CLK => temp[1].CLK
+CLK => temp[2].CLK
+reset => Mux3.IN1
+reset => Mux2.IN7
+reset => Mux1.IN7
+reset => Mux0.IN7
+STOP <= STOP~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |projectClock|alarmDetection:inst46
@@ -360,190 +879,6 @@ Key_out <= 16.DB_MAX_OUTPUT_PORT_TYPE
 CLK => 1.CLK
 CLK => 2.CLK
 Key_in => 1.DATAIN
-
-
-|projectClock|clk_gen:inst1
-1KHz <= div10_t:inst3.CLK_out
-clock => div10_t:inst.CLK
-100Hz <= div10_t:inst4.CLK_out
-10Hz <= div10_t:inst5.CLK_out
-1Hz <= div10_t:inst6.CLK_out
-
-
-|projectClock|clk_gen:inst1|div10_t:inst3
-CLK_out <= 2.DB_MAX_OUTPUT_PORT_TYPE
-CLK => 5.CLK
-CLK => 3.CLK
-CLK => 1.CLK
-CLK => 2.CLK
-
-
-|projectClock|clk_gen:inst1|div10_t:inst2
-CLK_out <= 2.DB_MAX_OUTPUT_PORT_TYPE
-CLK => 5.CLK
-CLK => 3.CLK
-CLK => 1.CLK
-CLK => 2.CLK
-
-
-|projectClock|clk_gen:inst1|div10_t:inst1
-CLK_out <= 2.DB_MAX_OUTPUT_PORT_TYPE
-CLK => 5.CLK
-CLK => 3.CLK
-CLK => 1.CLK
-CLK => 2.CLK
-
-
-|projectClock|clk_gen:inst1|div10_t:inst
-CLK_out <= 2.DB_MAX_OUTPUT_PORT_TYPE
-CLK => 5.CLK
-CLK => 3.CLK
-CLK => 1.CLK
-CLK => 2.CLK
-
-
-|projectClock|clk_gen:inst1|div10_t:inst4
-CLK_out <= 2.DB_MAX_OUTPUT_PORT_TYPE
-CLK => 5.CLK
-CLK => 3.CLK
-CLK => 1.CLK
-CLK => 2.CLK
-
-
-|projectClock|clk_gen:inst1|div10_t:inst5
-CLK_out <= 2.DB_MAX_OUTPUT_PORT_TYPE
-CLK => 5.CLK
-CLK => 3.CLK
-CLK => 1.CLK
-CLK => 2.CLK
-
-
-|projectClock|clk_gen:inst1|div10_t:inst6
-CLK_out <= 2.DB_MAX_OUTPUT_PORT_TYPE
-CLK => 5.CLK
-CLK => 3.CLK
-CLK => 1.CLK
-CLK => 2.CLK
-
-
-|projectClock|UPDOWN:inst19
-st[0] <= Savetest:inst7.NumOut[0]
-st[1] <= Savetest:inst7.NumOut[1]
-st[2] <= Savetest:inst7.NumOut[2]
-st[3] <= Savetest:inst7.NumOut[3]
-clk => Savetest:inst7.clk
-DOWN => inst20.IN0
-UP => inst21.IN0
-
-
-|projectClock|UPDOWN:inst19|Savetest:inst7
-clk => CNT[0].CLK
-clk => CNT[1].CLK
-clk => CNT[2].CLK
-clk => CNT[3].CLK
-NumIn[0] => Equal0.IN7
-NumIn[0] => Equal1.IN7
-NumIn[0] => CNT.DATAA
-NumIn[1] => Equal0.IN6
-NumIn[1] => Equal1.IN6
-NumIn[1] => CNT.DATAA
-NumIn[2] => Equal0.IN5
-NumIn[2] => Equal1.IN5
-NumIn[2] => CNT.DATAA
-NumIn[3] => Equal0.IN4
-NumIn[3] => Equal1.IN4
-NumIn[3] => CNT.DATAA
-NumOut[0] <= CNT[0].DB_MAX_OUTPUT_PORT_TYPE
-NumOut[1] <= CNT[1].DB_MAX_OUTPUT_PORT_TYPE
-NumOut[2] <= CNT[2].DB_MAX_OUTPUT_PORT_TYPE
-NumOut[3] <= CNT[3].DB_MAX_OUTPUT_PORT_TYPE
-
-
-|projectClock|UPDOWN:inst19|ORtest:inst5
-DOWNIn[0] => NumOut.IN0
-DOWNIn[1] => NumOut.IN0
-DOWNIn[2] => NumOut.IN0
-DOWNIn[3] => NumOut.IN0
-UPIn[0] => NumOut.IN1
-UPIn[1] => NumOut.IN1
-UPIn[2] => NumOut.IN1
-UPIn[3] => NumOut.IN1
-NumOut[0] <= NumOut.DB_MAX_OUTPUT_PORT_TYPE
-NumOut[1] <= NumOut.DB_MAX_OUTPUT_PORT_TYPE
-NumOut[2] <= NumOut.DB_MAX_OUTPUT_PORT_TYPE
-NumOut[3] <= NumOut.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|projectClock|UPDOWN:inst19|DOWNtest:inst4
-clk => NumOut.OUTPUTSELECT
-clk => NumOut.OUTPUTSELECT
-clk => NumOut.OUTPUTSELECT
-clk => NumOut.OUTPUTSELECT
-NumIn[0] => NumOut.DATAB
-NumIn[1] => NumOut.DATAB
-NumIn[2] => NumOut.DATAB
-NumIn[3] => NumOut.DATAB
-NumOut[0] <= NumOut.DB_MAX_OUTPUT_PORT_TYPE
-NumOut[1] <= NumOut.DB_MAX_OUTPUT_PORT_TYPE
-NumOut[2] <= NumOut.DB_MAX_OUTPUT_PORT_TYPE
-NumOut[3] <= NumOut.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|projectClock|UPDOWN:inst19|DOWN:inst
-DOWN => CNT[0].CLK
-DOWN => CNT[1].CLK
-DOWN => CNT[2].CLK
-DOWN => CNT[3].CLK
-NumIn[0] => Equal0.IN7
-NumIn[0] => Equal1.IN7
-NumIn[0] => Add0.IN8
-NumIn[1] => Equal0.IN6
-NumIn[1] => Equal1.IN6
-NumIn[1] => Add0.IN7
-NumIn[2] => Equal0.IN5
-NumIn[2] => Equal1.IN5
-NumIn[2] => Add0.IN6
-NumIn[3] => Equal0.IN4
-NumIn[3] => Equal1.IN4
-NumIn[3] => Add0.IN5
-NumOut[0] <= CNT[0].DB_MAX_OUTPUT_PORT_TYPE
-NumOut[1] <= CNT[1].DB_MAX_OUTPUT_PORT_TYPE
-NumOut[2] <= CNT[2].DB_MAX_OUTPUT_PORT_TYPE
-NumOut[3] <= CNT[3].DB_MAX_OUTPUT_PORT_TYPE
-
-
-|projectClock|UPDOWN:inst19|UPtest:inst3
-clk => NumOut.OUTPUTSELECT
-clk => NumOut.OUTPUTSELECT
-clk => NumOut.OUTPUTSELECT
-clk => NumOut.OUTPUTSELECT
-NumIn[0] => NumOut.DATAB
-NumIn[1] => NumOut.DATAB
-NumIn[2] => NumOut.DATAB
-NumIn[3] => NumOut.DATAB
-NumOut[0] <= NumOut.DB_MAX_OUTPUT_PORT_TYPE
-NumOut[1] <= NumOut.DB_MAX_OUTPUT_PORT_TYPE
-NumOut[2] <= NumOut.DB_MAX_OUTPUT_PORT_TYPE
-NumOut[3] <= NumOut.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|projectClock|UPDOWN:inst19|UP:inst1
-UP => CNT[0].CLK
-UP => CNT[1].CLK
-UP => CNT[2].CLK
-UP => CNT[3].CLK
-NumIn[0] => Equal0.IN7
-NumIn[0] => Add0.IN8
-NumIn[1] => Equal0.IN6
-NumIn[1] => Add0.IN7
-NumIn[2] => Equal0.IN5
-NumIn[2] => Add0.IN6
-NumIn[3] => Equal0.IN4
-NumIn[3] => Add0.IN5
-NumOut[0] <= CNT[0].DB_MAX_OUTPUT_PORT_TYPE
-NumOut[1] <= CNT[1].DB_MAX_OUTPUT_PORT_TYPE
-NumOut[2] <= CNT[2].DB_MAX_OUTPUT_PORT_TYPE
-NumOut[3] <= CNT[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |projectClock|debounce_g:inst72
@@ -847,15 +1182,6 @@ CLK => 2.CLK
 Key_in => 1.DATAIN
 
 
-|projectClock|five_sec:inst47
-CLK => STOP~reg0.CLK
-CLK => temp[0].CLK
-CLK => temp[1].CLK
-CLK => temp[2].CLK
-reset => STOP.OUTPUTSELECT
-STOP <= STOP~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
 |projectClock|vectortest:inst3
 a_v[0] => Mux0.IN19
 a_v[0] => Mux1.IN19
@@ -1018,7 +1344,7 @@ SIGNALOUT[2] <= SIGNALOUT.DB_MAX_OUTPUT_PORT_TYPE
 SIGNALOUT[3] <= SIGNALOUT.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|projectClock|vectorAND:inst55
+|projectClock|vectorAND:inst26
 ANDINPUT => SIGNALOUT.OUTPUTSELECT
 ANDINPUT => SIGNALOUT.OUTPUTSELECT
 ANDINPUT => SIGNALOUT.OUTPUTSELECT
@@ -1199,18 +1525,133 @@ SIGNALOUT[2] <= SIGNALOUT.DB_MAX_OUTPUT_PORT_TYPE
 SIGNALOUT[3] <= SIGNALOUT.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|projectClock|vectorAND:inst26
-ANDINPUT => SIGNALOUT.OUTPUTSELECT
-ANDINPUT => SIGNALOUT.OUTPUTSELECT
-ANDINPUT => SIGNALOUT.OUTPUTSELECT
-ANDINPUT => SIGNALOUT.OUTPUTSELECT
-SIGNALIN[0] => SIGNALOUT.DATAA
-SIGNALIN[1] => SIGNALOUT.DATAA
-SIGNALIN[2] => SIGNALOUT.DATAA
-SIGNALIN[3] => SIGNALOUT.DATAA
-SIGNALOUT[0] <= SIGNALOUT.DB_MAX_OUTPUT_PORT_TYPE
-SIGNALOUT[1] <= SIGNALOUT.DB_MAX_OUTPUT_PORT_TYPE
-SIGNALOUT[2] <= SIGNALOUT.DB_MAX_OUTPUT_PORT_TYPE
-SIGNALOUT[3] <= SIGNALOUT.DB_MAX_OUTPUT_PORT_TYPE
+|projectClock|vectorOR2:inst63
+ledin[0] => led_and_out.IN0
+ledin[1] => led_and_out.IN0
+ledin[2] => led_and_out.IN0
+ledin[3] => led_and_out.IN0
+ledin[4] => led_and_out.IN0
+ledin[5] => led_and_out.IN0
+ledin[6] => led_and_out.IN0
+ledin[7] => led_and_out.IN0
+ledin[8] => led_and_out.IN0
+ledin[9] => led_and_out.IN0
+ledin[10] => led_and_out.IN0
+ledin[11] => led_and_out.IN0
+ledin2[0] => led_and_out.IN1
+ledin2[1] => led_and_out.IN1
+ledin2[2] => led_and_out.IN1
+ledin2[3] => led_and_out.IN1
+ledin2[4] => led_and_out.IN1
+ledin2[5] => led_and_out.IN1
+ledin2[6] => led_and_out.IN1
+ledin2[7] => led_and_out.IN1
+ledin2[8] => led_and_out.IN1
+ledin2[9] => led_and_out.IN1
+ledin2[10] => led_and_out.IN1
+ledin2[11] => led_and_out.IN1
+led_and_out[0] <= led_and_out.DB_MAX_OUTPUT_PORT_TYPE
+led_and_out[1] <= led_and_out.DB_MAX_OUTPUT_PORT_TYPE
+led_and_out[2] <= led_and_out.DB_MAX_OUTPUT_PORT_TYPE
+led_and_out[3] <= led_and_out.DB_MAX_OUTPUT_PORT_TYPE
+led_and_out[4] <= led_and_out.DB_MAX_OUTPUT_PORT_TYPE
+led_and_out[5] <= led_and_out.DB_MAX_OUTPUT_PORT_TYPE
+led_and_out[6] <= led_and_out.DB_MAX_OUTPUT_PORT_TYPE
+led_and_out[7] <= led_and_out.DB_MAX_OUTPUT_PORT_TYPE
+led_and_out[8] <= led_and_out.DB_MAX_OUTPUT_PORT_TYPE
+led_and_out[9] <= led_and_out.DB_MAX_OUTPUT_PORT_TYPE
+led_and_out[10] <= led_and_out.DB_MAX_OUTPUT_PORT_TYPE
+led_and_out[11] <= led_and_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projectClock|led_and:inst59
+ledin[0] => led_and_out.IN0
+ledin[1] => led_and_out.IN0
+ledin[2] => led_and_out.IN0
+ledin[3] => led_and_out.IN0
+ledin[4] => led_and_out.IN0
+ledin[5] => led_and_out.IN0
+ledin[6] => led_and_out.IN0
+ledin[7] => led_and_out.IN0
+ledin[8] => led_and_out.IN0
+ledin[9] => led_and_out.IN0
+ledin[10] => led_and_out.IN0
+ledin[11] => led_and_out.IN0
+andinput => led_and_out.IN1
+andinput => led_and_out.IN1
+andinput => led_and_out.IN1
+andinput => led_and_out.IN1
+andinput => led_and_out.IN1
+andinput => led_and_out.IN1
+andinput => led_and_out.IN1
+andinput => led_and_out.IN1
+andinput => led_and_out.IN1
+andinput => led_and_out.IN1
+andinput => led_and_out.IN1
+andinput => led_and_out.IN1
+led_and_out[0] <= led_and_out.DB_MAX_OUTPUT_PORT_TYPE
+led_and_out[1] <= led_and_out.DB_MAX_OUTPUT_PORT_TYPE
+led_and_out[2] <= led_and_out.DB_MAX_OUTPUT_PORT_TYPE
+led_and_out[3] <= led_and_out.DB_MAX_OUTPUT_PORT_TYPE
+led_and_out[4] <= led_and_out.DB_MAX_OUTPUT_PORT_TYPE
+led_and_out[5] <= led_and_out.DB_MAX_OUTPUT_PORT_TYPE
+led_and_out[6] <= led_and_out.DB_MAX_OUTPUT_PORT_TYPE
+led_and_out[7] <= led_and_out.DB_MAX_OUTPUT_PORT_TYPE
+led_and_out[8] <= led_and_out.DB_MAX_OUTPUT_PORT_TYPE
+led_and_out[9] <= led_and_out.DB_MAX_OUTPUT_PORT_TYPE
+led_and_out[10] <= led_and_out.DB_MAX_OUTPUT_PORT_TYPE
+led_and_out[11] <= led_and_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projectClock|LED:inst57
+clk => j.CLK
+clk => op[0].CLK
+clk => op[1].CLK
+clk => op[2].CLK
+clk => op[3].CLK
+clk => op[4].CLK
+clk => op[5].CLK
+clk => op[6].CLK
+clk => op[7].CLK
+clk => op[8].CLK
+clk => op[9].CLK
+clk => op[10].CLK
+clk => op[11].CLK
+com <= <VCC>
+x[0] <= op[0].DB_MAX_OUTPUT_PORT_TYPE
+x[1] <= op[1].DB_MAX_OUTPUT_PORT_TYPE
+x[2] <= op[2].DB_MAX_OUTPUT_PORT_TYPE
+x[3] <= op[3].DB_MAX_OUTPUT_PORT_TYPE
+x[4] <= op[4].DB_MAX_OUTPUT_PORT_TYPE
+x[5] <= op[5].DB_MAX_OUTPUT_PORT_TYPE
+x[6] <= op[6].DB_MAX_OUTPUT_PORT_TYPE
+x[7] <= op[7].DB_MAX_OUTPUT_PORT_TYPE
+x[8] <= op[8].DB_MAX_OUTPUT_PORT_TYPE
+x[9] <= op[9].DB_MAX_OUTPUT_PORT_TYPE
+x[10] <= op[10].DB_MAX_OUTPUT_PORT_TYPE
+x[11] <= op[11].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projectClock|led_and2:inst61
+edit1 => tempEdit1.IN1
+edit2 => tempEdit2.IN1
+edit3 => tempEdit3.IN1
+edit4 => tempEdit4.IN1
+edit5 => tempEdit5.IN1
+edit6 => tempEdit6.IN1
+editTime => tempEdit.IN0
+editAlarm => tempEdit.IN1
+led_and_out[0] <= <GND>
+led_and_out[1] <= <GND>
+led_and_out[2] <= <GND>
+led_and_out[3] <= <GND>
+led_and_out[4] <= tempEdit6.DB_MAX_OUTPUT_PORT_TYPE
+led_and_out[5] <= tempEdit5.DB_MAX_OUTPUT_PORT_TYPE
+led_and_out[6] <= <GND>
+led_and_out[7] <= tempEdit4.DB_MAX_OUTPUT_PORT_TYPE
+led_and_out[8] <= tempEdit3.DB_MAX_OUTPUT_PORT_TYPE
+led_and_out[9] <= <GND>
+led_and_out[10] <= tempEdit2.DB_MAX_OUTPUT_PORT_TYPE
+led_and_out[11] <= tempEdit1.DB_MAX_OUTPUT_PORT_TYPE
 
 

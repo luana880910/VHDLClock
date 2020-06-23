@@ -1,5 +1,5 @@
 Analysis & Synthesis report for projectClock
-Fri Jun 19 15:37:50 2020
+Tue Jun 23 22:07:47 2020
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -45,14 +45,14 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +---------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Jun 19 15:37:50 2020      ;
+; Analysis & Synthesis Status     ; Successful - Tue Jun 23 22:07:46 2020      ;
 ; Quartus II 64-Bit Version       ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                   ; projectClock                               ;
 ; Top-level Entity Name           ; projectClock                               ;
 ; Family                          ; Cyclone V                                  ;
 ; Logic utilization (in ALMs)     ; N/A                                        ;
-; Total registers                 ; 136                                        ;
-; Total pins                      ; 26                                         ;
+; Total registers                 ; 326                                        ;
+; Total pins                      ; 32                                         ;
 ; Total virtual pins              ; 0                                          ;
 ; Total block memory bits         ; 0                                          ;
 ; Total DSP Blocks                ; 0                                          ;
@@ -158,7 +158,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 2      ;
+; Number detected on machine ; 4      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -182,102 +182,128 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; counterHour_1.vhd                ; yes             ; User VHDL File                           ; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/counterHour_1.vhd     ;         ;
 ; counterHour_10.vhd               ; yes             ; User VHDL File                           ; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/counterHour_10.vhd    ;         ;
 ; alarmDetection.vhd               ; yes             ; User VHDL File                           ; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/alarmDetection.vhd    ;         ;
+; musicselector.vhd                ; yes             ; User VHDL File                           ; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/musicselector.vhd     ;         ;
+; led_and.vhd                      ; yes             ; User VHDL File                           ; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/led_and.vhd           ;         ;
+; led_and2.vhd                     ; yes             ; User VHDL File                           ; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/led_and2.vhd          ;         ;
+; vectorOR2.vhd                    ; yes             ; User VHDL File                           ; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/vectorOR2.vhd         ;         ;
 ; test.bdf                         ; yes             ; Auto-Found Block Diagram/Schematic File  ; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/test.bdf              ;         ;
+; alarm_clock.vhd                  ; yes             ; Auto-Found VHDL File                     ; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/alarm_clock.vhd       ;         ;
 ; clktest.vhd                      ; yes             ; Auto-Found VHDL File                     ; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/clktest.vhd           ;         ;
 ; div10_t.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/div10_t.bdf           ;         ;
-; debounce_g.bdf                   ; yes             ; Auto-Found Block Diagram/Schematic File  ; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/debounce_g.bdf        ;         ;
-; clk_gen.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/clk_gen.bdf           ;         ;
+; buzzer_music0.vhd                ; yes             ; Auto-Found VHDL File                     ; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/buzzer_music0.vhd     ;         ;
+; buzzer_music1.vhd                ; yes             ; Auto-Found VHDL File                     ; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/buzzer_music1.vhd     ;         ;
+; music_02.vhd                     ; yes             ; Auto-Found VHDL File                     ; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/music_02.vhd          ;         ;
+; buzzer_music2.vhd                ; yes             ; Auto-Found VHDL File                     ; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/buzzer_music2.vhd     ;         ;
+; music_03.vhd                     ; yes             ; Auto-Found VHDL File                     ; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/music_03.vhd          ;         ;
+; music_01.vhd                     ; yes             ; Auto-Found VHDL File                     ; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/music_01.vhd          ;         ;
 ; updown.bdf                       ; yes             ; Auto-Found Block Diagram/Schematic File  ; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/updown.bdf            ;         ;
 ; savetest.vhd                     ; yes             ; Auto-Found VHDL File                     ; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/savetest.vhd          ;         ;
 ; ortest.vhd                       ; yes             ; Auto-Found VHDL File                     ; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/ortest.vhd            ;         ;
 ; downtest.vhd                     ; yes             ; Auto-Found VHDL File                     ; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/downtest.vhd          ;         ;
 ; down.vhd                         ; yes             ; Auto-Found VHDL File                     ; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/down.vhd              ;         ;
 ; uptest.vhd                       ; yes             ; Auto-Found VHDL File                     ; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/uptest.vhd            ;         ;
+; clk_gen.bdf                      ; yes             ; Auto-Found Block Diagram/Schematic File  ; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/clk_gen.bdf           ;         ;
 ; five_sec.vhd                     ; yes             ; Auto-Found VHDL File                     ; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/five_sec.vhd          ;         ;
+; debounce_g.bdf                   ; yes             ; Auto-Found Block Diagram/Schematic File  ; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/debounce_g.bdf        ;         ;
 ; vectortest.vhd                   ; yes             ; Auto-Found VHDL File                     ; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/vectortest.vhd        ;         ;
 ; switch.vhd                       ; yes             ; Auto-Found VHDL File                     ; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/switch.vhd            ;         ;
+; led.vhd                          ; yes             ; Auto-Found VHDL File                     ; Z:/Desktop/Programming/VHDL/VHDLClock/projectClock/led.vhd               ;         ;
 +----------------------------------+-----------------+------------------------------------------+--------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                 ;
-+---------------------------------------------+-------------------------------+
-; Resource                                    ; Usage                         ;
-+---------------------------------------------+-------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 164                           ;
-;                                             ;                               ;
-; Combinational ALUT usage for logic          ; 291                           ;
-;     -- 7 input functions                    ; 0                             ;
-;     -- 6 input functions                    ; 35                            ;
-;     -- 5 input functions                    ; 32                            ;
-;     -- 4 input functions                    ; 74                            ;
-;     -- <=3 input functions                  ; 150                           ;
-;                                             ;                               ;
-; Dedicated logic registers                   ; 136                           ;
-;                                             ;                               ;
-; I/O pins                                    ; 26                            ;
-; Total DSP Blocks                            ; 0                             ;
-; Maximum fan-out node                        ; clk_gen:inst1|div10_t:inst5|2 ;
-; Maximum fan-out                             ; 34                            ;
-; Total fan-out                               ; 1409                          ;
-; Average fan-out                             ; 2.94                          ;
-+---------------------------------------------+-------------------------------+
++--------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                    ;
++---------------------------------------------+----------------------------------+
+; Resource                                    ; Usage                            ;
++---------------------------------------------+----------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 491                              ;
+;                                             ;                                  ;
+; Combinational ALUT usage for logic          ; 806                              ;
+;     -- 7 input functions                    ; 1                                ;
+;     -- 6 input functions                    ; 173                              ;
+;     -- 5 input functions                    ; 93                               ;
+;     -- 4 input functions                    ; 189                              ;
+;     -- <=3 input functions                  ; 350                              ;
+;                                             ;                                  ;
+; Dedicated logic registers                   ; 326                              ;
+;                                             ;                                  ;
+; I/O pins                                    ; 32                               ;
+; Total DSP Blocks                            ; 0                                ;
+; Maximum fan-out node                        ; Test:inst62|CLKtest:inst1|CNTout ;
+; Maximum fan-out                             ; 204                              ;
+; Total fan-out                               ; 4033                             ;
+; Average fan-out                             ; 3.37                             ;
++---------------------------------------------+----------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                ;
-+------------------------------+-------------------+--------------+-------------------+------------+------+--------------+--------------------------------------------+--------------+
-; Compilation Hierarchy Node   ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                        ; Library Name ;
-+------------------------------+-------------------+--------------+-------------------+------------+------+--------------+--------------------------------------------+--------------+
-; |projectClock                ; 291 (14)          ; 136 (0)      ; 0                 ; 0          ; 26   ; 0            ; |projectClock                              ; work         ;
-;    |Test:inst62|             ; 62 (0)            ; 40 (0)       ; 0                 ; 0          ; 0    ; 0            ; |projectClock|Test:inst62                  ; work         ;
-;       |CLKtest:inst1|        ; 6 (6)             ; 6 (6)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|Test:inst62|CLKtest:inst1    ; work         ;
-;       |buzzer:inst|          ; 52 (52)           ; 30 (30)      ; 0                 ; 0          ; 0    ; 0            ; |projectClock|Test:inst62|buzzer:inst      ; work         ;
-;       |div10_t:inst3|        ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|Test:inst62|div10_t:inst3    ; work         ;
-;    |UPDOWN:inst19|           ; 17 (2)            ; 12 (0)       ; 0                 ; 0          ; 0    ; 0            ; |projectClock|UPDOWN:inst19                ; work         ;
-;       |DOWN:inst|            ; 5 (5)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|UPDOWN:inst19|DOWN:inst      ; work         ;
-;       |ORtest:inst5|         ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|UPDOWN:inst19|ORtest:inst5   ; work         ;
-;       |Savetest:inst7|       ; 3 (3)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|UPDOWN:inst19|Savetest:inst7 ; work         ;
-;       |UP:inst1|             ; 3 (3)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|UPDOWN:inst19|UP:inst1       ; work         ;
-;    |alarmDetection:inst46|   ; 11 (11)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|alarmDetection:inst46        ; work         ;
-;    |clk_gen:inst1|           ; 27 (0)            ; 27 (0)       ; 0                 ; 0          ; 0    ; 0            ; |projectClock|clk_gen:inst1                ; work         ;
-;       |div10_t:inst1|        ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|clk_gen:inst1|div10_t:inst1  ; work         ;
-;       |div10_t:inst2|        ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|clk_gen:inst1|div10_t:inst2  ; work         ;
-;       |div10_t:inst3|        ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|clk_gen:inst1|div10_t:inst3  ; work         ;
-;       |div10_t:inst4|        ; 3 (3)             ; 3 (3)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|clk_gen:inst1|div10_t:inst4  ; work         ;
-;       |div10_t:inst5|        ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|clk_gen:inst1|div10_t:inst5  ; work         ;
-;       |div10_t:inst6|        ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|clk_gen:inst1|div10_t:inst6  ; work         ;
-;       |div10_t:inst|         ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|clk_gen:inst1|div10_t:inst   ; work         ;
-;    |counterHour_10:inst15|   ; 6 (6)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|counterHour_10:inst15        ; work         ;
-;    |counterHour_10:inst42|   ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|counterHour_10:inst42        ; work         ;
-;    |counterHour_1:inst13|    ; 16 (16)           ; 5 (5)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|counterHour_1:inst13         ; work         ;
-;    |counterHour_1:inst43|    ; 8 (8)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|counterHour_1:inst43         ; work         ;
-;    |counterSecond_10:inst40| ; 8 (8)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|counterSecond_10:inst40      ; work         ;
-;    |counterSecond_10:inst41| ; 6 (6)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|counterSecond_10:inst41      ; work         ;
-;    |counterSecond_10:inst5|  ; 10 (10)           ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|counterSecond_10:inst5       ; work         ;
-;    |counterSecond_10:inst9|  ; 10 (10)           ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|counterSecond_10:inst9       ; work         ;
-;    |counterSecond_1:inst38|  ; 8 (8)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|counterSecond_1:inst38       ; work         ;
-;    |counterSecond_1:inst39|  ; 8 (8)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|counterSecond_1:inst39       ; work         ;
-;    |counterSecond_1:inst7|   ; 13 (13)           ; 5 (5)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|counterSecond_1:inst7        ; work         ;
-;    |counterSecond_1:inst8|   ; 13 (13)           ; 5 (5)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|counterSecond_1:inst8        ; work         ;
-;    |debounce_g:inst27|       ; 1 (1)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|debounce_g:inst27            ; work         ;
-;    |debounce_g:inst65|       ; 1 (1)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|debounce_g:inst65            ; work         ;
-;    |debounce_g:inst66|       ; 1 (1)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|debounce_g:inst66            ; work         ;
-;    |debounce_g:inst67|       ; 1 (1)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|debounce_g:inst67            ; work         ;
-;    |debounce_g:inst68|       ; 1 (1)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|debounce_g:inst68            ; work         ;
-;    |debounce_g:inst69|       ; 1 (1)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|debounce_g:inst69            ; work         ;
-;    |debounce_g:inst70|       ; 1 (1)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|debounce_g:inst70            ; work         ;
-;    |debounce_g:inst71|       ; 1 (1)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|debounce_g:inst71            ; work         ;
-;    |debounce_g:inst72|       ; 1 (1)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|debounce_g:inst72            ; work         ;
-;    |debounce_g:inst73|       ; 1 (1)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|debounce_g:inst73            ; work         ;
-;    |debounce_g:inst74|       ; 1 (1)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|debounce_g:inst74            ; work         ;
-;    |debounce_g:inst75|       ; 1 (1)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|debounce_g:inst75            ; work         ;
-;    |debounce_g:inst76|       ; 1 (1)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|debounce_g:inst76            ; work         ;
-;    |display:inst|            ; 3 (3)             ; 3 (3)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|display:inst                 ; work         ;
-;    |shift_clock:inst23|      ; 3 (3)             ; 3 (3)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|shift_clock:inst23           ; work         ;
-;    |switch:inst44|           ; 21 (21)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|switch:inst44                ; work         ;
-;    |vectortest:inst3|        ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|vectortest:inst3             ; work         ;
-+------------------------------+-------------------+--------------+-------------------+------------+------+--------------+--------------------------------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
++------------------------------+-------------------+--------------+-------------------+------------+------+--------------+------------------------------------------------+--------------+
+; Compilation Hierarchy Node   ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                            ; Library Name ;
++------------------------------+-------------------+--------------+-------------------+------------+------+--------------+------------------------------------------------+--------------+
+; |projectClock                ; 806 (15)          ; 326 (0)      ; 0                 ; 0          ; 32   ; 0            ; |projectClock                                  ; work         ;
+;    |LED:inst57|              ; 72 (72)           ; 13 (13)      ; 0                 ; 0          ; 0    ; 0            ; |projectClock|LED:inst57                       ; work         ;
+;    |Test:inst62|             ; 484 (8)           ; 213 (0)      ; 0                 ; 0          ; 0    ; 0            ; |projectClock|Test:inst62                      ; work         ;
+;       |CLKtest:inst1|        ; 6 (6)             ; 6 (6)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|Test:inst62|CLKtest:inst1        ; work         ;
+;       |alarm_clock:inst6|    ; 43 (43)           ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |projectClock|Test:inst62|alarm_clock:inst6    ; work         ;
+;       |buzzer:inst|          ; 27 (27)           ; 15 (15)      ; 0                 ; 0          ; 0    ; 0            ; |projectClock|Test:inst62|buzzer:inst          ; work         ;
+;       |buzzer_music0:inst2|  ; 56 (56)           ; 34 (34)      ; 0                 ; 0          ; 0    ; 0            ; |projectClock|Test:inst62|buzzer_music0:inst2  ; work         ;
+;       |buzzer_music1:inst99| ; 63 (63)           ; 19 (19)      ; 0                 ; 0          ; 0    ; 0            ; |projectClock|Test:inst62|buzzer_music1:inst99 ; work         ;
+;       |buzzer_music2:inst4|  ; 92 (92)           ; 36 (36)      ; 0                 ; 0          ; 0    ; 0            ; |projectClock|Test:inst62|buzzer_music2:inst4  ; work         ;
+;       |div10_t:inst3|        ; 3 (3)             ; 3 (3)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|Test:inst62|div10_t:inst3        ; work         ;
+;       |music_01:inst16|      ; 41 (41)           ; 17 (17)      ; 0                 ; 0          ; 0    ; 0            ; |projectClock|Test:inst62|music_01:inst16      ; work         ;
+;       |music_02:inst7|       ; 58 (58)           ; 19 (19)      ; 0                 ; 0          ; 0    ; 0            ; |projectClock|Test:inst62|music_02:inst7       ; work         ;
+;       |music_03:inst8|       ; 79 (79)           ; 20 (20)      ; 0                 ; 0          ; 0    ; 0            ; |projectClock|Test:inst62|music_03:inst8       ; work         ;
+;       |musicselector:inst98| ; 8 (8)             ; 12 (12)      ; 0                 ; 0          ; 0    ; 0            ; |projectClock|Test:inst62|musicselector:inst98 ; work         ;
+;    |UPDOWN:inst19|           ; 17 (2)            ; 12 (0)       ; 0                 ; 0          ; 0    ; 0            ; |projectClock|UPDOWN:inst19                    ; work         ;
+;       |DOWN:inst|            ; 5 (5)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|UPDOWN:inst19|DOWN:inst          ; work         ;
+;       |ORtest:inst5|         ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|UPDOWN:inst19|ORtest:inst5       ; work         ;
+;       |Savetest:inst7|       ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|UPDOWN:inst19|Savetest:inst7     ; work         ;
+;       |UP:inst1|             ; 3 (3)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|UPDOWN:inst19|UP:inst1           ; work         ;
+;    |alarmDetection:inst46|   ; 10 (10)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|alarmDetection:inst46            ; work         ;
+;    |clk_gen:inst1|           ; 27 (0)            ; 27 (0)       ; 0                 ; 0          ; 0    ; 0            ; |projectClock|clk_gen:inst1                    ; work         ;
+;       |div10_t:inst1|        ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|clk_gen:inst1|div10_t:inst1      ; work         ;
+;       |div10_t:inst2|        ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|clk_gen:inst1|div10_t:inst2      ; work         ;
+;       |div10_t:inst3|        ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|clk_gen:inst1|div10_t:inst3      ; work         ;
+;       |div10_t:inst4|        ; 3 (3)             ; 3 (3)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|clk_gen:inst1|div10_t:inst4      ; work         ;
+;       |div10_t:inst5|        ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|clk_gen:inst1|div10_t:inst5      ; work         ;
+;       |div10_t:inst6|        ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|clk_gen:inst1|div10_t:inst6      ; work         ;
+;       |div10_t:inst|         ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|clk_gen:inst1|div10_t:inst       ; work         ;
+;    |counterHour_10:inst15|   ; 6 (6)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|counterHour_10:inst15            ; work         ;
+;    |counterHour_10:inst42|   ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|counterHour_10:inst42            ; work         ;
+;    |counterHour_1:inst13|    ; 16 (16)           ; 5 (5)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|counterHour_1:inst13             ; work         ;
+;    |counterHour_1:inst43|    ; 8 (8)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|counterHour_1:inst43             ; work         ;
+;    |counterSecond_10:inst40| ; 8 (8)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|counterSecond_10:inst40          ; work         ;
+;    |counterSecond_10:inst41| ; 6 (6)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|counterSecond_10:inst41          ; work         ;
+;    |counterSecond_10:inst5|  ; 10 (10)           ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|counterSecond_10:inst5           ; work         ;
+;    |counterSecond_10:inst9|  ; 10 (10)           ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|counterSecond_10:inst9           ; work         ;
+;    |counterSecond_1:inst38|  ; 8 (8)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|counterSecond_1:inst38           ; work         ;
+;    |counterSecond_1:inst39|  ; 8 (8)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|counterSecond_1:inst39           ; work         ;
+;    |counterSecond_1:inst7|   ; 13 (13)           ; 5 (5)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|counterSecond_1:inst7            ; work         ;
+;    |counterSecond_1:inst8|   ; 13 (13)           ; 5 (5)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|counterSecond_1:inst8            ; work         ;
+;    |debounce_g:inst27|       ; 1 (1)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|debounce_g:inst27                ; work         ;
+;    |debounce_g:inst65|       ; 1 (1)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|debounce_g:inst65                ; work         ;
+;    |debounce_g:inst66|       ; 1 (1)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|debounce_g:inst66                ; work         ;
+;    |debounce_g:inst67|       ; 1 (1)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|debounce_g:inst67                ; work         ;
+;    |debounce_g:inst68|       ; 1 (1)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|debounce_g:inst68                ; work         ;
+;    |debounce_g:inst69|       ; 1 (1)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|debounce_g:inst69                ; work         ;
+;    |debounce_g:inst70|       ; 1 (1)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|debounce_g:inst70                ; work         ;
+;    |debounce_g:inst71|       ; 1 (1)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|debounce_g:inst71                ; work         ;
+;    |debounce_g:inst72|       ; 1 (1)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|debounce_g:inst72                ; work         ;
+;    |debounce_g:inst73|       ; 1 (1)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|debounce_g:inst73                ; work         ;
+;    |debounce_g:inst74|       ; 1 (1)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|debounce_g:inst74                ; work         ;
+;    |debounce_g:inst75|       ; 1 (1)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|debounce_g:inst75                ; work         ;
+;    |debounce_g:inst76|       ; 1 (1)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|debounce_g:inst76                ; work         ;
+;    |display:inst|            ; 3 (3)             ; 3 (3)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|display:inst                     ; work         ;
+;    |five_sec:inst47|         ; 10 (10)           ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|five_sec:inst47                  ; work         ;
+;    |led_and2:inst61|         ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|led_and2:inst61                  ; work         ;
+;    |led_and:inst59|          ; 6 (6)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|led_and:inst59                   ; work         ;
+;    |outputsix:inst2|         ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|outputsix:inst2                  ; work         ;
+;    |shift_clock:inst23|      ; 3 (3)             ; 3 (3)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|shift_clock:inst23               ; work         ;
+;    |switch:inst44|           ; 18 (18)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|switch:inst44                    ; work         ;
+;    |vectorOR2:inst63|        ; 6 (6)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|vectorOR2:inst63                 ; work         ;
+;    |vectortest:inst3|        ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |projectClock|vectortest:inst3                 ; work         ;
++------------------------------+-------------------+--------------+-------------------+------------+------+--------------+------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -304,67 +330,137 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                 ;
-+-------------------------------------------+----------------------------------------+
-; Register name                             ; Reason for Removal                     ;
-+-------------------------------------------+----------------------------------------+
-; counterSecond_1:inst38|carry              ; Stuck at GND due to stuck port clock   ;
-; counterSecond_10:inst40|carry_out         ; Stuck at GND due to stuck port clock   ;
-; counterSecond_1:inst39|carry              ; Stuck at GND due to stuck port clock   ;
-; counterSecond_10:inst41|carry_out         ; Stuck at GND due to stuck port clock   ;
-; counterHour_1:inst43|carry_out            ; Stuck at GND due to stuck port clock   ;
-; clk_gen:inst1|div10_t:inst4|5             ; Merged with display:inst|temp[0]       ;
-; five_sec:inst47|temp[0,2]                 ; Stuck at VCC due to stuck port data_in ;
-; counterSecond_10:inst40|temp[3]           ; Stuck at GND due to stuck port clock   ;
-; counterSecond_10:inst5|temp[3]            ; Stuck at GND due to stuck port data_in ;
-; counterSecond_10:inst41|temp[3]           ; Stuck at GND due to stuck port clock   ;
-; counterSecond_10:inst9|temp[3]            ; Stuck at GND due to stuck port data_in ;
-; counterHour_10:inst42|temp[2]             ; Stuck at GND due to stuck port clock   ;
-; counterHour_10:inst15|temp[2]             ; Stuck at GND due to stuck port data_in ;
-; counterHour_10:inst42|temp[3]             ; Stuck at GND due to stuck port clock   ;
-; counterHour_10:inst15|temp[3]             ; Stuck at GND due to stuck port data_in ;
-; Test:inst62|buzzer:inst|LEN[2]            ; Stuck at GND due to stuck port data_in ;
-; five_sec:inst47|temp[1]                   ; Stuck at VCC due to stuck port data_in ;
-; five_sec:inst47|STOP                      ; Stuck at VCC due to stuck port data_in ;
-; counterSecond_1:inst38|temp[0]~_emulated  ; Stuck at GND due to stuck port clock   ;
-; counterSecond_1:inst38|temp[1]~_emulated  ; Stuck at GND due to stuck port clock   ;
-; counterSecond_1:inst38|temp[2]~_emulated  ; Stuck at GND due to stuck port clock   ;
-; counterSecond_1:inst38|temp[3]~_emulated  ; Stuck at GND due to stuck port clock   ;
-; counterSecond_10:inst40|temp[0]~_emulated ; Stuck at GND due to stuck port clock   ;
-; counterSecond_10:inst40|temp[1]~_emulated ; Stuck at GND due to stuck port clock   ;
-; counterSecond_10:inst40|temp[2]~_emulated ; Stuck at GND due to stuck port clock   ;
-; counterSecond_1:inst39|temp[0]~_emulated  ; Stuck at GND due to stuck port clock   ;
-; counterSecond_1:inst39|temp[1]~_emulated  ; Stuck at GND due to stuck port clock   ;
-; counterSecond_1:inst39|temp[2]~_emulated  ; Stuck at GND due to stuck port clock   ;
-; counterSecond_1:inst39|temp[3]~_emulated  ; Stuck at GND due to stuck port clock   ;
-; counterSecond_10:inst41|temp[0]~_emulated ; Stuck at GND due to stuck port clock   ;
-; counterSecond_10:inst41|temp[1]~_emulated ; Stuck at GND due to stuck port clock   ;
-; counterSecond_10:inst41|temp[2]~_emulated ; Stuck at GND due to stuck port clock   ;
-; counterHour_1:inst43|temp[0]~_emulated    ; Stuck at GND due to stuck port clock   ;
-; counterHour_1:inst43|temp[1]~_emulated    ; Stuck at GND due to stuck port clock   ;
-; counterHour_1:inst43|temp[2]~_emulated    ; Stuck at GND due to stuck port clock   ;
-; counterHour_1:inst43|temp[3]~_emulated    ; Stuck at GND due to stuck port clock   ;
-; counterHour_10:inst42|temp[0]~_emulated   ; Stuck at GND due to stuck port clock   ;
-; counterHour_10:inst42|temp[1]~_emulated   ; Stuck at GND due to stuck port clock   ;
-; Total Number of Removed Registers = 39    ;                                        ;
-+-------------------------------------------+----------------------------------------+
++--------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                     ;
++----------------------------------------------+---------------------------------------------------------+
+; Register name                                ; Reason for Removal                                      ;
++----------------------------------------------+---------------------------------------------------------+
+; counterSecond_1:inst38|carry                 ; Stuck at GND due to stuck port clock                    ;
+; counterSecond_10:inst40|carry_out            ; Stuck at GND due to stuck port clock                    ;
+; counterSecond_1:inst39|carry                 ; Stuck at GND due to stuck port clock                    ;
+; counterSecond_10:inst41|carry_out            ; Stuck at GND due to stuck port clock                    ;
+; counterHour_1:inst43|carry_out               ; Stuck at GND due to stuck port clock                    ;
+; clk_gen:inst1|div10_t:inst4|5                ; Merged with display:inst|temp[0]                        ;
+; Test:inst62|div10_t:inst3|5                  ; Merged with clk_gen:inst1|div10_t:inst|5                ;
+; Test:inst62|buzzer:inst|DIVIDER[14]          ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[14]   ;
+; Test:inst62|music_02:inst7|DIVIDER[14]       ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[14]   ;
+; Test:inst62|buzzer:inst|DIVIDER[13]          ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[13]   ;
+; Test:inst62|music_02:inst7|DIVIDER[13]       ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[13]   ;
+; Test:inst62|buzzer:inst|DIVIDER[12]          ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[12]   ;
+; Test:inst62|music_02:inst7|DIVIDER[12]       ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[12]   ;
+; Test:inst62|buzzer:inst|DIVIDER[11]          ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[11]   ;
+; Test:inst62|music_02:inst7|DIVIDER[11]       ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[11]   ;
+; Test:inst62|buzzer:inst|DIVIDER[10]          ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[10]   ;
+; Test:inst62|music_02:inst7|DIVIDER[10]       ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[10]   ;
+; Test:inst62|buzzer:inst|DIVIDER[9]           ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[9]    ;
+; Test:inst62|music_02:inst7|DIVIDER[9]        ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[9]    ;
+; Test:inst62|buzzer:inst|DIVIDER[8]           ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[8]    ;
+; Test:inst62|music_02:inst7|DIVIDER[8]        ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[8]    ;
+; Test:inst62|buzzer:inst|DIVIDER[7]           ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[7]    ;
+; Test:inst62|music_02:inst7|DIVIDER[7]        ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[7]    ;
+; Test:inst62|buzzer:inst|DIVIDER[6]           ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[6]    ;
+; Test:inst62|music_02:inst7|DIVIDER[6]        ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[6]    ;
+; Test:inst62|buzzer:inst|DIVIDER[5]           ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[5]    ;
+; Test:inst62|music_02:inst7|DIVIDER[5]        ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[5]    ;
+; Test:inst62|buzzer:inst|DIVIDER[4]           ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[4]    ;
+; Test:inst62|music_02:inst7|DIVIDER[4]        ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[4]    ;
+; Test:inst62|buzzer:inst|DIVIDER[3]           ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[3]    ;
+; Test:inst62|music_02:inst7|DIVIDER[3]        ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[3]    ;
+; Test:inst62|buzzer:inst|DIVIDER[2]           ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[2]    ;
+; Test:inst62|music_02:inst7|DIVIDER[2]        ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[2]    ;
+; Test:inst62|buzzer:inst|DIVIDER[1]           ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[1]    ;
+; Test:inst62|music_02:inst7|DIVIDER[1]        ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[1]    ;
+; Test:inst62|buzzer:inst|DIVIDER[0]           ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[0]    ;
+; Test:inst62|music_02:inst7|DIVIDER[0]        ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[0]    ;
+; Test:inst62|buzzer_music1:inst99|DIVIDER[14] ; Merged with Test:inst62|buzzer_music0:inst2|DIVIDER[14] ;
+; Test:inst62|buzzer_music1:inst99|DIVIDER[13] ; Merged with Test:inst62|buzzer_music0:inst2|DIVIDER[13] ;
+; Test:inst62|buzzer_music1:inst99|DIVIDER[12] ; Merged with Test:inst62|buzzer_music0:inst2|DIVIDER[12] ;
+; Test:inst62|buzzer_music1:inst99|DIVIDER[11] ; Merged with Test:inst62|buzzer_music0:inst2|DIVIDER[11] ;
+; Test:inst62|buzzer_music1:inst99|DIVIDER[10] ; Merged with Test:inst62|buzzer_music0:inst2|DIVIDER[10] ;
+; Test:inst62|buzzer_music1:inst99|DIVIDER[9]  ; Merged with Test:inst62|buzzer_music0:inst2|DIVIDER[9]  ;
+; Test:inst62|buzzer_music1:inst99|DIVIDER[8]  ; Merged with Test:inst62|buzzer_music0:inst2|DIVIDER[8]  ;
+; Test:inst62|buzzer_music1:inst99|DIVIDER[7]  ; Merged with Test:inst62|buzzer_music0:inst2|DIVIDER[7]  ;
+; Test:inst62|buzzer_music1:inst99|DIVIDER[6]  ; Merged with Test:inst62|buzzer_music0:inst2|DIVIDER[6]  ;
+; Test:inst62|buzzer_music1:inst99|DIVIDER[5]  ; Merged with Test:inst62|buzzer_music0:inst2|DIVIDER[5]  ;
+; Test:inst62|buzzer_music1:inst99|DIVIDER[4]  ; Merged with Test:inst62|buzzer_music0:inst2|DIVIDER[4]  ;
+; Test:inst62|buzzer_music1:inst99|DIVIDER[3]  ; Merged with Test:inst62|buzzer_music0:inst2|DIVIDER[3]  ;
+; Test:inst62|buzzer_music1:inst99|DIVIDER[2]  ; Merged with Test:inst62|buzzer_music0:inst2|DIVIDER[2]  ;
+; Test:inst62|buzzer_music1:inst99|DIVIDER[1]  ; Merged with Test:inst62|buzzer_music0:inst2|DIVIDER[1]  ;
+; Test:inst62|buzzer_music1:inst99|DIVIDER[0]  ; Merged with Test:inst62|buzzer_music0:inst2|DIVIDER[0]  ;
+; counterSecond_10:inst40|temp[3]              ; Stuck at GND due to stuck port clock                    ;
+; counterSecond_10:inst5|temp[3]               ; Stuck at GND due to stuck port data_in                  ;
+; counterSecond_10:inst41|temp[3]              ; Stuck at GND due to stuck port clock                    ;
+; counterSecond_10:inst9|temp[3]               ; Stuck at GND due to stuck port data_in                  ;
+; counterHour_10:inst42|temp[2]                ; Stuck at GND due to stuck port clock                    ;
+; counterHour_10:inst15|temp[2]                ; Stuck at GND due to stuck port data_in                  ;
+; counterHour_10:inst42|temp[3]                ; Stuck at GND due to stuck port clock                    ;
+; counterHour_10:inst15|temp[3]                ; Stuck at GND due to stuck port data_in                  ;
+; Test:inst62|alarm_clock:inst6|LEN[1,2]       ; Stuck at GND due to stuck port data_in                  ;
+; Test:inst62|buzzer:inst|LEN[2]               ; Stuck at GND due to stuck port data_in                  ;
+; Test:inst62|music_03:inst8|DIVIDER[1]        ; Merged with Test:inst62|buzzer_music0:inst2|DIVIDER[1]  ;
+; Test:inst62|music_03:inst8|DIVIDER[0]        ; Merged with Test:inst62|buzzer_music0:inst2|DIVIDER[0]  ;
+; Test:inst62|music_03:inst8|DIVIDER[2]        ; Merged with Test:inst62|buzzer_music0:inst2|DIVIDER[2]  ;
+; Test:inst62|music_03:inst8|DIVIDER[3]        ; Merged with Test:inst62|buzzer_music0:inst2|DIVIDER[3]  ;
+; Test:inst62|music_03:inst8|DIVIDER[4]        ; Merged with Test:inst62|buzzer_music0:inst2|DIVIDER[4]  ;
+; Test:inst62|music_03:inst8|DIVIDER[5]        ; Merged with Test:inst62|buzzer_music0:inst2|DIVIDER[5]  ;
+; Test:inst62|music_03:inst8|DIVIDER[6]        ; Merged with Test:inst62|buzzer_music0:inst2|DIVIDER[6]  ;
+; Test:inst62|music_03:inst8|DIVIDER[7]        ; Merged with Test:inst62|buzzer_music0:inst2|DIVIDER[7]  ;
+; Test:inst62|music_03:inst8|DIVIDER[8]        ; Merged with Test:inst62|buzzer_music0:inst2|DIVIDER[8]  ;
+; Test:inst62|music_03:inst8|DIVIDER[9]        ; Merged with Test:inst62|buzzer_music0:inst2|DIVIDER[9]  ;
+; Test:inst62|music_03:inst8|DIVIDER[10]       ; Merged with Test:inst62|buzzer_music0:inst2|DIVIDER[10] ;
+; Test:inst62|music_03:inst8|DIVIDER[11]       ; Merged with Test:inst62|buzzer_music0:inst2|DIVIDER[11] ;
+; Test:inst62|music_03:inst8|DIVIDER[12]       ; Merged with Test:inst62|buzzer_music0:inst2|DIVIDER[12] ;
+; Test:inst62|music_03:inst8|DIVIDER[13]       ; Merged with Test:inst62|buzzer_music0:inst2|DIVIDER[13] ;
+; Test:inst62|music_03:inst8|DIVIDER[14]       ; Merged with Test:inst62|buzzer_music0:inst2|DIVIDER[14] ;
+; Test:inst62|music_01:inst16|DIVIDER[0]       ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[0]    ;
+; Test:inst62|music_01:inst16|DIVIDER[1]       ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[1]    ;
+; Test:inst62|music_01:inst16|DIVIDER[2]       ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[2]    ;
+; Test:inst62|music_01:inst16|DIVIDER[3]       ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[3]    ;
+; Test:inst62|music_01:inst16|DIVIDER[4]       ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[4]    ;
+; Test:inst62|music_01:inst16|DIVIDER[5]       ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[5]    ;
+; Test:inst62|music_01:inst16|DIVIDER[6]       ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[6]    ;
+; Test:inst62|music_01:inst16|DIVIDER[7]       ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[7]    ;
+; Test:inst62|music_01:inst16|DIVIDER[8]       ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[8]    ;
+; Test:inst62|music_01:inst16|DIVIDER[9]       ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[9]    ;
+; Test:inst62|music_01:inst16|DIVIDER[10]      ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[10]   ;
+; Test:inst62|music_01:inst16|DIVIDER[11]      ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[11]   ;
+; Test:inst62|music_01:inst16|DIVIDER[12]      ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[12]   ;
+; Test:inst62|music_01:inst16|DIVIDER[13]      ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[13]   ;
+; Test:inst62|music_01:inst16|DIVIDER[14]      ; Merged with Test:inst62|alarm_clock:inst6|DIVIDER[14]   ;
+; counterSecond_1:inst38|temp[0]~_emulated     ; Stuck at GND due to stuck port clock                    ;
+; counterSecond_1:inst38|temp[1]~_emulated     ; Stuck at GND due to stuck port clock                    ;
+; counterSecond_1:inst38|temp[2]~_emulated     ; Stuck at GND due to stuck port clock                    ;
+; counterSecond_1:inst38|temp[3]~_emulated     ; Stuck at GND due to stuck port clock                    ;
+; counterSecond_10:inst40|temp[0]~_emulated    ; Stuck at GND due to stuck port clock                    ;
+; counterSecond_10:inst40|temp[1]~_emulated    ; Stuck at GND due to stuck port clock                    ;
+; counterSecond_10:inst40|temp[2]~_emulated    ; Stuck at GND due to stuck port clock                    ;
+; counterSecond_1:inst39|temp[0]~_emulated     ; Stuck at GND due to stuck port clock                    ;
+; counterSecond_1:inst39|temp[1]~_emulated     ; Stuck at GND due to stuck port clock                    ;
+; counterSecond_1:inst39|temp[2]~_emulated     ; Stuck at GND due to stuck port clock                    ;
+; counterSecond_1:inst39|temp[3]~_emulated     ; Stuck at GND due to stuck port clock                    ;
+; counterSecond_10:inst41|temp[0]~_emulated    ; Stuck at GND due to stuck port clock                    ;
+; counterSecond_10:inst41|temp[1]~_emulated    ; Stuck at GND due to stuck port clock                    ;
+; counterSecond_10:inst41|temp[2]~_emulated    ; Stuck at GND due to stuck port clock                    ;
+; counterHour_1:inst43|temp[0]~_emulated       ; Stuck at GND due to stuck port clock                    ;
+; counterHour_1:inst43|temp[1]~_emulated       ; Stuck at GND due to stuck port clock                    ;
+; counterHour_1:inst43|temp[2]~_emulated       ; Stuck at GND due to stuck port clock                    ;
+; counterHour_1:inst43|temp[3]~_emulated       ; Stuck at GND due to stuck port clock                    ;
+; counterHour_10:inst42|temp[0]~_emulated      ; Stuck at GND due to stuck port clock                    ;
+; counterHour_10:inst42|temp[1]~_emulated      ; Stuck at GND due to stuck port clock                    ;
+; Total Number of Removed Registers = 113      ;                                                         ;
++----------------------------------------------+---------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                   ;
-+------------------------------+---------------------------+--------------------------------------------------------------------+
-; Register name                ; Reason for Removal        ; Registers Removed due to This Register                             ;
-+------------------------------+---------------------------+--------------------------------------------------------------------+
-; counterSecond_1:inst38|carry ; Stuck at GND              ; counterSecond_10:inst40|carry_out, counterSecond_1:inst39|carry,   ;
-;                              ; due to stuck port clock   ; counterSecond_10:inst41|carry_out, counterHour_1:inst43|carry_out, ;
-;                              ;                           ; counterSecond_10:inst40|temp[3], counterSecond_10:inst41|temp[3],  ;
-;                              ;                           ; counterHour_10:inst42|temp[2], counterHour_10:inst42|temp[3]       ;
-; five_sec:inst47|temp[2]      ; Stuck at VCC              ; five_sec:inst47|STOP                                               ;
-;                              ; due to stuck port data_in ;                                                                    ;
-; five_sec:inst47|temp[0]      ; Stuck at VCC              ; five_sec:inst47|temp[1]                                            ;
-;                              ; due to stuck port data_in ;                                                                    ;
-+------------------------------+---------------------------+--------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                 ;
++------------------------------+-------------------------+--------------------------------------------------------------------+
+; Register name                ; Reason for Removal      ; Registers Removed due to This Register                             ;
++------------------------------+-------------------------+--------------------------------------------------------------------+
+; counterSecond_1:inst38|carry ; Stuck at GND            ; counterSecond_10:inst40|carry_out, counterSecond_1:inst39|carry,   ;
+;                              ; due to stuck port clock ; counterSecond_10:inst41|carry_out, counterHour_1:inst43|carry_out, ;
+;                              ;                         ; counterSecond_10:inst40|temp[3], counterSecond_10:inst41|temp[3],  ;
+;                              ;                         ; counterHour_10:inst42|temp[2], counterHour_10:inst42|temp[3]       ;
++------------------------------+-------------------------+--------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -372,25 +468,32 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 136   ;
-; Number of registers using Synchronous Clear  ; 22    ;
+; Total registers                              ; 326   ;
+; Number of registers using Synchronous Clear  ; 147   ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 20    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 10    ;
+; Number of registers using Clock Enable       ; 92    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
-; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |projectClock|Test:inst62|buzzer:inst|COUNT[5] ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |projectClock|UPDOWN:inst19|DOWN:inst|CNT[3]   ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |projectClock|UPDOWN:inst19|DOWN:inst|CNT[2]   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |projectClock|Test:inst62|alarm_clock:inst6|COUNT[2]    ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |projectClock|Test:inst62|buzzer_music0:inst2|COUNT[0]  ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |projectClock|Test:inst62|buzzer:inst|COUNT[3]          ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |projectClock|Test:inst62|buzzer_music1:inst99|COUNT[4] ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |projectClock|Test:inst62|music_02:inst7|COUNT[5]       ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |projectClock|Test:inst62|buzzer_music2:inst4|COUNT[3]  ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |projectClock|Test:inst62|music_03:inst8|COUNT[0]       ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |projectClock|Test:inst62|music_01:inst16|COUNT[1]      ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |projectClock|UPDOWN:inst19|DOWN:inst|CNT[0]            ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |projectClock|UPDOWN:inst19|DOWN:inst|CNT[1]            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
 
 
 +-------------------------------+
@@ -398,7 +501,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -408,7 +511,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Fri Jun 19 15:37:45 2020
+    Info: Processing started: Tue Jun 23 22:07:40 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off projectClock -c projectClock
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file up.vhd
@@ -468,6 +571,18 @@ Info (12021): Found 2 design units, including 1 entities, in source file vector_
 Info (12021): Found 2 design units, including 1 entities, in source file alarmdetection.vhd
     Info (12022): Found design unit 1: alarmDetection-a
     Info (12023): Found entity 1: alarmDetection
+Info (12021): Found 2 design units, including 1 entities, in source file musicselector.vhd
+    Info (12022): Found design unit 1: musicselector-a
+    Info (12023): Found entity 1: musicselector
+Info (12021): Found 2 design units, including 1 entities, in source file led_and.vhd
+    Info (12022): Found design unit 1: led_and-a
+    Info (12023): Found entity 1: led_and
+Info (12021): Found 2 design units, including 1 entities, in source file led_and2.vhd
+    Info (12022): Found design unit 1: led_and2-a
+    Info (12023): Found entity 1: led_and2
+Info (12021): Found 2 design units, including 1 entities, in source file vectoror2.vhd
+    Info (12022): Found design unit 1: vectorOR2-a
+    Info (12023): Found entity 1: vectorOR2
 Info (12127): Elaborating entity "projectClock" for the top level hierarchy
 Warning (275083): Bus "timeS10[3..0]" found using same base name as "timeS1", which might lead to a name conflict.
 Warning (275083): Bus "timeM10[3..0]" found using same base name as "timeM1", which might lead to a name conflict.
@@ -511,11 +626,14 @@ Warning (275080): Converted elements in bus name "timeS1" using legacy naming ru
     Warning (275081): Converted element name(s) from "timeS1[3..0]" to "timeS13..0"
 Warning (275080): Converted elements in bus name "timeS10" using legacy naming rules. Make any assignments on the new names, not on the original names.
     Warning (275081): Converted element name(s) from "timeS10[3..0]" to "timeS103..0"
+Warning (275083): Bus "ledin2[11..0]" found using same base name as "ledin", which might lead to a name conflict.
+Warning (275080): Converted elements in bus name "ledin" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "ledin[11..0]" to "ledin11..0"
+Warning (275080): Converted elements in bus name "ledin2" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "ledin2[11..0]" to "ledin211..0"
 Warning (275011): Block or symbol "VCC" of instance "inst18" overlaps another block or symbol
 Warning (275011): Block or symbol "counterSecond_1" of instance "inst7" overlaps another block or symbol
 Warning (275011): Block or symbol "counterSecond_1" of instance "inst8" overlaps another block or symbol
-Warning (275011): Block or symbol "AND2" of instance "inst30" overlaps another block or symbol
-Warning (275011): Block or symbol "vectorAND" of instance "inst26" overlaps another block or symbol
 Warning (275011): Block or symbol "counterSecond_1" of instance "inst38" overlaps another block or symbol
 Warning (275011): Block or symbol "counterSecond_1" of instance "inst39" overlaps another block or symbol
 Warning (275080): Converted elements in bus name "alarmH1" using legacy naming rules. Make any assignments on the new names, not on the original names.
@@ -557,9 +675,14 @@ Warning (275080): Converted elements in bus name "timeS10" using legacy naming r
 Warning (12125): Using design file test.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: Test
 Info (12128): Elaborating entity "Test" for hierarchy "Test:inst62"
-Info (12128): Elaborating entity "buzzer" for hierarchy "Test:inst62|buzzer:inst"
-Warning (10492): VHDL Process Statement warning at buzzer.vhd(24): signal "PITCH" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at buzzer.vhd(73): signal "INDEX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (275011): Block or symbol "music_02" of instance "inst7" overlaps another block or symbol
+Warning (275011): Block or symbol "musicselector" of instance "inst98" overlaps another block or symbol
+Warning (12125): Using design file alarm_clock.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: alarm_clock-arch
+    Info (12023): Found entity 1: alarm_clock
+Info (12128): Elaborating entity "alarm_clock" for hierarchy "Test:inst62|alarm_clock:inst6"
+Warning (10492): VHDL Process Statement warning at alarm_clock.vhd(24): signal "PITCH" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at alarm_clock.vhd(61): signal "INDEX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (12125): Using design file clktest.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: CLKtest-arch
     Info (12023): Found entity 1: CLKtest
@@ -567,23 +690,46 @@ Info (12128): Elaborating entity "CLKtest" for hierarchy "Test:inst62|CLKtest:in
 Warning (12125): Using design file div10_t.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: div10_t
 Info (12128): Elaborating entity "div10_t" for hierarchy "Test:inst62|div10_t:inst3"
-Info (12128): Elaborating entity "alarmDetection" for hierarchy "alarmDetection:inst46"
-Info (12128): Elaborating entity "counterHour_1" for hierarchy "counterHour_1:inst43"
-Warning (10492): VHDL Process Statement warning at counterHour_1.vhd(19): signal "edit" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at counterHour_1.vhd(20): signal "edit_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Info (12128): Elaborating entity "counterSecond_10" for hierarchy "counterSecond_10:inst41"
-Warning (10492): VHDL Process Statement warning at counterSecond_10.vhd(18): signal "edit_input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at counterSecond_10.vhd(19): signal "edit_input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Info (12128): Elaborating entity "counterSecond_1" for hierarchy "counterSecond_1:inst39"
-Warning (10492): VHDL Process Statement warning at counterSecond_1.vhd(17): signal "edit_input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (12125): Using design file debounce_g.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: debounce_g
-Info (12128): Elaborating entity "debounce_g" for hierarchy "debounce_g:inst71"
-Info (12128): Elaborating entity "demultiplexer3to6" for hierarchy "demultiplexer3to6:inst22"
-Info (12128): Elaborating entity "shift_clock" for hierarchy "shift_clock:inst23"
-Warning (12125): Using design file clk_gen.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: clk_gen
-Info (12128): Elaborating entity "clk_gen" for hierarchy "clk_gen:inst1"
+Info (12128): Elaborating entity "musicselector" for hierarchy "Test:inst62|musicselector:inst98"
+Warning (12125): Using design file buzzer_music0.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: buzzer_music0-arch
+    Info (12023): Found entity 1: buzzer_music0
+Info (12128): Elaborating entity "buzzer_music0" for hierarchy "Test:inst62|buzzer_music0:inst2"
+Warning (10492): VHDL Process Statement warning at buzzer_music0.vhd(24): signal "PITCH" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at buzzer_music0.vhd(73): signal "INDEX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "buzzer" for hierarchy "Test:inst62|buzzer:inst"
+Warning (10492): VHDL Process Statement warning at buzzer.vhd(24): signal "PITCH" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at buzzer.vhd(73): signal "INDEX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (12125): Using design file buzzer_music1.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: buzzer_music1-arch
+    Info (12023): Found entity 1: buzzer_music1
+Info (12128): Elaborating entity "buzzer_music1" for hierarchy "Test:inst62|buzzer_music1:inst99"
+Warning (10492): VHDL Process Statement warning at buzzer_music1.vhd(24): signal "PITCH" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at buzzer_music1.vhd(83): signal "INDEX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (12125): Using design file music_02.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: music_02-arch
+    Info (12023): Found entity 1: music_02
+Info (12128): Elaborating entity "music_02" for hierarchy "Test:inst62|music_02:inst7"
+Warning (10492): VHDL Process Statement warning at music_02.vhd(24): signal "PITCH" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at music_02.vhd(79): signal "INDEX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (12125): Using design file buzzer_music2.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: buzzer_music2-arch
+    Info (12023): Found entity 1: buzzer_music2
+Info (12128): Elaborating entity "buzzer_music2" for hierarchy "Test:inst62|buzzer_music2:inst4"
+Warning (10492): VHDL Process Statement warning at buzzer_music2.vhd(24): signal "PITCH" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at buzzer_music2.vhd(75): signal "INDEX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (12125): Using design file music_03.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: music_03-arch
+    Info (12023): Found entity 1: music_03
+Info (12128): Elaborating entity "music_03" for hierarchy "Test:inst62|music_03:inst8"
+Warning (10492): VHDL Process Statement warning at music_03.vhd(24): signal "PITCH" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at music_03.vhd(79): signal "INDEX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (12125): Using design file music_01.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: music_01-arch
+    Info (12023): Found entity 1: music_01
+Info (12128): Elaborating entity "music_01" for hierarchy "Test:inst62|music_01:inst16"
+Warning (10492): VHDL Process Statement warning at music_01.vhd(24): signal "PITCH" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at music_01.vhd(79): signal "INDEX" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (12125): Using design file updown.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: UPDOWN
 Info (12128): Elaborating entity "UPDOWN" for hierarchy "UPDOWN:inst19"
@@ -608,14 +754,31 @@ Warning (12125): Using design file uptest.vhd, which is not specified as a desig
     Info (12023): Found entity 1: UPtest
 Info (12128): Elaborating entity "UPtest" for hierarchy "UPDOWN:inst19|UPtest:inst3"
 Info (12128): Elaborating entity "UP" for hierarchy "UPDOWN:inst19|UP:inst1"
-Info (12128): Elaborating entity "counterHour_10" for hierarchy "counterHour_10:inst42"
-Warning (10492): VHDL Process Statement warning at counterHour_10.vhd(17): signal "edit" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at counterHour_10.vhd(18): signal "edit_input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at counterHour_10.vhd(19): signal "edit_input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (12125): Using design file clk_gen.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: clk_gen
+Info (12128): Elaborating entity "clk_gen" for hierarchy "clk_gen:inst1"
 Warning (12125): Using design file five_sec.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: five_sec-counter
     Info (12023): Found entity 1: five_sec
 Info (12128): Elaborating entity "five_sec" for hierarchy "five_sec:inst47"
+Info (12128): Elaborating entity "alarmDetection" for hierarchy "alarmDetection:inst46"
+Info (12128): Elaborating entity "counterHour_1" for hierarchy "counterHour_1:inst43"
+Warning (10492): VHDL Process Statement warning at counterHour_1.vhd(19): signal "edit" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at counterHour_1.vhd(20): signal "edit_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "counterSecond_10" for hierarchy "counterSecond_10:inst41"
+Warning (10492): VHDL Process Statement warning at counterSecond_10.vhd(18): signal "edit_input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at counterSecond_10.vhd(19): signal "edit_input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "counterSecond_1" for hierarchy "counterSecond_1:inst39"
+Warning (10492): VHDL Process Statement warning at counterSecond_1.vhd(17): signal "edit_input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (12125): Using design file debounce_g.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: debounce_g
+Info (12128): Elaborating entity "debounce_g" for hierarchy "debounce_g:inst71"
+Info (12128): Elaborating entity "demultiplexer3to6" for hierarchy "demultiplexer3to6:inst22"
+Info (12128): Elaborating entity "shift_clock" for hierarchy "shift_clock:inst23"
+Info (12128): Elaborating entity "counterHour_10" for hierarchy "counterHour_10:inst42"
+Warning (10492): VHDL Process Statement warning at counterHour_10.vhd(17): signal "edit" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at counterHour_10.vhd(18): signal "edit_input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at counterHour_10.vhd(19): signal "edit_input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (12125): Using design file vectortest.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: vectortest-a
     Info (12023): Found entity 1: vectortest
@@ -633,6 +796,13 @@ Info (12128): Elaborating entity "vectorOR" for hierarchy "vectorOR:inst37"
 Info (12128): Elaborating entity "vectorAND" for hierarchy "vectorAND:inst17"
 Warning (10492): VHDL Process Statement warning at vectorAND.vhd(15): signal "SIGNALIN" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at vectorAND.vhd(17): signal "SIGNALIN" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "vectorOR2" for hierarchy "vectorOR2:inst63"
+Info (12128): Elaborating entity "led_and" for hierarchy "led_and:inst59"
+Warning (12125): Using design file led.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: LED-a
+    Info (12023): Found entity 1: LED
+Info (12128): Elaborating entity "LED" for hierarchy "LED:inst57"
+Info (12128): Elaborating entity "led_and2" for hierarchy "led_and2:inst61"
 Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
     Warning (13310): Register "counterSecond_1:inst38|temp[0]" is converted into an equivalent circuit using register "counterSecond_1:inst38|temp[0]~_emulated" and latch "counterSecond_1:inst38|temp[0]~1"
     Warning (13310): Register "counterSecond_1:inst7|temp[0]" is converted into an equivalent circuit using register "counterSecond_1:inst7|temp[0]~_emulated" and latch "counterSecond_1:inst7|temp[0]~1"
@@ -679,14 +849,14 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 333 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 6 input pins
-    Info (21059): Implemented 20 output pins
-    Info (21061): Implemented 307 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 158 warnings
-    Info: Peak virtual memory: 4712 megabytes
-    Info: Processing ended: Fri Jun 19 15:37:50 2020
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:03
+Info (21057): Implemented 859 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 7 input pins
+    Info (21059): Implemented 25 output pins
+    Info (21061): Implemented 827 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 185 warnings
+    Info: Peak virtual memory: 4722 megabytes
+    Info: Processing ended: Tue Jun 23 22:07:47 2020
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:04
 
 

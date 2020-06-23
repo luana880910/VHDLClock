@@ -60,17 +60,11 @@ set_location_assignment PIN_AA9 -to b_v[2]
 set_location_assignment PIN_Y9 -to b_v[1]
 set_location_assignment PIN_AB8 -to b_v[0]
 set_location_assignment PIN_W16 -to clk
-set_location_assignment PIN_AA12 -to S[2]
-set_location_assignment PIN_AB11 -to S[1]
-set_location_assignment PIN_AB10 -to S[0]
 set_global_assignment -name EDA_NETLIST_WRITER_OUTPUT_DIR "Z:/VHDL/VHDLClock/projectClock/simulation/qsim/" -section_id eda_simulation
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
-set_location_assignment PIN_N21 -to COM
+set_location_assignment PIN_N20 -to COM
 set_location_assignment PIN_C16 -to edit_pin
 set_location_assignment PIN_AA15 -to editstart
-set_location_assignment PIN_E2 -to RRRR[2]
-set_location_assignment PIN_D3 -to RRRR[1]
-set_location_assignment PIN_C2 -to RRRR[0]
 set_global_assignment -name VHDL_FILE up.vhd
 set_global_assignment -name VHDL_FILE shift_clock.vhd
 set_global_assignment -name VHDL_FILE buzzer.vhd
@@ -93,12 +87,28 @@ set_global_assignment -name VHDL_FILE register_saver.vhd
 set_global_assignment -name VHDL_FILE vector_gndvhd.vhd
 set_location_assignment PIN_R22 -to addone
 set_location_assignment PIN_P22 -to minusone
-set_location_assignment PIN_G1 -to test[3]
-set_location_assignment PIN_U2 -to test[2]
-set_location_assignment PIN_N1 -to test[1]
-set_location_assignment PIN_AA2 -to test[0]
 set_location_assignment PIN_AA14 -to alarmSet
 set_global_assignment -name VHDL_FILE alarmDetection.vhd
 set_location_assignment PIN_AB15 -to buzzer_out
 set_location_assignment PIN_U1 -to test_LED22
+set_global_assignment -name VHDL_FILE musicselector.vhd
+set_location_assignment PIN_AB18 -to editmusicIn
+set_location_assignment PIN_E2 -to LEDVECTOR[11]
+set_location_assignment PIN_D3 -to LEDVECTOR[10]
+set_location_assignment PIN_C2 -to LEDVECTOR[9]
+set_location_assignment PIN_C1 -to LEDVECTOR[8]
+set_location_assignment PIN_L2 -to LEDVECTOR[7]
+set_location_assignment PIN_L1 -to LEDVECTOR[6]
+set_location_assignment PIN_G2 -to LEDVECTOR[5]
+set_location_assignment PIN_G1 -to LEDVECTOR[4]
+set_location_assignment PIN_U2 -to LEDVECTOR[3]
+set_location_assignment PIN_N1 -to LEDVECTOR[2]
+set_location_assignment PIN_AA2 -to LEDVECTOR[1]
+set_location_assignment PIN_AA1 -to LEDVECTOR[0]
+set_location_assignment PIN_AA12 -to displayer[2]
+set_location_assignment PIN_AB11 -to displayer[1]
+set_location_assignment PIN_AB10 -to displayer[0]
+set_global_assignment -name VHDL_FILE led_and.vhd
+set_global_assignment -name VHDL_FILE led_and2.vhd
+set_global_assignment -name VHDL_FILE vectorOR2.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
